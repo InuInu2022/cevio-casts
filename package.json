@@ -1,0 +1,14 @@
+{
+  "name": "cevio-casts",
+  "version": "1.0.0",
+  "description": "definitions for cevio casts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "InuInu2022",
+  "license": "MIT",
+  "devDependencies": {
+    "quicktype": "^23.0.12"
+  }
+}
