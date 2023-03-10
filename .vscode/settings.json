@@ -1,0 +1,11 @@
+{
+	"json.schemas": [
+	{
+		"fileMatch": [
+			"./data/data.json"
+		],
+		"url": "./model/test.json"
+	}
+	],
+	"workbench.settings.useSplitJSON": false
+}

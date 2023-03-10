@@ -1,0 +1,200 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "AllCast": {
+            "description": "all casts",
+            "title": "AllCast",
+            "type": "object",
+            "properties": {
+                "version": {
+                    "type": "string",
+                    "title": "version"
+                },
+                "casts": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Cast"
+                    },
+                    "title": "casts"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "casts",
+                "version"
+            ]
+        },
+        "Cast": {
+            "description": "CeVIO cast (voice library)",
+            "title": "Cast",
+            "type": "object",
+            "properties": {
+                "id": {
+                    "description": "internal cast id",
+                    "type": "string",
+                    "title": "id"
+                },
+                "cname": {
+                    "description": "internal cast name",
+                    "type": "string",
+                    "title": "cname"
+                },
+                "names": {
+                    "description": "display cast names",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/DisplayName"
+                    },
+                    "title": "names"
+                },
+                "category": {
+                    "description": "cast category (song voice or talk voice)",
+                    "enum": [
+                        "SingerSong",
+                        "Song",
+                        "Talk",
+                        "TextVocal"
+                    ],
+                    "type": "string",
+                    "title": "category"
+                },
+                "product": {
+                    "description": "software",
+                    "enum": [
+                        "CeVIO AI",
+                        "CeVIO CS",
+                        "VoiSona"
+                    ],
+                    "type": "string",
+                    "title": "product"
+                },
+                "gender": {
+                    "description": "voice gender",
+                    "enum": [
+                        "Female",
+                        "Male"
+                    ],
+                    "type": "string",
+                    "title": "gender"
+                },
+                "lang": {
+                    "$ref": "#/definitions/Language",
+                    "description": "voice language",
+                    "title": "lang"
+                },
+                "versions": {
+                    "description": "voice libraries versions list",
+                    "type": "array",
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "title": "versions"
+                },
+                "hasEmotions": {
+                    "description": "True/false value of whether this cast has emotion parameters",
+                    "type": "boolean",
+                    "title": "hasEmotions"
+                },
+                "emotions": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Emotion"
+                    },
+                    "title": "emotions"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "category",
+                "cname",
+                "gender",
+                "hasEmotions",
+                "id",
+                "lang",
+                "names",
+                "product"
+            ]
+        },
+        "DisplayName": {
+            "description": "Display of name in each language",
+            "title": "DisplayName",
+            "type": "object",
+            "properties": {
+                "lang": {
+                    "$ref": "#/definitions/Language",
+                    "description": "display language",
+                    "title": "lang"
+                },
+                "display": {
+                    "description": "display name",
+                    "type": "string",
+                    "title": "display"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "display",
+                "lang"
+            ]
+        },
+        "Language": {
+            "title": "Language",
+            "enum": [
+                "Chinese",
+                "English",
+                "Japanese"
+            ],
+            "type": "string"
+        },
+        "SongVoice": {
+            "description": "Type def for Song voice casts",
+            "title": "SongVoice",
+            "enum": [
+                "SingerSong",
+                "Song"
+            ],
+            "type": "string"
+        },
+        "TalkVoice": {
+            "description": "Type def for Talk voice casts",
+            "title": "TalkVoice",
+            "enum": [
+                "Talk",
+                "TextVocal"
+            ],
+            "type": "string"
+        },
+        "VoiceVersion": {
+            "description": "voice's version",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "Emotion": {
+            "description": "Emotion parameter",
+            "title": "Emotion",
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "title": "id"
+                },
+                "names": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/DisplayName"
+                    },
+                    "title": "names"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "id"
+            ]
+        }
+    }
+}
