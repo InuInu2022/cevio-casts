@@ -1,3 +1,6 @@
 [submodule "test/FluentCeVIOWrapper"]
 	path = test/FluentCeVIOWrapper
 	url = https://github.com/InuInu2022/FluentCeVIOWrapper.git
+[submodule "test/lib/FluentCeVIOWrapper"]
+	path = test/lib/FluentCeVIOWrapper
+	url = https://github.com/InuInu2022/FluentCeVIOWrapper.git
