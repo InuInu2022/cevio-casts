@@ -1,0 +1,3 @@
+[submodule "test/FluentCeVIOWrapper"]
+	path = test/FluentCeVIOWrapper
+	url = https://github.com/InuInu2022/FluentCeVIOWrapper.git
