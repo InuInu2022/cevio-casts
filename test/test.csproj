@@ -2,10 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <TargetPlatform>x64</TargetPlatform>
     <Nullable>enable</Nullable>
 
     <IsPackable>false</IsPackable>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,7 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="lib\FluentCeVIOWrapper\FluentCeVIOWrapper.Common\FluentCeVIOWrapper.Common.csproj" />
   </ItemGroup>
 
 </Project>
