@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test2", "test2\test2.csproj", "{DB3DC3FA-9A5D-45AC-A659-ECD79AA038F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "languages", "languages", "{79FD13AA-8212-4495-A58D-CBF517EB00C7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csharp", "csharp", "{0DADEAF5-284F-403D-9614-76B50AF98559}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CevioCasts", "languages\csharp\CevioCasts\CevioCasts.csproj", "{52BF462D-66A4-4B5B-9945-B7EDC41524CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB3DC3FA-9A5D-45AC-A659-ECD79AA038F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB3DC3FA-9A5D-45AC-A659-ECD79AA038F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB3DC3FA-9A5D-45AC-A659-ECD79AA038F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB3DC3FA-9A5D-45AC-A659-ECD79AA038F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52BF462D-66A4-4B5B-9945-B7EDC41524CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52BF462D-66A4-4B5B-9945-B7EDC41524CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52BF462D-66A4-4B5B-9945-B7EDC41524CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52BF462D-66A4-4B5B-9945-B7EDC41524CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0DADEAF5-284F-403D-9614-76B50AF98559} = {79FD13AA-8212-4495-A58D-CBF517EB00C7}
+		{52BF462D-66A4-4B5B-9945-B7EDC41524CD} = {0DADEAF5-284F-403D-9614-76B50AF98559}
+	EndGlobalSection
+EndGlobal
