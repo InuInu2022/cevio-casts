@@ -4,7 +4,7 @@
   "description": "definitions for cevio casts",
   "main": "",
   "scripts": {
-    "makeschema": "quicktype ./model/cast.ts -o ./model/schema.json -l schema --top-level AllCast",
+    "makeschema": "quicktype ./model/cast.ts -o ./model/schema.json -l schema --top-level Definitions",
     "test": "node ./test/validate.js"
   },
   "author": "InuInu2022",

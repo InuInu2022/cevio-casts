@@ -1,7 +1,7 @@
 /**
- * all casts
+ * cast definitions
  */
-interface AllCast{
+interface Definitions{
 	version: string;
 	casts: Cast[];
 }
