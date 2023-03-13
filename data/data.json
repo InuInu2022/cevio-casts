@@ -1,4 +1,5 @@
 {
+	"$schema": "https://github.com/InuInu2022/cevio-casts/blob/832c8a6f93aa440907e796bd4690bc1591e19729/model/schema.json",
 	"version": "1.0.0",
 	"casts": [
 		{
