@@ -64,8 +64,6 @@ using CevioCasts; //if you included classlib `CevioCasts`
 
 var jsonString = File.ReadAllText("path/to/data.json");
 var defs = Definitions.FromJson(jsonString);
-
-defs.
 ```
 
 ## other language
