@@ -5,7 +5,8 @@
   "main": "",
   "scripts": {
     "makeschema": "quicktype ./model/cast.ts -o ./model/schema.json -l schema --top-level Definitions",
-    "test": "node ./test/validate.js"
+    "test": "node ./test/validate.js",
+    "gen-csharp": "node ./languages/gen-csharp.js"
   },
   "author": "InuInu2022",
   "license": "MIT",
