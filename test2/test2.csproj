@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\test\lib\FluentCeVIOWrapper\FluentCeVIOWrapper.Common\FluentCeVIOWrapper.Common.csproj" />
+    <ProjectReference Include="..\languages\csharp\CevioCasts\CevioCasts.csproj" />
   </ItemGroup>
 
 </Project>
