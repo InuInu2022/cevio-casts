@@ -877,6 +877,28 @@
 			"hasEmotions": false
 		},
 		{
+			"id": "CSNV-JPF-TRF1",
+			"cname": "CSNV-JPF-TRF1",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "奏兎める"
+				},
+				{
+					"lang": "English",
+					"display": "Kanato Mell"
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.0.1"
+			],
+			"hasEmotions": false
+		},
+		{
 			"id": "CTNV-JPF-A",
 			"cname": "CTNV-JPF-A",
 			"names": [
