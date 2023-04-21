@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -1917,6 +1917,28 @@
 			"lang": "Japanese",
 			"versions": [
 				"1.0.2"
+			],
+			"hasEmotions": false
+		}
+		,{
+			"id": "techno-sp_ja_JP_f824_svss.tsnvoice",
+			"cname": "techno-sp_ja_JP_f824_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "#kzn"
+				},
+				{
+					"lang": "English",
+					"display": "#kzn"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.0.0 ported from CeVIO AI"
 			],
 			"hasEmotions": false
 		}
