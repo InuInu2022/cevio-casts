@@ -38,6 +38,8 @@ Definition data for CeVIO casts (voice library) defined in JSON format.
 
 **[./data/data.json](./data/data.json)** に最新の定義データがあるので動的にDLするのでも構いません。※githubからのDLはgithubのDL制限に引っかからないように注意してください。
 
+`https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/data/data.json`
+
 ## json schema
 
 json schemaは `model/schema.json` にあります。
