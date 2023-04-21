@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Security.AccessControl;
 using System.Diagnostics;
 using Xunit.Abstractions;
@@ -21,9 +22,9 @@ public class UnitTest1 : IDisposable
 		);
 		jsonString = File.ReadAllText(path);
 
-		StartProcessAsync("CeVIO_CS").AsTask().Wait();
-		StartProcessAsync("CeVIO_AI").AsTask().Wait();
-		Thread.Sleep(1000);
+		//StartProcessAsync("CeVIO_CS").AsTask().Wait();
+		//StartProcessAsync("CeVIO_AI").AsTask().Wait();
+		//Thread.Sleep(1000);
 	}
 
 	void IDisposable.Dispose(){
@@ -47,6 +48,38 @@ public class UnitTest1 : IDisposable
 		Assert.NotNull(jsonString);
 		var defs = Definitions.FromJson(jsonString);
 		Assert.NotNull(defs);
+	}
+
+	[Fact]
+	public void SumCasts()
+	{
+		var defs = Definitions.FromJson(jsonString);
+		int total = defs.Casts.Length;
+		int ai_total = defs.Casts.Count(c => c.Product == CevioCasts.Product.CeVIO_AI);
+		int cs_total = defs.Casts.Count(c => c.Product == CevioCasts.Product.CeVIO_CS);
+		int vs_total = defs.Casts.Count(c => c.Product == CevioCasts.Product.VoiSona);
+		int talk_total = defs.Casts.Count(c => c.Category == Category.TextVocal);
+		int song_total = defs.Casts.Count(c => c.Category == Category.SingerSong);
+		var cs_song = defs.Casts.Count(c => c.Product == CevioCasts.Product.CeVIO_CS && c.Category == Category.SingerSong);
+		var cs_talk = defs.Casts.Count(c => c.Product == CevioCasts.Product.CeVIO_CS && c.Category == Category.TextVocal);
+		var ai_song = defs.Casts.Count(c => c.Product == CevioCasts.Product.CeVIO_AI && c.Category == Category.SingerSong);
+		var ai_talk = defs.Casts.Count(c => c.Product == CevioCasts.Product.CeVIO_AI && c.Category == Category.TextVocal);
+		var vs_song = defs.Casts.Count(c => c.Product == CevioCasts.Product.VoiSona && c.Category == Category.SingerSong);
+		var vs_talk = defs.Casts.Count(c => c.Product == CevioCasts.Product.VoiSona && c.Category == Category.TextVocal);
+
+		output.WriteLine($"total: {total}");
+		output.WriteLine($" ai: {ai_total}");
+		output.WriteLine($" cs: {cs_total}");
+		output.WriteLine($" vs: {vs_total}");
+		output.WriteLine($" talk: {talk_total}");
+		output.WriteLine($" song: {song_total}");
+
+		output.WriteLine("|Product|Talk|Song|Total|");
+		output.WriteLine("|---|---|---|---|");
+		output.WriteLine($"|CeVIO CS|{cs_talk}|{cs_song}|{cs_total}|");
+		output.WriteLine($"|CeVIO AI|{ai_talk}|{ai_song}|{ai_total}|");
+		output.WriteLine($"|VoiSona|{vs_talk}|{vs_song}|{vs_total}|");
+		output.WriteLine($"|Sum|{talk_total}|{song_total}|{total}|");
 	}
 
 	[Fact]
