@@ -70,6 +70,10 @@
 				{
 					"lang": "Japanese",
 					"display": "すずきつづみ"
+				},
+				{
+					"lang": "English",
+					"display": "Suzuki Tsudumi"
 				}
 			],
 			"category": "TextVocal",
@@ -85,6 +89,10 @@
 						{
 							"lang": "Japanese",
 							"display": "クール"
+						},
+						{
+							"lang": "English",
+							"display": "Cool"
 						}
 					]
 				},
@@ -94,6 +102,10 @@
 						{
 							"lang": "Japanese",
 							"display": "照れ"
+						},
+						{
+							"lang": "English",
+							"display": "Bashful"
 						}
 					]
 				}
@@ -106,6 +118,11 @@
 				{
 					"lang": "Japanese",
 					"display": "タカハシ"
+
+				},
+				{
+					"lang": "English",
+					"display": "Takahashi"
 				}
 			],
 			"category": "TextVocal",
@@ -121,6 +138,10 @@
 						{
 							"lang": "Japanese",
 							"display": "元気"
+						},
+						{
+							"lang": "English",
+							"display": "Fine"
 						}
 					]
 				},
@@ -130,6 +151,10 @@
 						{
 							"lang": "Japanese",
 							"display": "普通"
+						},
+						{
+							"lang": "English",
+							"display": "Normal"
 						}
 					]
 				},
@@ -139,6 +164,10 @@
 						{
 							"lang": "Japanese",
 							"display": "へこみ"
+						},
+						{
+							"lang": "English",
+							"display": "Sad"
 						}
 					]
 				}
@@ -386,7 +415,7 @@
 				},
 				{
 					"lang": "English",
-					"display": ""
+					"display": "HAL-O-ROID"
 				}
 			],
 			"category": "SingerSong",
@@ -406,7 +435,7 @@
 				},
 				{
 					"lang": "English",
-					"display": ""
+					"display": "Akasaki Minato"
 				}
 			],
 			"category": "SingerSong",
@@ -426,7 +455,7 @@
 				},
 				{
 					"lang": "English",
-					"display": ""
+					"display": "Midorizaki Kasumi"
 				}
 			],
 			"category": "SingerSong",
@@ -446,7 +475,7 @@
 				},
 				{
 					"lang": "English",
-					"display": ""
+					"display": "Ginsaki Yamato"
 				}
 			],
 			"category": "SingerSong",
@@ -466,7 +495,7 @@
 				},
 				{
 					"lang": "English",
-					"display": ""
+					"display": "Kinzaki Koharu"
 				}
 			],
 			"category": "SingerSong",
@@ -486,7 +515,7 @@
 				},
 				{
 					"lang": "English",
-					"display": ""
+					"display": "Shirosaki Yudai"
 				}
 			],
 			"category": "SingerSong",
@@ -506,7 +535,7 @@
 				},
 				{
 					"lang": "English",
-					"display": ""
+					"display": "Kizaki Airi"
 				}
 			],
 			"category": "SingerSong",
@@ -546,7 +575,7 @@
 				},
 				{
 					"lang": "English",
-					"display": ""
+					"display": "Suzuki Tsudumi"
 				}
 			],
 			"category": "SingerSong",
@@ -566,7 +595,7 @@
 				},
 				{
 					"lang": "English",
-					"display": ""
+					"display": "Yuzuki Yukari Rei"
 				}
 			],
 			"category": "SingerSong",
@@ -586,7 +615,7 @@
 				},
 				{
 					"lang": "English",
-					"display": ""
+					"display": "Tohoku Kiritan"
 				}
 			],
 			"category": "SingerSong",
@@ -606,7 +635,7 @@
 				},
 				{
 					"lang": "English",
-					"display": ""
+					"display": "Tohoku Zunko"
 				}
 			],
 			"category": "SingerSong",
@@ -626,7 +655,7 @@
 				},
 				{
 					"lang": "English",
-					"display": "東北イタコ"
+					"display": "Tohoku Itako"
 				}
 			],
 			"category": "SingerSong",
@@ -662,7 +691,7 @@
 			"names": [
 				{
 					"lang": "Japanese",
-					"display": "星界(SEKAI)"
+					"display": "星界（SEKAI）"
 				},
 				{
 					"lang": "English",
@@ -682,7 +711,7 @@
 			"names": [
 				{
 					"lang": "Japanese",
-					"display": "裏命(RIME)"
+					"display": "裏命（RIME）"
 				},
 				{
 					"lang": "English",
@@ -726,7 +755,7 @@
 				},
 				{
 					"lang": "English",
-					"display": ""
+					"display": "OИE"
 				}
 			],
 			"category": "SingerSong",
@@ -766,7 +795,7 @@
 				},
 				{
 					"lang": "English",
-					"display": ""
+					"display": "IA (ENG)"
 				}
 			],
 			"category": "SingerSong",
@@ -806,7 +835,7 @@
 				},
 				{
 					"lang": "English",
-					"display": ""
+					"display": "Futaba Minato"
 				}
 			],
 			"category": "SingerSong",
@@ -929,7 +958,7 @@
 						},
 						{
 							"lang": "English",
-							"display": ""
+							"display": "Fine"
 						}
 					]
 				},
@@ -942,7 +971,7 @@
 						},
 						{
 							"lang": "English",
-							"display": ""
+							"display": "Normal"
 						}
 					]
 				},
@@ -955,7 +984,7 @@
 						},
 						{
 							"lang": "English",
-							"display": ""
+							"display": "Angry"
 						}
 					]
 				},
@@ -968,7 +997,7 @@
 						},
 						{
 							"lang": "English",
-							"display": ""
+							"display": "Sad"
 						}
 					]
 				}
@@ -984,7 +1013,7 @@
 				},
 				{
 					"lang": "English",
-					"display": ""
+					"display": "Koharu Rikka"
 				}
 			],
 			"category": "TextVocal",
@@ -1071,7 +1100,7 @@
 				},
 				{
 					"lang": "English",
-					"display": ""
+					"display": "IA"
 				}
 			],
 			"category": "TextVocal",
@@ -1145,7 +1174,7 @@
 				},
 				{
 					"lang": "English",
-					"display": ""
+					"display": "OИE"
 				}
 			],
 			"category": "TextVocal",
@@ -1219,7 +1248,7 @@
 				},
 				{
 					"lang": "English",
-					"display": ""
+					"display": "Tsurumaki Maki (JP)"
 				}
 			],
 			"category": "TextVocal",
@@ -1306,7 +1335,7 @@
 				},
 				{
 					"lang": "English",
-					"display": ""
+					"display": "Tsurumaki Maki (EN)"
 				}
 			],
 			"category": "TextVocal",
@@ -1393,7 +1422,7 @@
 				},
 				{
 					"lang": "English",
-					"display": ""
+					"display": "Natsuki Karin"
 				}
 			],
 			"category": "TextVocal",
@@ -1480,7 +1509,7 @@
 				},
 				{
 					"lang": "English",
-					"display": ""
+					"display": "FEE-chan"
 				}
 			],
 			"category": "TextVocal",
@@ -1567,7 +1596,7 @@
 				},
 				{
 					"lang": "English",
-					"display": ""
+					"display": "ROSA"
 				}
 			],
 			"category": "TextVocal",
@@ -1641,7 +1670,7 @@
 				},
 				{
 					"lang": "English",
-					"display": ""
+					"display": "Suzuki Tsudumi"
 				}
 			],
 			"category": "TextVocal",
@@ -1728,7 +1757,7 @@
 				},
 				{
 					"lang": "English",
-					"display": ""
+					"display": "Hanakuma Chifuyu"
 				}
 			],
 			"category": "TextVocal",
