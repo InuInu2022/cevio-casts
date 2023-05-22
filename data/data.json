@@ -1971,5 +1971,27 @@
 			],
 			"hasEmotions": false
 		}
+		,{
+			"id": "techno-sp_ja_JP_f811_svss",
+			"cname": "techno-sp_ja_JP_f811_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "結月ゆかり麗"
+				},
+				{
+					"lang": "English",
+					"display": "Yuzuki Yukari Rei"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.1.0 ported from CeVIO AI"
+			],
+			"hasEmotions": false
+		}
 	]
 }
