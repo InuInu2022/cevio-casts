@@ -68,7 +68,7 @@ var jsonString = File.ReadAllText("path/to/data.json");
 var defs = Definitions.FromJson(jsonString);
 ```
 
-### example: SongAlphaValueCheck
+### sample code: SongAlphaValueCheck
 
 [SongAlphaValueCheck
 /Program.cs](https://github.com/InuInu2022/CeVIOVoiceLibDB/blob/main/tools/SongAlphaValueCheck/Program.cs)
