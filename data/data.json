@@ -1993,5 +1993,30 @@
 			],
 			"hasEmotions": false
 		}
+		,{
+			"id": "techno-sp_ja_JP_m867_svss",
+			"cname": "techno-sp_ja_JP_m867_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "MYK-IV"
+				},
+				{
+					"lang": "English",
+					"display": "MYK-IV"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Male",
+			"lang": "Japanese",
+			"versions": [
+				"1.0.0",
+				"1.1.0",
+				"2.0.0 Beta",
+				"2.1.0 Beta"
+			],
+			"hasEmotions": false
+		}
 	]
 }
