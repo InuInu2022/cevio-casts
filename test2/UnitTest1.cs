@@ -93,6 +93,24 @@ public class UnitTest1 : IDisposable
 		}
 	}
 
+	[Fact]
+	public void CheckSpSymbol()
+	{
+		var defs = Definitions.FromJson(jsonString);
+		foreach(var cast in defs.Casts){
+			if(cast?.SpSymbols is null)continue;
+			if(cast.SpSymbols.Length == 0)continue;
+
+			var result =
+				cast
+					.SpSymbols
+					.Any(a => a
+						.Names
+						.Any(a2 => a2.Display != ""));
+			Assert.True(result);
+		}
+	}
+
 	[Theory]
 	[InlineData("CeVIO_AI")]
 	[InlineData("CeVIO_CS")]
