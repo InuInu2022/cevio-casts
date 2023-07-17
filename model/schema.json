@@ -104,6 +104,14 @@
                         "$ref": "#/definitions/Emotion"
                     },
                     "title": "emotions"
+                },
+                "symbols": {
+                    "description": "special label definitions",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/SpSymbol"
+                    },
+                    "title": "symbols"
                 }
             },
             "additionalProperties": false,
@@ -194,6 +202,37 @@
             "additionalProperties": false,
             "required": [
                 "id"
+            ]
+        },
+        "SpSymbol": {
+            "description": "Special label parameter",
+            "title": "SpSymbol",
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "title": "id"
+                },
+                "symbols": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "title": "symbols"
+                },
+                "names": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/DisplayName"
+                    },
+                    "title": "names"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "id",
+                "names",
+                "symbols"
             ]
         }
     }

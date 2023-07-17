@@ -58,6 +58,9 @@ namespace CevioCasts
 
         [JsonProperty("emotions", NullValueHandling = NullValueHandling.Ignore)]
         public Emotion[] Emotions { get; set; }
+
+        [JsonProperty("spSymbols", NullValueHandling = NullValueHandling.Ignore)]
+        public SpSymbol[] SpSymbols { get; set; }
     }
 
     public partial class Emotion
@@ -76,6 +79,18 @@ namespace CevioCasts
 
         [JsonProperty("display")]
         public string Display { get; set; }
+    }
+
+    public partial class SpSymbol
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
+
+        [JsonProperty("symbols")]
+        public string[] Symbols { get; set; }
+
+        [JsonProperty("names")]
+        public Name[] Names { get; set; }
     }
 
     public enum Category { SingerSong, TextVocal };
