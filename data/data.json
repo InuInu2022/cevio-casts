@@ -862,7 +862,9 @@
 			"product": "CeVIO AI",
 			"gender": "Female",
 			"lang": "Japanese",
-			"versions": [],
+			"versions": [
+				"1.0.0"
+			],
 			"hasEmotions": false
 		},
 		{
@@ -882,7 +884,9 @@
 			"product": "CeVIO AI",
 			"gender": "Female",
 			"lang": "Japanese",
-			"versions": [],
+			"versions": [
+				"1.0.0"
+			],
 			"hasEmotions": false
 		},
 		{
@@ -926,6 +930,58 @@
 				"1.0.1"
 			],
 			"hasEmotions": false
+		},
+		{
+			"id": "CSNV-JPF-BNE1",
+			"cname": "CSNV-JPF-BNE1",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "りむる"
+				},
+				{
+					"lang": "English",
+					"display": "Reml"
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.0.1"
+			],
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "bounceuppitch",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "はね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Bounce-up pitch"
+						}
+					]
+				},
+				{
+					"id": "whisper",
+					"symbols":["^","＾"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "吐き捨て"
+						},
+						{
+							"lang": "English",
+							"display": "Spit Out"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "CTNV-JPF-A",
