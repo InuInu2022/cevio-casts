@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.3.3",
+	"version": "1.4.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -842,8 +842,40 @@
 			"product": "CeVIO AI",
 			"gender": "Female",
 			"lang": "Japanese",
-			"versions": [],
-			"hasEmotions": false
+			"versions": [
+				"1.0.0"
+			],
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "bounceuppitch",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "跳ね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Bounce-up pitch"
+						}
+					]
+				},
+				{
+					"id": "rough",
+					"symbols":["%","％"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "吐き捨て"
+						},
+						{
+							"lang": "English",
+							"display": "Breathe out"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "CSNV-JPF-BSR1",
@@ -2206,6 +2238,60 @@
 						{
 							"lang": "English",
 							"display": "Rough"
+						}
+					]
+				}
+			]
+		}
+
+		,{
+			"id": "techno-sp_ja_JP_f830_svss",
+			"cname": "techno-sp_ja_JP_f830_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "双葉湊音"
+				},
+				{
+					"lang": "English",
+					"display": "Futaba Minato"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.0.0 ported from CeVIO AI",
+				"1.2.1"
+			],
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "bounceuppitch",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "跳ね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Bounce-up pitch"
+						}
+					]
+				},
+				{
+					"id": "rough",
+					"symbols":["%","％"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "吐き捨て"
+						},
+						{
+							"lang": "English",
+							"display": "Breathe out"
 						}
 					]
 				}
