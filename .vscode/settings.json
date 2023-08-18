@@ -7,5 +7,6 @@
 		"url": "./model/test.json"
 	}
 	],
-	"workbench.settings.useSplitJSON": false
+	"workbench.settings.useSplitJSON": false,
+	"dotnet.defaultSolution": "cevio-casts.sln"
 }
