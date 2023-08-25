@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.4.0",
+	"version": "1.5.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -1917,6 +1917,69 @@
 						{
 							"lang": "English",
 							"display": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "CTNV-JPM-C",
+			"cname": "CTNV-JPM-C",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "タカハシ"
+				},
+				{
+					"lang": "English",
+					"display": "Takahashi"
+				}
+			],
+			"category": "TextVocal",
+			"product": "CeVIO AI",
+			"gender": "Male",
+			"lang": "Japanese",
+			"versions": [
+				"1.0.0"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "CTNV-JPM-C_FINE",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "元気"
+						},
+						{
+							"lang": "English",
+							"display": "Fine"
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPM-C_NORMAL",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "普通"
+						},
+						{
+							"lang": "English",
+							"display": "Normal"
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPM-C_SAD",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "へこみ"
+						},
+						{
+							"lang": "English",
+							"display": "Sad"
 						}
 					]
 				}
