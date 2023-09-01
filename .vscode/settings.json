@@ -8,5 +8,6 @@
 	}
 	],
 	"workbench.settings.useSplitJSON": false,
-	"dotnet.defaultSolution": "cevio-casts.sln"
+	"dotnet.defaultSolution": "cevio-casts.sln",
+	"dotnet.server.useOmnisharp":true
 }
