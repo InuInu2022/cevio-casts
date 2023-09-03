@@ -41,7 +41,7 @@ public class UnitTest1 : IDisposable
 	}
 
 	[Fact]
-	public async ValueTask ReadAsync()
+	public async Task ReadAsync()
 	{
 		var jsonString =
 			await File.ReadAllTextAsync("../data/data.json");
@@ -114,7 +114,7 @@ public class UnitTest1 : IDisposable
 	[Theory]
 	[InlineData("CeVIO_AI")]
 	[InlineData("CeVIO_CS")]
-	public async ValueTask CastTestAsync(string product)
+	public async Task CastTestAsync(string product)
 	{
 		output.WriteLine("1");
 
@@ -156,7 +156,7 @@ public class UnitTest1 : IDisposable
 		{
 			Assert.True(false);
 			output.WriteLine($"Error:{e.Message}");
-			throw new Xunit.Sdk.XunitException();
+			throw new Xunit.Sdk.XunitException($"Error:{e.Message}");
 		}
 
 		output.WriteLine("7");
