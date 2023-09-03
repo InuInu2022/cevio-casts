@@ -2449,5 +2449,246 @@
 				}
 			]
 		}
+		,{
+			"id": "techno-sp_ja_JP_f801_tts",
+			"cname": "techno-sp_ja_JP_f801_tts.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "さとうささら"
+				},
+				{
+					"lang": "English",
+					"display": "Sato Sasara"
+				}
+			],
+			"category": "TextVocal",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.0.0 ported from CeVIO AI"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "0",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Normal"
+						},
+						{
+							"lang": "English",
+							"display": "Normal"
+						}
+					]
+				},
+				{
+					"id": "1",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Happy"
+						},
+						{
+							"lang": "English",
+							"display": "Happy"
+						}
+					]
+				},
+				{
+					"id": "2",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Bashful"
+						},
+						{
+							"lang": "English",
+							"display": "Bashful"
+						}
+					]
+				},
+				{
+					"id": "3",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Angry"
+						},
+						{
+							"lang": "English",
+							"display": "Angry"
+						}
+					]
+				},
+				{
+					"id": "4",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Sad"
+						},
+						{
+							"lang": "English",
+							"display": "Sad"
+						}
+					]
+				}
+			]
+		}
+		,{
+			"id": "techno-sp_ja_JP_f802_tts",
+			"cname": "techno-sp_ja_JP_f802_tts.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "すずきつづみ"
+				},
+				{
+					"lang": "English",
+					"display": "Suzuki Tsudumi"
+				}
+			],
+			"category": "TextVocal",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.0.0 ported from CeVIO AI"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "0",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Cool"
+						},
+						{
+							"lang": "English",
+							"display": "Cool"
+						}
+					]
+				},
+				{
+					"id": "1",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Bashful"
+						},
+						{
+							"lang": "English",
+							"display": "Bashful"
+						}
+					]
+				},
+				{
+					"id": "2",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Angry"
+						},
+						{
+							"lang": "English",
+							"display": "Angry"
+						}
+					]
+				},
+				{
+					"id": "3",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Happy"
+						},
+						{
+							"lang": "English",
+							"display": "Happy"
+						}
+					]
+				},
+				{
+					"id": "4",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Whisper"
+						},
+						{
+							"lang": "English",
+							"display": "Whisper"
+						}
+					]
+				}
+			]
+		}
+		,{
+			"id": "techno-sp_ja_JP_m801_tts",
+			"cname": "techno-sp_ja_JP_m801_tts.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "タカハシ"
+				},
+				{
+					"lang": "English",
+					"display": "Takahashi"
+				}
+			],
+			"category": "TextVocal",
+			"product": "VoiSona",
+			"gender": "Male",
+			"lang": "Japanese",
+			"versions": [
+				"2.0.0 ported from CeVIO AI"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "0",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Normal"
+						},
+						{
+							"lang": "English",
+							"display": "Normal"
+						}
+					]
+				},
+				{
+					"id": "1",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Fine"
+						},
+						{
+							"lang": "English",
+							"display": "Fine"
+						}
+					]
+				},
+				{
+					"id": "4",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Sad"
+						},
+						{
+							"lang": "English",
+							"display": "Sad"
+						}
+					]
+				}
+			]
+		}
 	]
 }
