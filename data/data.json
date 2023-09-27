@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.6.0",
+	"version": "1.7.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -582,7 +582,9 @@
 			"product": "CeVIO AI",
 			"gender": "Female",
 			"lang": "Japanese",
-			"versions": [],
+			"versions": [
+				"1.0.1"
+			],
 			"hasEmotions": true
 		},
 		{
@@ -2355,6 +2357,56 @@
 						{
 							"lang": "English",
 							"display": "Breathe out"
+						}
+					]
+				}
+			]
+		}
+		,{
+			"id": "techno-sp_ja_JP_f802_svss",
+			"cname": "techno-sp_ja_JP_f802_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "すずきつづみ"
+				},
+				{
+					"lang": "English",
+					"display": "Suzuki Tsudumi"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.0.1 ported from CeVIO AI"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "0",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Sweet"
+						},
+						{
+							"lang": "English",
+							"display": "Sweet"
+						}
+					]
+				},
+				{
+					"id": "1",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Powerful"
+						},
+						{
+							"lang": "English",
+							"display": "Powerful"
 						}
 					]
 				}
