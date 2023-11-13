@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.7.0",
+	"version": "1.8.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -746,6 +746,100 @@
 			"lang": "Japanese",
 			"versions": [],
 			"hasEmotions": true
+		},
+		{
+			"id": "CSNV-JPF-THR5",
+			"cname": "CSNV-JPF-THR5",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "羽累"
+				},
+				{
+					"lang": "English",
+					"display": "HARU"
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.0.2"
+			],
+			"hasEmotions": true,
+			"spSymbols": [
+				{
+					"id": "bounceuppitch",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "はね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Bounce-up pitch"
+						}
+					]
+				},
+				{
+					"id": "rollrs",
+					"symbols":["^","＾"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "巻き舌"
+						},
+						{
+							"lang": "English",
+							"display": "Roll r’s"
+						}
+					]
+				},
+				{
+					"id": "irritation",
+					"symbols":["%","％"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "いきり"
+						},
+						{
+							"lang": "English",
+							"display": "Irritation"
+						}
+					]
+				},
+				{
+					"id": "falsettoinrap",
+					"symbols":["=","＝"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ラップで裏返り"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto in Rap"
+						}
+					]
+				},
+				{
+					"id": "pitchfallinrap",
+					"symbols":["_","＿"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ラップでフォール"
+						},
+						{
+							"lang": "English",
+							"display": "Pitch Fall in Rap"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "CSNV-JPF-FP4",
@@ -2430,7 +2524,8 @@
 			"gender": "Female",
 			"lang": "Japanese",
 			"versions": [
-				"2.0.0"
+				"2.0.0",
+				"2.0.1"
 			],
 			"hasEmotions": true,
 			"emotions": [
