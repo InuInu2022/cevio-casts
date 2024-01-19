@@ -110,5 +110,5 @@ CeVIO Creative Studio の ONE (Song/Talk), IA (English Song/Talk)のデータが
 ```
 MIT License
 
-Copyright (c) 2023 いぬいぬ
+Copyright (c) 2024 いぬいぬ
 ```
