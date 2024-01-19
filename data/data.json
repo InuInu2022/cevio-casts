@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.9.0",
+	"version": "1.10.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -2158,6 +2158,108 @@
 					]
 				}
 			]
+		},
+		{
+			"id": "CTNV-JPF-GLA1",
+			"cname": "CTNV-JPF-GLA1",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "双葉湊音"
+				},
+				{
+					"lang": "English",
+					"display": "Futaba Minato"
+				}
+			],
+			"category": "TextVocal",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.0.0"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "CTNV-JPF-GLA1_NORMAL",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "普通"
+						},
+						{
+							"lang": "English",
+							"display": "Normal"
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-GLA1_FINE",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "元気"
+						},
+						{
+							"lang": "English",
+							"display": "Fine"
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-GLA1_ANGRY",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "怒り"
+						},
+						{
+							"lang": "English",
+							"display": "Angry"
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-GLA1_CRY",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "泣き"
+						},
+						{
+							"lang": "English",
+							"display": "Cry"
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-GLA1_SHY",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "人見知り"
+						},
+						{
+							"lang": "English",
+							"display": "Shy"
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-GLA1_CHILD",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "幼い"
+						},
+						{
+							"lang": "English",
+							"display": "Child"
+						}
+					]
+				}
+			]
 		}
 		,{
 			"id": "nitech-jp_ja_JP_f008_svss",
@@ -2932,6 +3034,108 @@
 						{
 							"lang": "English",
 							"display": "Sad"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "techno-sp_ja_JP_f830_tts",
+			"cname": "techno-sp_ja_JP_f830_tts.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "双葉湊音"
+				},
+				{
+					"lang": "English",
+					"display": "Futaba Minato"
+				}
+			],
+			"category": "TextVocal",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"2.0.2"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "0",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Normal"
+						},
+						{
+							"lang": "English",
+							"display": "Normal"
+						}
+					]
+				},
+				{
+					"id": "1",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Fine"
+						},
+						{
+							"lang": "English",
+							"display": "Fine"
+						}
+					]
+				},
+				{
+					"id": "2",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Angry"
+						},
+						{
+							"lang": "English",
+							"display": "Angry"
+						}
+					]
+				},
+				{
+					"id": "3",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Cry"
+						},
+						{
+							"lang": "English",
+							"display": "Cry"
+						}
+					]
+				},
+				{
+					"id": "4",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Shy"
+						},
+						{
+							"lang": "English",
+							"display": "Shy"
+						}
+					]
+				},
+				{
+					"id": "5",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Child"
+						},
+						{
+							"lang": "English",
+							"display": "Child"
 						}
 					]
 				}

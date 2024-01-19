@@ -19,6 +19,13 @@ Definition data for CeVIO casts (voice library) defined in JSON format.
 - キャスト名・感情名は日本語表記の他、一部英語表記の定義も含まれます
 - VoiSona, VoiSona Talkのライブラリにも対応しています
 
+|Product|Talk|Song|Total|
+|---|---|---|---|
+|CeVIO CS|5|11|16|
+|CeVIO AI|13|21|34|
+|VoiSona|5|11|16|
+|Sum|23|43|66|
+
 ## Definitions
 
 - Cast names (JP/partially EN)
