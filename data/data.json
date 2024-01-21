@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.10.0",
+	"version": "1.10.1",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -2838,11 +2838,11 @@
 					"names": [
 						{
 							"lang": "Japanese",
-							"display": "Happy"
+							"display": "Fine"
 						},
 						{
 							"lang": "English",
-							"display": "Happy"
+							"display": "Fine"
 						}
 					]
 				},
@@ -2851,29 +2851,16 @@
 					"names": [
 						{
 							"lang": "Japanese",
-							"display": "Bashful"
+							"display": "Angry"
 						},
 						{
 							"lang": "English",
-							"display": "Bashful"
+							"display": "Angry"
 						}
 					]
 				},
 				{
 					"id": "3",
-					"names": [
-						{
-							"lang": "Japanese",
-							"display": "Angry"
-						},
-						{
-							"lang": "English",
-							"display": "Angry"
-						}
-					]
-				},
-				{
-					"id": "4",
 					"names": [
 						{
 							"lang": "Japanese",
