@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.10.2",
+	"version": "1.11.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -926,7 +926,37 @@
 			"versions": [
 				"1.0.1"
 			],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "bounceuppitch",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "跳ね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Bounce-up pitch"
+						}
+					]
+				},
+				{
+					"id": "rough",
+					"symbols":["%","％"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "抜き"
+						},
+						{
+							"lang": "English",
+							"display": "Relux"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "CSNV-ENF-FP5",
@@ -2708,6 +2738,102 @@
 			"lang": "Japanese",
 			"versions": [
 				"2.0.0"
+			],
+			"hasEmotions": false
+		}
+		,{
+			"id": "CSNV-JPF-FP5",
+			"cname": "techno-sp_ja_JP_f808_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "IA"
+				},
+				{
+					"lang": "English",
+					"display": "IA"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.0.1 ported from CeVIO AI"
+			],
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "bounceuppitch",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "跳ね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Bounce-up pitch"
+						}
+					]
+				},
+				{
+					"id": "rough",
+					"symbols":["%","％"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "抜き"
+						},
+						{
+							"lang": "English",
+							"display": "Relux"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "techno-sp_en_US_f808_svss",
+			"cname": "techno-sp_en_US_f808_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "IA ENGLISH"
+				},
+				{
+					"lang": "English",
+					"display": "IA ENGLISH"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "English",
+			"versions": [
+				"1.0.2 ported from CeVIO AI"
+			],
+			"hasEmotions": false
+		}
+		,{
+			"id": "techno-sp_ja_JP_f803_svss",
+			"cname": "techno-sp_ja_JP_f803_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "OИE"
+				},
+				{
+					"lang": "English",
+					"display": "OИE"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.0.1 ported from CeVIO AI"
 			],
 			"hasEmotions": false
 		}
