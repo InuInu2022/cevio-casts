@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.11.0",
+	"version": "1.11.1",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -2742,7 +2742,7 @@
 			"hasEmotions": false
 		}
 		,{
-			"id": "CSNV-JPF-FP5",
+			"id": "techno-sp_ja_JP_f808_svss",
 			"cname": "techno-sp_ja_JP_f808_svss.tsnvoice",
 			"names": [
 				{
