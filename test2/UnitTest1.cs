@@ -75,7 +75,7 @@ public class UnitTest1 : IDisposable
 		output.WriteLine($" song: {song_total}");
 
 		output.WriteLine("|Product|Talk|Song|Total|");
-		output.WriteLine("|---|---|---|---|");
+		output.WriteLine("|---|---:|---:|---:|");
 		output.WriteLine($"|CeVIO CS|{cs_talk}|{cs_song}|{cs_total}|");
 		output.WriteLine($"|CeVIO AI|{ai_talk}|{ai_song}|{ai_total}|");
 		output.WriteLine($"|VoiSona|{vs_talk}|{vs_song}|{vs_total}|");
