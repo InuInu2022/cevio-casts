@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.11.1",
+	"version": "1.12.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -610,7 +610,8 @@
 			"gender": "Female",
 			"lang": "Japanese",
 			"versions": [
-				"1.0.1"
+				"1.0.1",
+				"2.0.0"
 			],
 			"hasEmotions": true
 		},
@@ -1968,7 +1969,8 @@
 			"gender": "Female",
 			"lang": "Japanese",
 			"versions": [
-				"1.0.1"
+				"1.0.1",
+				"2.0.0"
 			],
 			"hasEmotions": true,
 			"emotions": [
@@ -2355,7 +2357,8 @@
 			"lang": "English",
 			"versions": [
 				"1.0.0",
-				"1.1.0"
+				"1.1.0",
+				"2.0.0"
 			],
 			"hasEmotions": false,
 			"spSymbols": [
@@ -2687,7 +2690,8 @@
 			"gender": "Female",
 			"lang": "Japanese",
 			"versions": [
-				"1.0.1 ported from CeVIO AI"
+				"1.0.1 ported from CeVIO AI",
+				"2.0.0"
 			],
 			"hasEmotions": true,
 			"emotions": [
@@ -3022,7 +3026,8 @@
 			"gender": "Female",
 			"lang": "Japanese",
 			"versions": [
-				"1.0.0 ported from CeVIO AI"
+				"1.0.0 ported from CeVIO AI",
+				"2.0.0"
 			],
 			"hasEmotions": true,
 			"emotions": [
