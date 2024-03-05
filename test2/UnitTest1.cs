@@ -29,7 +29,8 @@ public class UnitTest1 : IDisposable
 
 	void IDisposable.Dispose(){
 		GC.SuppressFinalize(this);
-		foreach(var p in process){
+		foreach(var p in process)
+		{
 			p.Value?.Kill();
 		}
 	}
@@ -86,8 +87,10 @@ public class UnitTest1 : IDisposable
 	public void ChechCName()
 	{
 		var defs = Definitions.FromJson(jsonString);
-		foreach(var cast in defs.Casts){
-			if(cast.Product == CevioCasts.Product.CeVIO_AI){
+		foreach(var cast in defs.Casts)
+		{
+			if(cast.Product == CevioCasts.Product.CeVIO_AI)
+			{
 				Assert.Equal(cast.Id, cast.Cname);
 			}
 		}
@@ -97,10 +100,10 @@ public class UnitTest1 : IDisposable
 	public void CheckSpSymbol()
 	{
 		var defs = Definitions.FromJson(jsonString);
-		foreach(var cast in defs.Casts){
-			if(cast?.SpSymbols is null)continue;
-			if(cast.SpSymbols.Length == 0)continue;
-
+		foreach(var cast in defs.Casts)
+		{
+			if(cast?.SpSymbols is null){continue;}
+			if(cast.SpSymbols.Length == 0){continue;}
 			var result =
 				cast
 					.SpSymbols
@@ -161,7 +164,8 @@ public class UnitTest1 : IDisposable
 
 		output.WriteLine("7");
 
-		foreach(var c in talkCasts){
+		foreach(var c in talkCasts)
+		{
 			var jname = c.Names
 				.First(n => n.Lang == Lang.Japanese)
 				.Display;
