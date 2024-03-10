@@ -114,6 +114,20 @@ public class UnitTest1 : IDisposable
 		}
 	}
 
+	[Fact]
+	public void CheckCopyPasteError()
+	{
+		var defs = Definitions
+			.FromJson(jsonString);
+		foreach (var cast in defs.Casts)
+		{
+			var isTarget = cast.Cname.EndsWith(".tsnvoice");
+			if(!isTarget){continue;}
+
+			Assert.True(cast.Product == CevioCasts.Product.VoiSona);
+		}
+	}
+
 	[Theory]
 	[InlineData("CeVIO_AI")]
 	[InlineData("CeVIO_CS")]
