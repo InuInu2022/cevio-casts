@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.14.0",
+	"version": "1.14.1",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -2890,7 +2890,7 @@
 				}
 			],
 			"category": "SingerSong",
-			"product": "CeVIO AI",
+			"product": "VoiSona",
 			"gender": "Female",
 			"lang": "Japanese",
 			"versions": [
