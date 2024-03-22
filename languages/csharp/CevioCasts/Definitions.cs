@@ -67,6 +67,19 @@ namespace CevioCasts
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("spSymbols")]
         public SpSymbol[] SpSymbols { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("emotionOrder")]
+        public EmotionOrder[] EmotionOrder { get; set; }
+    }
+
+    public partial class EmotionOrder
+    {
+        [JsonPropertyName("version")]
+        public string Version { get; set; }
+
+        [JsonPropertyName("order")]
+        public string[] Order { get; set; }
     }
 
     public partial class Emotion

@@ -1,7 +1,7 @@
 const { execSync } = require('child_process')
 const fs = require("fs")
 
-const stdout = execSync('quicktype ./data/data.json -o ./languages/csharp/CevioCasts/Definitions.cs -l cs --namespace CevioCasts --features complete --framework SystemTextJson -S ./model/schema.json')
+const stdout = execSync('quicktype ./data/data.json -o ./languages/csharp/CevioCasts/Definitions.cs -l cs --namespace CevioCasts --features complete --framework SystemTextJson -S ./model/schema.json --no-integer-strings')
 console.log(`stdout: ${stdout.toString("utf8")}`)
 
 let path = "./languages/csharp/CevioCasts/Definitions.cs";

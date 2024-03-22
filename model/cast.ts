@@ -29,6 +29,7 @@ interface Cast{
 	/** True/false value of whether this cast has emotion parameters */
 	hasEmotions: boolean;
 	emotions?: Emotion[];
+	emotionOrder?: EmotionOrder[];
 	/** special label definitions */
 	symbols?: SpSymbol[];
 }
@@ -66,6 +67,14 @@ type VoiceVersion = `${number}.${number}.${number}`;
 interface Emotion{
 	id: string;
 	names?: DisplayName[];
+}
+
+/**
+ * Emotion order parameter
+ */
+interface EmotionOrder{
+	version: VoiceVersion;
+	order: string[];
 }
 
 /**

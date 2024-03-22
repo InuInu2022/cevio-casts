@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.15.1",
+	"version": "1.16.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -3248,6 +3248,20 @@
 							"lang": "English",
 							"display": "Sad"
 						}
+					]
+				}
+			],
+			"emotionOrder": [
+				{
+					"version" : "2.0.0 ported from CeVIO AI",
+					"order": [
+						"0", "1", "2"
+					]
+				},
+				{
+					"version" : "2.0.1",
+					"order": [
+						"1", "0", "2"
 					]
 				}
 			]

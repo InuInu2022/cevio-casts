@@ -105,6 +105,13 @@
                     },
                     "title": "emotions"
                 },
+                "emotionOrder": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/EmotionOrder"
+                    },
+                    "title": "emotionOrder"
+                },
                 "symbols": {
                     "description": "special label definitions",
                     "type": "array",
@@ -202,6 +209,33 @@
             "additionalProperties": false,
             "required": [
                 "id"
+            ]
+        },
+        "EmotionOrder": {
+            "description": "Emotion order parameter",
+            "title": "EmotionOrder",
+            "type": "object",
+            "properties": {
+                "version": {
+                    "description": "voice's version",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "title": "version"
+                },
+                "order": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "title": "order"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "order",
+                "version"
             ]
         },
         "SpSymbol": {
