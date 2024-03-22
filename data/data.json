@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.15.0",
+	"version": "1.15.1",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -3238,7 +3238,7 @@
 					]
 				},
 				{
-					"id": "4",
+					"id": "2",
 					"names": [
 						{
 							"lang": "Japanese",
