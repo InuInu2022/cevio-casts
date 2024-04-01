@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.16.0",
+	"version": "1.17.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -680,7 +680,23 @@
 			"versions": [
 				"1.0.2"
 			],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "bounceuppitch",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "はね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Bounce-up pitch"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "CSNV-JPF-AHS6",
@@ -702,7 +718,23 @@
 			"versions": [
 				"1.0.1"
 			],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "bounceuppitch",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "はね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Bounce-up pitch"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "CSNV-JPF-THR1",
@@ -724,7 +756,37 @@
 			"versions": [
 				"1.0.2"
 			],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "trembling",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ふるえ"
+						},
+						{
+							"lang": "English",
+							"display": "Trembling"
+						}
+					]
+				},
+				{
+					"id": "whisper",
+					"symbols":["%","％"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ささやき"
+						},
+						{
+							"lang": "English",
+							"display": "Whisper"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "CSNV-JPF-THR2",
@@ -746,7 +808,51 @@
 			"versions": [
 				"1.0.0"
 			],
-			"hasEmotions": true
+			"hasEmotions": true,
+			"spSymbols": [
+				{
+					"id": "bounceuppitch",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "はね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Bounce-up pitch"
+						}
+					]
+				},
+				{
+					"id": "trembling",
+					"symbols":["^","＾"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ふるえ"
+						},
+						{
+							"lang": "English",
+							"display": "Trembling"
+						}
+					]
+				},
+				{
+					"id": "irritation",
+					"symbols":["%","％"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "いきり"
+						},
+						{
+							"lang": "English",
+							"display": "Irritation"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "CSNV-JPF-THR3",
@@ -768,7 +874,51 @@
 			"versions": [
 				"1.0.0"
 			],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "bounceuppitch",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "はね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Bounce-up pitch"
+						}
+					]
+				},
+				{
+					"id": "trembling",
+					"symbols":["^","＾"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ふるえ"
+						},
+						{
+							"lang": "English",
+							"display": "Trembling"
+						}
+					]
+				},
+				{
+					"id": "irritation",
+					"symbols":["%","％"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "いきり"
+						},
+						{
+							"lang": "English",
+							"display": "Irritation"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "CSNV-JPF-THR4",
@@ -790,7 +940,51 @@
 			"versions": [
 				"1.0.0"
 			],
-			"hasEmotions": true
+			"hasEmotions": true,
+			"spSymbols": [
+				{
+					"id": "bounceuppitch",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "はね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Bounce-up pitch"
+						}
+					]
+				},
+				{
+					"id": "roughness",
+					"symbols":["^","＾"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ガサガサ"
+						},
+						{
+							"lang": "English",
+							"display": "Roughness"
+						}
+					]
+				},
+				{
+					"id": "irritation",
+					"symbols":["%","％"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "いきり"
+						},
+						{
+							"lang": "English",
+							"display": "Irritation"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "CSNV-JPF-THR5",
@@ -1043,7 +1237,7 @@
 					]
 				},
 				{
-					"id": "rough",
+					"id": "breatheout",
 					"symbols":["%","％"],
 					"names":[
 						{
@@ -1078,7 +1272,51 @@
 			"versions": [
 				"1.0.0"
 			],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "bounceuppitch",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "跳ね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Bounce-up pitch"
+						}
+					]
+				},
+				{
+					"id": "whisper",
+					"symbols":["^","＾"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ささやき"
+						},
+						{
+							"lang": "English",
+							"display": "Whisper"
+						}
+					]
+				},
+				{
+					"id": "headfall",
+					"symbols":["%","％"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "先頭フォール"
+						},
+						{
+							"lang": "English",
+							"display": "Head Fall"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "CSNV-JPF-BSR2",
@@ -1100,7 +1338,37 @@
 			"versions": [
 				"1.0.0"
 			],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "irritation",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "いきり"
+						},
+						{
+							"lang": "English",
+							"display": "Irritation"
+						}
+					]
+				},
+				{
+					"id": "whisper",
+					"symbols":["^","＾"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ささやき"
+						},
+						{
+							"lang": "English",
+							"display": "Whisper"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "CSNV-JPF-ICTR1",
@@ -1175,7 +1443,37 @@
 			"versions": [
 				"1.0.1"
 			],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "roughness",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ガサガサ"
+						},
+						{
+							"lang": "English",
+							"display": "Roughness"
+						}
+					]
+				},
+				{
+					"id": "trembling",
+					"symbols":["^","＾"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ふるえ"
+						},
+						{
+							"lang": "English",
+							"display": "Trembling"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "CSNV-JPF-BNE1",
@@ -2926,6 +3224,260 @@
 						{
 							"lang": "English",
 							"display": "Roughness"
+						}
+					]
+				}
+			]
+		}
+		,{
+			"id": "techno-sp_ja_JP_f972_svss",
+			"cname": "techno-sp_ja_JP_f972_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "やまだかのん"
+				},
+				{
+					"lang": "English",
+					"display": "Yamada Kanon"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.0.0",
+				"2.0.0"
+			],
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "bounceuppitch",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "跳ね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Bounce-up pitch"
+						}
+					]
+				},
+				{
+					"id": "downattack",
+					"symbols":["%", "％"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "下降アタック"
+						},
+						{
+							"lang": "English",
+							"display": "Down attack"
+						}
+					]
+				}
+			]
+		}
+		,{
+			"id": "techno-sp_ja_JP_f973_svss",
+			"cname": "techno-sp_ja_JP_f973_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "たかむらひびき"
+				},
+				{
+					"lang": "English",
+					"display": "Takamura Hibiki"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.0.0",
+				"2.1.0"
+			],
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "bounceuppitch",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "跳ね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Bounce-up pitch"
+						}
+					]
+				},
+				{
+					"id": "roughness",
+					"symbols":["^","＾"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "吐き捨て"
+						},
+						{
+							"lang": "English",
+							"display": "Breathe out"
+						}
+					]
+				},
+				{
+					"id": "downattack",
+					"symbols":["%", "％"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "下降アタック"
+						},
+						{
+							"lang": "English",
+							"display": "Down attack"
+						}
+					]
+				}
+			]
+		}
+		,{
+			"id": "techno-sp_ja_JP_f974_svss",
+			"cname": "techno-sp_ja_JP_f974_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "かざまつりあさひ"
+				},
+				{
+					"lang": "English",
+					"display": "Kazamatsuri Asahi"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.0.0",
+				"2.1.0"
+			],
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "bounceuppitch",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "跳ね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Bounce-up pitch"
+						}
+					]
+				},
+				{
+					"id": "trembling",
+					"symbols":["^","＾"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ふるえ"
+						},
+						{
+							"lang": "English",
+							"display": "Trembling"
+						}
+					]
+				},
+				{
+					"id": "downattack",
+					"symbols":["%", "％"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "下降アタック"
+						},
+						{
+							"lang": "English",
+							"display": "Down attack"
+						}
+					]
+				}
+			]
+		}
+		,{
+			"id": "techno-sp_ja_JP_f975_svss",
+			"cname": "techno-sp_ja_JP_f975_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "こむらさきももか"
+				},
+				{
+					"lang": "English",
+					"display": "Komurasaki Momoka"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.0.0",
+				"2.2.0"
+			],
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "bounceuppitch",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "跳ね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Bounce-up pitch"
+						}
+					]
+				},
+				{
+					"id": "roughness",
+					"symbols":["^","＾"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "吐き捨て"
+						},
+						{
+							"lang": "English",
+							"display": "Breathe out"
+						}
+					]
+				},
+				{
+					"id": "downattack",
+					"symbols":["%", "％"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "下降アタック"
+						},
+						{
+							"lang": "English",
+							"display": "Down attack"
 						}
 					]
 				}
