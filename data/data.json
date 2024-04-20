@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.17.0",
+	"version": "1.18.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -2202,6 +2202,108 @@
 						{
 							"lang": "English",
 							"display": "Calm"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "CTNV-JPF-USTL2",
+			"cname": "CTNV-JPF-USTL2",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "ユニちゃん"
+				},
+				{
+					"lang": "English",
+					"display": "UNI-chan"
+				}
+			],
+			"category": "TextVocal",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"2.0.0"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "CTNV-JPF-USTL2_NORMAL",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "普通"
+						},
+						{
+							"lang": "English",
+							"display": "Normal"
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-USTL2_ANGRY",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "怒り"
+						},
+						{
+							"lang": "English",
+							"display": "Angry"
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-USTL2_HAPPY",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "嬉しい"
+						},
+						{
+							"lang": "English",
+							"display": "Happy"
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-USTL2_EXCITED",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "あおり"
+						},
+						{
+							"lang": "English",
+							"display": "Excited"
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-USTL2_SAD",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "哀しみ"
+						},
+						{
+							"lang": "English",
+							"display": "Sad"
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-USTL2_SWEET",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "甘々"
+						},
+						{
+							"lang": "English",
+							"display": "Sweet"
 						}
 					]
 				}
