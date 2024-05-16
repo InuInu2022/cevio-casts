@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.18.0",
+	"version": "1.19.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -1441,7 +1441,8 @@
 			"gender": "Female",
 			"lang": "Japanese",
 			"versions": [
-				"1.0.1"
+				"1.0.1",
+				"2.0.0"
 			],
 			"hasEmotions": false,
 			"spSymbols": [
@@ -3580,6 +3581,59 @@
 						{
 							"lang": "English",
 							"display": "Down attack"
+						}
+					]
+				}
+			]
+		}
+		,{
+			"id": "techno-sp_ja_JP_f833_svss",
+			"cname": "techno-sp_ja_JP_f833_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "奏兎める"
+				},
+				{
+					"lang": "English",
+					"display": "Kanato Mell"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.0.1 ported from CeVIO AI",
+				"2.0.0"
+			],
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "roughness",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ガサガサ"
+						},
+						{
+							"lang": "English",
+							"display": "Roughness"
+						}
+					]
+				},
+				{
+					"id": "trembling",
+					"symbols":["^","＾"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ふるえ"
+						},
+						{
+							"lang": "English",
+							"display": "Trembling"
 						}
 					]
 				}
