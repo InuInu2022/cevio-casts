@@ -17,6 +17,7 @@ Definition data for CeVIO casts (voice library) defined in JSON format.
 - CeVIOトークボイスの感情パラメータの名前やIDも同様に静的に取得できます
 - CeVIOソングボイスの内部IDも静的に取得できます
 - キャスト名・感情名は日本語表記の他、一部英語表記の定義も含まれます
+- ソングボイスの特殊歌詞記号のデータも含まれます
 - VoiSona, VoiSona Talkのライブラリにも対応しています
 
 |Product|Talk|Song|Total|
