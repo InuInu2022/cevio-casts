@@ -1,0 +1,1902 @@
+{
+	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
+	"version": "1.0.0",
+	"casts": [
+		{
+			"id": "CTV-JPF-A",
+			"cname": "A",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "さとうささら"
+				},
+				{
+					"lang": "English",
+					"display": "Sato Sasara"
+				}
+			],
+			"category": "TextVocal",
+			"product": "CeVIO CS",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.6.0",
+				"1.7.3"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "fine",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "元気"
+						}
+					]
+				},
+				{
+					"id": "normal",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "普通"
+						}
+					]
+				},
+				{
+					"id": "angry",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "怒り"
+						}
+					]
+				},
+				{
+					"id": "sad",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "哀しみ"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "CTV-JPF-B",
+			"cname": "B",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "すずきつづみ"
+				}
+			],
+			"category": "TextVocal",
+			"product": "CeVIO CS",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "cool",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "クール"
+						}
+					]
+				},
+				{
+					"id": "bashful",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "照れ"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "CTV-JPM-C",
+			"cname": "C",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "タカハシ"
+				}
+			],
+			"category": "TextVocal",
+			"product": "CeVIO CS",
+			"gender": "Male",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "cheerful",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "元気"
+						}
+					]
+				},
+				{
+					"id": "ordinary",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "普通"
+						}
+					]
+				},
+				{
+					"id": "depression",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "へこみ"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "CTV-JPF-FP1",
+			"cname": "ONE",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "ONE"
+				},
+				{
+					"lang": "English",
+					"display": "ONE"
+				}
+			],
+			"category": "TextVocal",
+			"product": "CeVIO CS",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.0.0"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "High"
+						},
+						{
+							"lang": "English",
+							"display": "High"
+						}
+					]
+				},
+				{
+					"id": "",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Mid"
+						},
+						{
+							"lang": "English",
+							"display": "Mid"
+						}
+					]
+				},
+				{
+					"id": "",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "MidLow"
+						},
+						{
+							"lang": "English",
+							"display": "MidLow"
+						}
+					]
+				},
+				{
+					"id": "",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Low"
+						},
+						{
+							"lang": "English",
+							"display": "Low"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "CTV-JPF-FP2",
+			"cname": "CTV-JPF-FP2",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "IA"
+				},
+				{
+					"lang": "English",
+					"display": "IA"
+				}
+			],
+			"category": "TextVocal",
+			"product": "CeVIO CS",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.0.0"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "CTV-JPF-FP2_Fine",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "High"
+						},
+						{
+							"lang": "English",
+							"display": "High"
+						}
+					]
+				},
+				{
+					"id": "CTV-JPF-FP2_Normal",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Normal"
+						},
+						{
+							"lang": "English",
+							"display": "Normal"
+						}
+					]
+				},
+				{
+					"id": "",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Low"
+						},
+						{
+							"lang": "English",
+							"display": "Low"
+						}
+					]
+				},
+				{
+					"id": "",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Bad"
+						},
+						{
+							"lang": "English",
+							"display": "Bad"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "CSV-JPF-A",
+			"cname": "A",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "さとうささら"
+				},
+				{
+					"lang": "English",
+					"display": "Sato Sasara"
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO CS",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": false
+		},
+		{
+			"id": "CSV-JPF-FP1",
+			"cname": "ONE",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "ONE"
+				},
+				{
+					"lang": "English",
+					"display": "ONE"
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO CS",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": false
+		},
+		{
+			"id": "CSV-ENF-FP3-N",
+			"cname": "CSV-ENF-FP3-N",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "IA English Natural"
+				},
+				{
+					"lang": "English",
+					"display": "IA English Natural"
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO CS",
+			"gender": "Female",
+			"lang": "English",
+			"versions": [],
+			"hasEmotions": false
+		},
+		{
+			"id": "CSV-ENF-FP3-P",
+			"cname": "CSV-ENF-FP3-P",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "IA English Powerfull"
+				},
+				{
+					"lang": "English",
+					"display": "IA English Powerfull"
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO CS",
+			"gender": "Female",
+			"lang": "English",
+			"versions": [],
+			"hasEmotions": false
+		},
+		{
+			"id": "XSV-JPM-HRM-P",
+			"cname": "XSV-JPM-HRM-P",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "ハルオロイド"
+				},
+				{
+					"lang": "English",
+					"display": ""
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO CS",
+			"gender": "Male",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": false
+		},
+		{
+			"id": "XSV-JPM-P",
+			"cname": "XSV-JPM-P",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "赤咲 湊"
+				},
+				{
+					"lang": "English",
+					"display": ""
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO CS",
+			"gender": "Male",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": false
+		},
+		{
+			"id": "XSV-JPF-W",
+			"cname": "XSV-JPF-W",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "緑咲 香澄"
+				},
+				{
+					"lang": "English",
+					"display": ""
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO CS",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": false
+		},
+		{
+			"id": "XSV-JPM-E",
+			"cname": "XSV-JPM-E",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "銀咲 大和"
+				},
+				{
+					"lang": "English",
+					"display": ""
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO CS",
+			"gender": "Male",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": false
+		},
+		{
+			"id": "XSV-JPF-E",
+			"cname": "XSV-JPF-E",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "金咲 小春"
+				},
+				{
+					"lang": "English",
+					"display": ""
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO CS",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": false
+		},
+		{
+			"id": "XSV-JPM-W",
+			"cname": "XSV-JPM-W",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "白咲 優大"
+				},
+				{
+					"lang": "English",
+					"display": ""
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO CS",
+			"gender": "Male",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": false
+		},
+		{
+			"id": "XSV-JPF-P",
+			"cname": "XSV-JPF-P",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "黄咲 愛里"
+				},
+				{
+					"lang": "English",
+					"display": ""
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO CS",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": false
+		},
+		{
+			"id": "CSNV-JPF-A",
+			"cname": "CSNV-JPF-A",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "さとうささら"
+				},
+				{
+					"lang": "English",
+					"display": "Sato Sasara"
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": false
+		},
+		{
+			"id": "CSNV-JPF-B",
+			"cname": "CSNV-JPF-B",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "すずきつづみ"
+				},
+				{
+					"lang": "English",
+					"display": ""
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": true
+		},
+		{
+			"id": "CSNV-JPF-VCLMK1",
+			"cname": "CSNV-JPF-VCLMK1",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "結月ゆかり 麗"
+				},
+				{
+					"lang": "English",
+					"display": ""
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": false
+		},
+		{
+			"id": "CSNV-JPF-AHS1",
+			"cname": "CSNV-JPF-AHS1",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "東北きりたん"
+				},
+				{
+					"lang": "English",
+					"display": ""
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": false
+		},
+		{
+			"id": "CSNV-JPF-AHS5",
+			"cname": "CSNV-JPF-AHS5",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "東北ずん子"
+				},
+				{
+					"lang": "English",
+					"display": ""
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": false
+		},
+		{
+			"id": "CSNV-JPF-AHS6",
+			"cname": "CSNV-JPF-AHS6",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "東北イタコ"
+				},
+				{
+					"lang": "English",
+					"display": "東北イタコ"
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": false
+		},
+		{
+			"id": "CSNV-JPF-THR1",
+			"cname": "CSNV-JPF-THR1",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "可不(KAFU)"
+				},
+				{
+					"lang": "English",
+					"display": "KAFU"
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": false
+		},
+		{
+			"id": "CSNV-JPF-THR2",
+			"cname": "CSNV-JPF-THR2",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "星界(SEKAI)"
+				},
+				{
+					"lang": "English",
+					"display": "SEKAI"
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": true
+		},
+		{
+			"id": "CSNV-JPF-THR3",
+			"cname": "CSNV-JPF-THR3",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "裏命(RIME)"
+				},
+				{
+					"lang": "English",
+					"display": "RIME"
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": false
+		},
+		{
+			"id": "CSNV-JPF-THR4",
+			"cname": "CSNV-JPF-THR4",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "狐子(COKO)"
+				},
+				{
+					"lang": "English",
+					"display": "COKO"
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": true
+		},
+		{
+			"id": "CSNV-JPF-FP4",
+			"cname": "CSNV-JPF-FP4",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "OИE"
+				},
+				{
+					"lang": "English",
+					"display": ""
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": false
+		},
+		{
+			"id": "CSNV-JPF-FP5",
+			"cname": "CSNV-JPF-FP5",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "IA"
+				},
+				{
+					"lang": "English",
+					"display": "IA"
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": false
+		},
+		{
+			"id": "CSNV-ENF-FP5",
+			"cname": "CSNV-ENF-FP5",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "IA (ENG)"
+				},
+				{
+					"lang": "English",
+					"display": ""
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "English",
+			"versions": [],
+			"hasEmotions": false
+		},
+		{
+			"id": "CSNV-JPF-KZA1",
+			"cname": "CSNV-JPF-KZA1",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "#kzn(キズナ)"
+				},
+				{
+					"lang": "English",
+					"display": "#kzn"
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": false
+		},
+		{
+			"id": "CSNV-JPF-GLA1",
+			"cname": "CSNV-JPF-GLA1",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "双葉湊音"
+				},
+				{
+					"lang": "English",
+					"display": ""
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": false
+		},
+		{
+			"id": "CSNV-JPF-BSR1",
+			"cname": "CSNV-JPF-BSR1",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "POPY"
+				},
+				{
+					"lang": "English",
+					"display": "POPY"
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": false
+		},
+		{
+			"id": "CSNV-JPF-BSR2",
+			"cname": "CSNV-JPF-BSR2",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "ROSE"
+				},
+				{
+					"lang": "English",
+					"display": "ROSE"
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": false
+		},
+		{
+			"id": "CSNV-JPF-ICTR1",
+			"cname": "CSNV-JPF-ICTR1",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "Ci flower"
+				},
+				{
+					"lang": "English",
+					"display": "Ci flower"
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": false
+		},
+		{
+			"id": "CTNV-JPF-A",
+			"cname": "CTNV-JPF-A",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "さとうささら"
+				},
+				{
+					"lang": "English",
+					"display": "Sato Sasara"
+				}
+			],
+			"category": "TextVocal",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.0.0"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "CTNV-JPF-A_FINE",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "元気"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-A_NORMAL",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "普通"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-A_ANGRY",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "怒り"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-A_SAD",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "哀しみ"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "CTNV-JPF-AHS2",
+			"cname": "CTNV-JPF-AHS2",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "小春六花"
+				},
+				{
+					"lang": "English",
+					"display": ""
+				}
+			],
+			"category": "TextVocal",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "CTNV-JPF-AHS2_HAPPY",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "嬉しい"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-AHS2_NORMAL",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "普通"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-AHS2_ANGRY",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "怒り"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-AHS2_SAD",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "哀しみ"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-AHS2_CALM",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "落ち着き"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "CTNV-JPF-FP5",
+			"cname": "CTNV-JPF-FP5",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "IA"
+				},
+				{
+					"lang": "English",
+					"display": ""
+				}
+			],
+			"category": "TextVocal",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions":true,
+			"emotions": [
+				{
+					"id": "CTNV-JPF-FP5_BRIGHT",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Bright"
+						},
+						{
+							"lang": "English",
+							"display": "Bright"
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-FP5_NORMAL",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Normal"
+						},
+						{
+							"lang": "English",
+							"display": "Normal"
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-FP5_STRONG",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Strong"
+						},
+						{
+							"lang": "English",
+							"display": "Strong"
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-FP5_DARK",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Dark"
+						},
+						{
+							"lang": "English",
+							"display": "Dark"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "CTNV-JPF-FP4",
+			"cname": "CTNV-JPF-FP4",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "OИE"
+				},
+				{
+					"lang": "English",
+					"display": ""
+				}
+			],
+			"category": "TextVocal",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "CTNV-JPF-FP4_BRIGHT",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Bright"
+						},
+						{
+							"lang": "English",
+							"display": "Bright"
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-FP4_NORMAL",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Normal"
+						},
+						{
+							"lang": "English",
+							"display": "Normal"
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-FP4_STRONG",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Strong"
+						},
+						{
+							"lang": "English",
+							"display": "Strong"
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-FP4_DARK",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Dark"
+						},
+						{
+							"lang": "English",
+							"display": "Dark"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "CTNV-JPF-AHS3",
+			"cname": "CTNV-JPF-AHS3",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "弦巻マキ (日)"
+				},
+				{
+					"lang": "English",
+					"display": ""
+				}
+			],
+			"category": "TextVocal",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "CTNV-JPF-AHS3_NORMAL",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "元気"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-AHS3_ANGRY",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "怒り"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-AHS3_CALM",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "落ち着き"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-AHS3_SAD",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "哀しみ"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-AHS3_MILD",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "穏やか"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "CTNV-ENF-AHS3",
+			"cname": "CTNV-ENF-AHS3",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "弦巻マキ (英)"
+				},
+				{
+					"lang": "English",
+					"display": ""
+				}
+			],
+			"category": "TextVocal",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "CTNV-ENF-AHS3_NORMAL",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "元気"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-ENF-AHS3_ANGRY",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "怒り"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-ENF-AHS3_CALM",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "落ち着き"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-ENF-AHS3_SAD",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "哀しみ"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-ENF-AHS3_MILD",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "穏やか"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "CTNV-JPF-AHS4",
+			"cname": "CTNV-JPF-AHS4",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "夏色花梨"
+				},
+				{
+					"lang": "English",
+					"display": ""
+				}
+			],
+			"category": "TextVocal",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "CTNV-JPF-AHS4_HAPPY",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "嬉しい"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-AHS4_NORMAL",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "普通"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-AHS4_ANGRY",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "怒り"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-AHS4_SAD",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "哀しみ"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-AHS4_CALM",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "落ち着き"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "CTNV-JPF-USTL1",
+			"cname": "CTNV-JPF-USTL1",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "フィーちゃん"
+				},
+				{
+					"lang": "English",
+					"display": ""
+				}
+			],
+			"category": "TextVocal",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "CTNV-JPF-USTL1_HAPPY",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "嬉しい"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-USTL1_NORMAL",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "普通"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-USTL1_ANGRY",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "怒り"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-USTL1_SAD",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "哀しみ"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-USTL1_CALM",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "落ち着き"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "CTNV-JPF-ZNSN1",
+			"cname": "CTNV-JPF-ZNSN1",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "ロサ (ROSA)"
+				},
+				{
+					"lang": "English",
+					"display": ""
+				}
+			],
+			"category": "TextVocal",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "CTNV-JPF-ZNSN1_HAPPY",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "嬉しい"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-ZNSN1_NORMAL",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "普通"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-ZNSN1_ANGRY",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "怒り"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-ZNSN1_SAD",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "哀しみ"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "CTNV-JPF-B",
+			"cname": "CTNV-JPF-B",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "すずきつづみ"
+				},
+				{
+					"lang": "English",
+					"display": ""
+				}
+			],
+			"category": "TextVocal",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "CTNV-JPF-B_COOL",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "クール"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-B_BASHFUL",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "照れ"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-B_ANGRY",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "怒り"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-B_HAPPY",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "喜び"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-B_WHISPER",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "ひそひそ"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "CTNV-JPF-AHS7",
+			"cname": "CTNV-JPF-AHS7",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "花隈千冬"
+				},
+				{
+					"lang": "English",
+					"display": ""
+				}
+			],
+			"category": "TextVocal",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "CTNV-JPF-AHS7_HAPPY",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "嬉しい"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-AHS7_NORMAL",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "普通"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-AHS7_ANGRY",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "怒り"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-AHS7_SAD",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "哀しみ"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPF-AHS7_CALM",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "落ち着き"
+						},
+						{
+							"lang": "English",
+							"display": ""
+						}
+					]
+				}
+			]
+		}
+		,{
+			"id": "nitech-jp_ja_JP_f008_svss",
+			"cname": "nitech-jp_ja_JP_f008_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "知声"
+				},
+				{
+					"lang": "English",
+					"display": "Chis-A"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.0.0",
+				"1.1.0",
+				"1.2.0",
+				"1.3.0",
+				"1.5.0"
+			],
+			"hasEmotions": false
+		}
+		,{
+			"id": "nitech-jp_en_US_f008_svss",
+			"cname": "nitech-jp_en_US_f008_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "Chis-A [tʃíːseɪ]"
+				},
+				{
+					"lang": "English",
+					"display": "Chis-A [tʃíːseɪ]"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "English",
+			"versions": [
+				"1.0.0",
+				"1.1.0"
+			],
+			"hasEmotions": false
+		}
+		,{
+			"id": "techno-sp_ja_JP_f801_svss",
+			"cname": "techno-sp_ja_JP_f801_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "さとうささら"
+				},
+				{
+					"lang": "English",
+					"display": "Sato Sasara"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.0.1 ported from CeVIO AI"
+			],
+			"hasEmotions": false
+		}
+		,{
+			"id": "techno-sp_ja_JP_m868_svss",
+			"cname": "techno-sp_ja_JP_m868_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "機流⾳"
+				},
+				{
+					"lang": "English",
+					"display": "Kirune"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Male",
+			"lang": "Japanese",
+			"versions": [
+				"1.1.0"
+			],
+			"hasEmotions": false
+		}
+		,{
+			"id": "techno-sp_ja_JP_f834_svss",
+			"cname": "techno-sp_ja_JP_f834_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "AiSuu"
+				},
+				{
+					"lang": "English",
+					"display": "AiSuu"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.0.2"
+			],
+			"hasEmotions": false
+		}
+	]
+}
