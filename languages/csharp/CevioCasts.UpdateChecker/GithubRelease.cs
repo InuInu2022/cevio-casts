@@ -1,6 +1,5 @@
 ﻿using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
-using CommunityToolkit.Diagnostics;
 using GithubReleaseDownloader;
 using GithubReleaseDownloader.Entities;
 using Mayerch1.GithubUpdateCheck;
