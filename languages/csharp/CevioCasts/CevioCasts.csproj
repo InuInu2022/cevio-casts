@@ -2,18 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFrameworks>netstandard2.0;net8</TargetFrameworks>
-    <LangVersion>latest</LangVersion>
-    <IsPublishable>false</IsPublishable>
   </PropertyGroup>
-
-  <PropertyGroup
-    Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net8.0'))">
-    <IsAotCompatible>true</IsAotCompatible>
-    <StripSymbols>true</StripSymbols>
-    <JsonSerializerIsReflectionEnabledByDefault>true</JsonSerializerIsReflectionEnabledByDefault>
-  </PropertyGroup>
-
 
   <ItemGroup>
     <PackageReference

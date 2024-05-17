@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GithubReleaseDownloader" Version="1.0.0" />
+    <PackageReference Include="Mayerch1.GithubUpdateCheck" Version="1.2.1" />
+    <PackageReference Include="PolySharp" Version="1.14.1+a7a92a9ddd050275c91c42b711d22cb41c3fbf3d">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.4" Condition="$(TargetFramework) == 'netstandard2.0' or&#xD;&#xA;        $(TargetFramework) == 'netcoreapp2.0' or&#xD;&#xA;        $(TargetFrameworkIdentifier) == '.NETFramework'" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CevioCasts\CevioCasts.csproj" />
+  </ItemGroup>
+
+</Project>

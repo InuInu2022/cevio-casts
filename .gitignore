@@ -478,3 +478,8 @@ $RECYCLE.BIN/
 
 # user add
 test2/server/*
+tests/UpdateCheck/dest/*.json
+.cosine/data.db
+tests/UpdateCheck/dest/data.json
+tests/UpdateCheck/dest/*
+test/files/*

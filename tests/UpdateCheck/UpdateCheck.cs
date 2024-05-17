@@ -1,4 +1,5 @@
 using CevioCasts;
+using CevioCasts.UpdateChecker;
 using FluentAssertions;
 using GithubReleaseDownloader;
 using Mayerch1.GithubUpdateCheck;
@@ -31,6 +32,33 @@ public class UpdateCheck
 		var result = await update.IsUpdateAvailableAsync(def.Version);
 		result.Should().BeTrue();
 		output.WriteLine($"github release version: {await update.VersionAsync()}");
+	}
+
+	[Fact]
+	public async void CheckAvailableLib()
+	{
+		var gr = await GithubRelease
+			.BuildAsync("../../../file/data.1.0.0.json");
+		var result = await gr.IsAvailableAsync();
+		result.Should().BeTrue();
+
+		var local = gr.GetLocalVersion();
+
+		local.Should()
+			.Be(new Version(1,0,0));
+		var repo = await gr.GetRepositoryVersionAsync();
+
+		output.WriteLine($"local:{local}, latest:{repo}");
+	}
+
+	[Fact]
+	public async void CheckAndDownloadLib()
+	{
+		var gr = await GithubRelease
+			.BuildAsync("../../../file/data.1.0.0.json");
+		await gr.DownloadAsync(
+			destPath: "../../../dest/"
+		);
 	}
 
 	[Fact]

@@ -31,6 +31,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\languages\csharp\CevioCasts\CevioCasts.csproj" />
+    <ProjectReference Include="..\..\languages\csharp\CevioCasts.UpdateChecker\CevioCasts.UpdateChecker.csproj" />
   </ItemGroup>
 
 </Project>
