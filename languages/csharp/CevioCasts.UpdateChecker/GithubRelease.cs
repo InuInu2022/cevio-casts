@@ -6,6 +6,9 @@ using Mayerch1.GithubUpdateCheck;
 
 namespace CevioCasts.UpdateChecker;
 
+/// <summary>
+/// Github Releaseのcast-dataのバージョンをチェック、ダウンロードなどを行うクラス。
+/// </summary>
 public sealed class GithubRelease
 {
 	private string Json { get; init; }
@@ -30,6 +33,14 @@ public sealed class GithubRelease
 		this.Repository = repository;
 	}
 
+	/// <summary>
+	/// Github releaseからのチェックを行うクラスのFactoryメソッド
+	/// </summary>
+	/// <param name="ceviocastsJsonPath">チェック対象のローカルに保存したcastデータjsonへのパス</param>
+	/// <param name="username">別リポジトリ対応</param>
+	/// <param name="repository">別リポジトリ対応</param>
+	/// <param name="cancellationToken"></param>
+	/// <returns></returns>
 	public static async ValueTask<GithubRelease> BuildAsync(
 		string ceviocastsJsonPath,
 		string username = "InuInu2022",
@@ -53,6 +64,16 @@ public sealed class GithubRelease
 		return new GithubRelease(json, username, repository);
 	}
 
+	/// <summary>
+	/// ローカルに保存されたcast-dataのバージョン情報を取得します。
+	/// </summary>
+	/// <remarks>
+	/// 既にバージョン情報が設定されている場合は、その情報を返します。
+	/// バージョン情報が設定されていない場合は、定義ファイルからバージョン情報を読み込み、
+	/// 新規のバージョン情報として設定します。バージョン情報の読み込みに失敗した場合は、
+	/// デフォルトのバージョン（0.0.0）を使用します。
+	/// </remarks>
+	/// <returns>ローカルに保存されたバージョン情報を表すVersionオブジェクト。</returns>
 	public Version GetLocalVersion()
 	{
 		if(localVersion is not null)
@@ -66,10 +87,21 @@ public sealed class GithubRelease
 		return localVersion;
 	}
 
+	/// <summary>
+	/// リポジトリから最新のcast-dataのバージョン情報を非同期で取得します。
+	/// </summary>
+	/// <remarks>
+	/// このメソッドは、キャッシュが無効な場合、リポジトリから新しいバージョン情報を取得し、それをローカルに保存します。
+	/// 取得したバージョン情報は、次回以降の呼び出し時にキャッシュされます。
+	/// </remarks>
+	/// <param name="useCache">有効にすると、既に取得済みのバージョン情報がある場合は、それを返します。</param>
+	/// <returns>リポジトリの最新バージョン情報を表すVersionオブジェクト。</returns>
 	public async ValueTask<Version>
-	GetRepositoryVersionAsync()
+	GetRepositoryVersionAsync(
+		bool useCache = false
+	)
 	{
-		if(repoVersion is not null)
+		if(useCache && repoVersion is not null)
 		{
 			return repoVersion;
 		}
@@ -80,12 +112,26 @@ public sealed class GithubRelease
 		return repoVersion;
 	}
 
+	/// <summary>
+	/// ローカルバージョンがリポジトリの最新バージョンと比較して
+	/// アップデートが利用可能かどうかを非同期で確認します。
+	/// </summary>
+	/// <returns>アップデートが利用可能の場合はtrue、利用不可の場合はfalse。</returns>
 	public Task<bool>
 	IsAvailableAsync() =>
 		update.IsUpdateAvailableAsync(
 			GetLocalVersion().ToString()
 		);
 
+	/// <summary>
+	/// リポジトリからcast-dataファイルをダウンロードします。
+	/// </summary>
+	/// <param name="destPath">ファイルを保存するディレクトリのパス。</param>
+	/// <param name="fileName">ダウンロードするファイル名。デフォルトは "data.json"。</param>
+	/// <param name="isSkipCheck">チェックをスキップするかどうか。デフォルトは <see langword="false"/>。</param>
+	/// <param name="percent">ダウンロード進捗を報告するための <see cref="IProgress{T}"/> インターフェイス。</param>
+	/// <param name="cancellationToken">この操作をキャンセルするための <see cref="CancellationToken"/>。</param>
+	/// <returns>非同期タスク。</returns>
 	[SuppressMessage("","CA1822")]
 	public async ValueTask DownloadAsync(
 		string? destPath = null,
@@ -101,8 +147,8 @@ public sealed class GithubRelease
 				.ConfigureAwait(false);
 			if(!result)
 			{
-				throw new OperationCanceledException("Download canceled: no new version data exists.",cancellationToken);
-				//return;
+					throw new OperationCanceledException("Download canceled: no new version data exists.",cancellationToken);
+					//return;
 			}
 		}
 
