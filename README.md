@@ -83,6 +83,25 @@ var defs = Definitions.FromJson(jsonString);
 [SongAlphaValueCheck
 /Program.cs](https://github.com/InuInu2022/CeVIOVoiceLibDB/blob/main/tools/SongAlphaValueCheck/Program.cs)
 
+### Update check from GitHub releases
+
+`CevioCasts.UpdateChecker.GithubRelease`を使うと
+github releaseの最新のバージョンのcast-dataの確認やダウンロードができます。
+
+```cs
+using CevioCasts.UpdateChecker;
+
+var gr = await GithubRelease
+  .BuildAsync("path/to/local/data.json");
+
+var localVersion = gr.GetLocalVersion();
+var latestVersion = await gr.GetRepositoryVersionAsync();
+
+var isAvailable = await gr.IsAvailableAsync();
+
+await gr.DownloadAsync();
+```
+
 ## other language
 
 quicktypeを利用して各言語のヘルパーコードを生成するのがおすすめです。
