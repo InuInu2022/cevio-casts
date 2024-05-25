@@ -7,6 +7,12 @@
 		"url": "./model/test.json"
 	}
 	],
+	"workbench.colorCustomizations": {
+        "titleBar.activeBackground": "#1d5623",
+        "titleBar.activeForeground": "#fdfcfc",
+        "activityBar.background": "#1d5623",
+        "activityBar.foreground": "#ffffff"
+    },
 	"workbench.settings.useSplitJSON": false,
 	"dotnet.defaultSolution": "cevio-casts.sln",
 	"dotnet.server.useOmnisharp":true
