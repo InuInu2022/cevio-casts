@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.19.0",
+	"version": "1.19.1",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -203,7 +203,7 @@
 			"hasEmotions": true,
 			"emotions": [
 				{
-					"id": "",
+					"id": "active",
 					"names": [
 						{
 							"lang": "Japanese",
@@ -216,7 +216,7 @@
 					]
 				},
 				{
-					"id": "",
+					"id": "mild",
 					"names": [
 						{
 							"lang": "Japanese",
@@ -229,7 +229,7 @@
 					]
 				},
 				{
-					"id": "",
+					"id": "irritated",
 					"names": [
 						{
 							"lang": "Japanese",
@@ -242,7 +242,7 @@
 					]
 				},
 				{
-					"id": "",
+					"id": "sorrow",
 					"names": [
 						{
 							"lang": "Japanese",
@@ -305,7 +305,7 @@
 					]
 				},
 				{
-					"id": "",
+					"id": "CTV-JPF-FP2_Angry",
 					"names": [
 						{
 							"lang": "Japanese",
@@ -318,7 +318,7 @@
 					]
 				},
 				{
-					"id": "",
+					"id": "CTV-JPF-FP2_Sad",
 					"names": [
 						{
 							"lang": "Japanese",
@@ -372,7 +372,9 @@
 			"product": "CeVIO CS",
 			"gender": "Female",
 			"lang": "Japanese",
-			"versions": [],
+			"versions": [
+				"1.0.0"
+			],
 			"hasEmotions": false
 		},
 		{
@@ -2854,7 +2856,8 @@
 			"gender": "Male",
 			"lang": "Japanese",
 			"versions": [
-				"1.1.0"
+				"1.1.0",
+				"2.0.0"
 			],
 			"hasEmotions": false,
 			"spSymbols": [
@@ -2920,7 +2923,8 @@
 			"gender": "Female",
 			"lang": "Japanese",
 			"versions": [
-				"1.0.2"
+				"1.0.2",
+				"2.0.0"
 			],
 			"hasEmotions": false,
 			"spSymbols": [
