@@ -483,3 +483,4 @@ tests/UpdateCheck/dest/*.json
 tests/UpdateCheck/dest/data.json
 tests/UpdateCheck/dest/*
 test/files/*
+viewer/CastViewer/CastViewer/Assets/data.json
