@@ -7,6 +7,18 @@
 			"type": "process",
 			"args": [
 				"build",
+				"${workspaceFolder}/viewer/CastViewer/CastViewer.Desktop/CastViewer.Desktop.csproj",
+				"/property:GenerateFullPaths=true",
+				"/consoleloggerparameters:NoSummary"
+			],
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "build test",
+			"command": "dotnet",
+			"type": "process",
+			"args": [
+				"build",
 				"${workspaceFolder}/test2/test2.csproj",
 				"/property:GenerateFullPaths=true",
 				"/consoleloggerparameters:NoSummary"
