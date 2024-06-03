@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net8.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\languages\csharp\CevioCasts\CevioCasts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="bodong.PropertyModels" Version="11.0.6.2" />
+  </ItemGroup>
+</Project>

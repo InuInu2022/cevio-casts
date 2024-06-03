@@ -1,0 +1,112 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:CastViewer.ViewModels"
+             xmlns:pgc="clr-namespace:Avalonia.PropertyGrid.Controls;assembly=Avalonia.PropertyGrid"
+             xmlns:epoxy="https://github.com/kekyo/Epoxy"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="CastViewer.Views.MainView"
+             x:DataType="vm:MainViewModel">
+  <Design.DataContext>
+    <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <vm:MainViewModel />
+  </Design.DataContext>
+
+  <Grid
+    ColumnDefinitions="*, 3, 2*"
+    RowDefinitions="Auto, *">
+    <!--                                                    -->
+    <ListBox
+      x:Name="casts"
+      Grid.Column="0"
+      Grid.Row="0"
+      Grid.RowSpan="2"
+      ItemsSource="{Binding CastList}"
+      SelectedItem="{Binding SelectedCast}"
+      SelectedIndex="{Binding SelectedCastIndex}"
+      SelectionChanged="Listbox_SelectionChanged"
+      >
+      <ListBox.ItemTemplate>
+        <DataTemplate>
+          <Border
+            BorderThickness="1"
+            CornerRadius="4"
+            Padding="5"
+            Margin="0"
+            BorderBrush="#88888888">
+            <DockPanel
+              >
+              <TextBlock
+                Text="{Binding Names[0]}"
+                FontFamily="{StaticResource NotoSansCJKjp}"
+                DockPanel.Dock="Left"
+                />
+              <TextBlock
+                Text="{Binding Category}"
+                FontSize="11"
+                Padding="2"
+                FontWeight="Thin"
+                HorizontalAlignment="Right"
+                DockPanel.Dock="Right"
+                />
+              <TextBlock
+                Text="{Binding Product}"
+                FontSize="11"
+                Padding="2"
+                FontWeight="Thin"
+                HorizontalAlignment="Right"
+                DockPanel.Dock="Right"
+                />
+            </DockPanel>
+          </Border>
+        </DataTemplate>
+      </ListBox.ItemTemplate>
+    </ListBox>
+    <GridSplitter
+      Grid.Column="1" ResizeDirection="Columns"/>
+    <!--                                                    -->
+    <StackPanel
+      Grid.Column="2"
+      Grid.Row="0"
+      VerticalAlignment="Stretch">
+      <StackPanel
+        Orientation="Horizontal">
+        <SelectableTextBlock
+          FontSize="30"
+          FontWeight="Bold"
+          LetterSpacing="1.5"
+          Padding="5"
+          Text="{Binding SelectedCast.Names[0]}" />
+        <TextBlock
+          Text="{Binding SelectedCast.Category}"
+          Padding="5"
+          FontWeight="Thin"
+          VerticalAlignment="Bottom" />
+        <TextBlock
+          Text="{Binding SelectedCast.Product}"
+          Padding="5"
+          FontWeight="Thin"
+          VerticalAlignment="Bottom" />
+      </StackPanel>
+      <ProgressBar
+        IsVisible="{Binding IsLoading}"
+        IsIndeterminate="{Binding IsLoading}" />
+    </StackPanel>
+
+    <ScrollViewer
+      Grid.Column="2"
+      Grid.Row="1"
+      >
+      <pgc:PropertyGrid
+        x:Name="propertyGrid_Basic"
+        Margin="4"
+        IsEnabled="{Binding IsPgEnabled}"
+        epoxy:Anchor.Pile="{Binding PgPile}"
+        >
+      </pgc:PropertyGrid>
+    </ScrollViewer>
+  </Grid>
+
+</UserControl>
