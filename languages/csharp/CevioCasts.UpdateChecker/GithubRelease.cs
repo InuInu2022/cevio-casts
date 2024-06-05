@@ -33,6 +33,18 @@ public sealed class GithubRelease
 		this.Repository = repository;
 	}
 
+	private GithubRelease(
+		Definitions definitions,
+		string username,
+		string repository
+	) {
+		update = new GithubUpdateCheck(username, repository);
+		Definitions = definitions;
+		Json = Definitions.ToJson();
+		this.UserName = username;
+		this.Repository = repository;
+	}
+
 	/// <summary>
 	/// Github releaseからのチェックを行うクラスのFactoryメソッド
 	/// </summary>
@@ -62,6 +74,15 @@ public sealed class GithubRelease
 		).ConfigureAwait(false);
 #endif
 		return new GithubRelease(json, username, repository);
+	}
+
+	public static GithubRelease Build(
+		Definitions loadedDefinition,
+		string username = "InuInu2022",
+		string repository = "cevio-casts"
+	)
+	{
+		return new GithubRelease(loadedDefinition, username, repository);
 	}
 
 	/// <summary>
