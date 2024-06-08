@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.19.1",
+	"version": "1.20.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -3379,11 +3379,11 @@
 					"names":[
 						{
 							"lang": "Japanese",
-							"display": "下降アタック"
+							"display": "先頭フォール"
 						},
 						{
 							"lang": "English",
-							"display": "Down attack"
+							"display": "Head fall"
 						}
 					]
 				}
@@ -3556,7 +3556,7 @@
 						},
 						{
 							"lang": "English",
-							"display": "Bounce-up pitch"
+							"display": "Pitch flip up"
 						}
 					]
 				},
@@ -3614,22 +3614,22 @@
 			"hasEmotions": false,
 			"spSymbols": [
 				{
-					"id": "roughness",
+					"id": "raspy",
 					"symbols":["@","＠"],
 					"names":[
 						{
 							"lang": "Japanese",
-							"display": "ガサガサ"
+							"display": "ガラガラ声"
 						},
 						{
 							"lang": "English",
-							"display": "Roughness"
+							"display": "Raspy"
 						}
 					]
 				},
 				{
-					"id": "trembling",
-					"symbols":["^","＾"],
+					"id": "shakey",
+					"symbols":["%", "％"],
 					"names":[
 						{
 							"lang": "Japanese",
@@ -3637,7 +3637,87 @@
 						},
 						{
 							"lang": "English",
-							"display": "Trembling"
+							"display": "Shakey"
+						}
+					]
+				}
+			]
+		}
+		,{
+			"id": "techno-sp_ja_JP_f841_svss",
+			"cname": "techno-sp_ja_JP_f841_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "玉姫"
+				},
+				{
+					"lang": "English",
+					"display": "Tamaki"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"2.1.0"
+			],
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "pitchflipup",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "跳ね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Pitch flip up"
+						}
+					]
+				},
+				{
+					"id": "headfall",
+					"symbols":["%", "％"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "先頭フォール"
+						},
+						{
+							"lang": "English",
+							"display": "Head fall"
+						}
+					]
+				},
+				{
+					"id": "strained",
+					"symbols":["^","＾"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "いきり"
+						},
+						{
+							"lang": "English",
+							"display": "Strained"
+						}
+					]
+				},
+				{
+					"id": "tailfall",
+					"symbols":["＿"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "末尾フォール"
+						},
+						{
+							"lang": "English",
+							"display": "Tail fall"
 						}
 					]
 				}
