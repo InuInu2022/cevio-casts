@@ -65,6 +65,14 @@ namespace CevioCasts
         public Emotion[] Emotions { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("vocalRange")]
+        public VocalRange VocalRange { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("vocalTempo")]
+        public VocalTempo VocalTempo { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("spSymbols")]
         public SpSymbol[] SpSymbols { get; set; }
 
@@ -110,6 +118,28 @@ namespace CevioCasts
 
         [JsonPropertyName("names")]
         public Name[] Names { get; set; }
+
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonPropertyName("versions")]
+        public string[] Versions { get; set; }
+    }
+
+    public partial class VocalRange
+    {
+        [JsonPropertyName("high")]
+        public string High { get; set; }
+
+        [JsonPropertyName("low")]
+        public string Low { get; set; }
+    }
+
+    public partial class VocalTempo
+    {
+        [JsonPropertyName("high")]
+        public long High { get; set; }
+
+        [JsonPropertyName("low")]
+        public long Low { get; set; }
     }
 
     public enum Category { SingerSong, TextVocal };
@@ -287,7 +317,7 @@ namespace CevioCasts
 
         public static readonly ProductConverter Singleton = new ProductConverter();
     }
-    
+
     public class DateOnlyConverter : JsonConverter<DateOnly>
     {
         private readonly string serializationFormat;

@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.20.0",
+	"version": "1.21.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -592,7 +592,51 @@
 				"1.0.1",
 				"2.0.0"
 			],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"vocalRange": {
+				"high": "D#5",
+				"low": "G#3"
+			},
+			"vocalTempo": {
+				"high": 160,
+				"low": 80
+			},
+			"spSymbols": [
+				{
+					"id": "bounceuppitch",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "はね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Bounce-up pitch"
+						}
+					],
+					"versions": [
+						"2.0.0"
+					]
+				},
+				{
+					"id": "headfall",
+					"symbols":["%","％"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "先頭フォール"
+						},
+						{
+							"lang": "English",
+							"display": "Head fall"
+						}
+					],
+					"versions": [
+						"2.0.0"
+					]
+				}
+			]
 		},
 		{
 			"id": "CSNV-JPF-B",
@@ -615,7 +659,43 @@
 				"1.0.1",
 				"2.0.0"
 			],
-			"hasEmotions": true
+			"hasEmotions": true,
+			"vocalRange": {
+				"high": "D#5",
+				"low": "F#3"
+			},
+			"vocalTempo": {
+				"high": 150,
+				"low": 75
+			},
+			"emotions": [
+				{
+					"id": "0",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "感情"
+						},
+						{
+							"lang": "English",
+							"display": "Emotion"
+						}
+					]
+				},
+				{
+					"id": "1",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "感情"
+						},
+						{
+							"lang": "English",
+							"display": "Emotion"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "CSNV-JPF-VCLMK1",
@@ -638,7 +718,15 @@
 				"1.1.0",
 				"2.0.0"
 			],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"vocalRange": {
+				"high": "D5",
+				"low": "G3"
+			},
+			"vocalTempo": {
+				"high": 145,
+				"low": 80
+			}
 		},
 		{
 			"id": "CSNV-JPF-AHS1",
@@ -1102,7 +1190,15 @@
 			"versions": [
 				"1.0.1"
 			],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"vocalRange": {
+				"high": "E5",
+				"low": "G3"
+			},
+			"vocalTempo": {
+				"high": 180,
+				"low": 80
+			}
 		},
 		{
 			"id": "CSNV-JPF-FP5",
@@ -1125,6 +1221,14 @@
 				"1.0.1"
 			],
 			"hasEmotions": false,
+			"vocalRange": {
+				"high": "G5",
+				"low": "B3"
+			},
+			"vocalTempo": {
+				"high": 130,
+				"low": 70
+			},
 			"spSymbols": [
 				{
 					"id": "bounceuppitch",
@@ -1176,7 +1280,15 @@
 			"versions": [
 				"1.0.2"
 			],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"vocalRange": {
+				"high": "F5",
+				"low": "F3"
+			},
+			"vocalTempo": {
+				"high": 170,
+				"low": 70
+			}
 		},
 		{
 			"id": "CSNV-JPF-KZA1",
@@ -1199,7 +1311,15 @@
 				"1.0.0",
 				"2.0.0"
 			],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"vocalRange": {
+				"high": "E5",
+				"low": "F3"
+			},
+			"vocalTempo": {
+				"high": 180,
+				"low": 60
+			}
 		},
 		{
 			"id": "CSNV-JPF-GLA1",
@@ -1223,6 +1343,14 @@
 				"2.0.0"
 			],
 			"hasEmotions": false,
+			"vocalRange": {
+				"high": "F5",
+				"low": "G3"
+			},
+			"vocalTempo": {
+				"high": 140,
+				"low": 70
+			},
 			"spSymbols": [
 				{
 					"id": "bounceuppitch",
@@ -1236,6 +1364,23 @@
 							"lang": "English",
 							"display": "Bounce-up pitch"
 						}
+					]
+				},
+				{
+					"id": "tailfall",
+					"symbols":["^","＾"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "末尾フォール"
+						},
+						{
+							"lang": "English",
+							"display": "Tail fall"
+						}
+					],
+					"versions":[
+						"2.0.0"
 					]
 				},
 				{
@@ -1394,6 +1539,14 @@
 				"2.0.0"
 			],
 			"hasEmotions": false,
+			"vocalRange": {
+				"high": "E5",
+				"low": "G3"
+			},
+			"vocalTempo": {
+				"high": 170,
+				"low": 90
+			},
 			"spSymbols": [
 				{
 					"id": "bounceuppitch",
@@ -1422,6 +1575,23 @@
 							"display": "Roughness"
 						}
 					]
+				},
+				{
+					"id": "exhale",
+					"symbols":["_","＿"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "吐き捨て"
+						},
+						{
+							"lang": "English",
+							"display": "Exhale"
+						}
+					],
+					"versions":[
+						"2.0.0"
+					]
 				}
 			]
 		},
@@ -1447,6 +1617,14 @@
 				"2.0.0"
 			],
 			"hasEmotions": false,
+			"vocalRange": {
+				"high": "D#5",
+				"low": "G#3"
+			},
+			"vocalTempo": {
+				"high": 150,
+				"low": 80
+			},
 			"spSymbols": [
 				{
 					"id": "roughness",
@@ -2758,18 +2936,26 @@
 				"2.0.0"
 			],
 			"hasEmotions": false,
+			"vocalRange": {
+				"high": "D5",
+				"low": "G3"
+			},
+			"vocalTempo": {
+				"high": 145,
+				"low": 80
+			},
 			"spSymbols": [
 				{
-					"id": "roughness",
+					"id": "rapsy",
 					"symbols":["@","＠"],
 					"names":[
 						{
 							"lang": "Japanese",
-							"display": "ざらざら"
+							"display": "ガラガラ声"
 						},
 						{
 							"lang": "English",
-							"display": "Roughness"
+							"display": "Raspy"
 						}
 					]
 				}
@@ -2798,18 +2984,26 @@
 				"2.0.0"
 			],
 			"hasEmotions": false,
+			"vocalRange": {
+				"high": "D5",
+				"low": "F3"
+			},
+			"vocalTempo": {
+				"high": 145,
+				"low": 70
+			},
 			"spSymbols": [
 				{
-					"id": "roughness",
+					"id": "rapsy",
 					"symbols":["@","＠"],
 					"names":[
 						{
 							"lang": "Japanese",
-							"display": "ざらざら"
+							"display": "ガラガラ声"
 						},
 						{
 							"lang": "English",
-							"display": "Roughness"
+							"display": "Raspy"
 						}
 					]
 				}
@@ -2836,7 +3030,51 @@
 				"1.0.1 ported from CeVIO AI",
 				"2.0.0"
 			],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"vocalRange": {
+				"high": "D#5",
+				"low": "G#3"
+			},
+			"vocalTempo": {
+				"high": 160,
+				"low": 80
+			},
+			"spSymbols": [
+				{
+					"id": "pitchflipup",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "跳ね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Pitch flip up"
+						}
+					],
+					"versions": [
+						"2.0.0"
+					]
+				},
+				{
+					"id": "headfall",
+					"symbols":["%","％"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "先頭フォール"
+						},
+						{
+							"lang": "English",
+							"display": "Head fall"
+						}
+					],
+					"versions": [
+						"2.0.0"
+					]
+				}
+			]
 		}
 		,{
 			"id": "techno-sp_ja_JP_m868_svss",
@@ -2860,9 +3098,17 @@
 				"2.0.0"
 			],
 			"hasEmotions": false,
+			"vocalRange": {
+				"high": "C#5",
+				"low": "C#3"
+			},
+			"vocalTempo": {
+				"high": 185,
+				"low": 110
+			},
 			"spSymbols": [
 				{
-					"id": "bounceuppitch",
+					"id": "pitchflipup",
 					"symbols":["@","＠"],
 					"names":[
 						{
@@ -2871,12 +3117,12 @@
 						},
 						{
 							"lang": "English",
-							"display": "Bounce-up pitch"
+							"display": "Pitch flip up"
 						}
 					]
 				},
 				{
-					"id": "rollrs",
+					"id": "rolledrs",
 					"symbols":["^","＾"],
 					"names":[
 						{
@@ -2885,7 +3131,7 @@
 						},
 						{
 							"lang": "English",
-							"display": "Roll r’s"
+							"display": "Rolled Rs"
 						}
 					]
 				},
@@ -2927,9 +3173,17 @@
 				"2.0.0"
 			],
 			"hasEmotions": false,
+			"vocalRange": {
+				"high": "E5",
+				"low": "G#3"
+			},
+			"vocalTempo": {
+				"high": 190,
+				"low": 125
+			},
 			"spSymbols": [
 				{
-					"id": "bounceuppitch",
+					"id": "pitchflipup",
 					"symbols":["@","＠"],
 					"names":[
 						{
@@ -2938,8 +3192,42 @@
 						},
 						{
 							"lang": "English",
-							"display": "Bounce-up pitch"
+							"display": "Pitch flip up"
 						}
+					]
+				},
+				{
+					"id": "exhale",
+					"symbols":["^","＾"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "吐き捨て"
+						},
+						{
+							"lang": "English",
+							"display": "Exhale"
+						}
+					],
+					"versions":[
+						"2.0.0"
+					]
+				},
+				{
+					"id": "tailfall",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "末尾フォール"
+						},
+						{
+							"lang": "English",
+							"display": "Tail fall"
+						}
+					],
+					"versions":[
+						"2.0.0"
 					]
 				}
 			]
@@ -2965,7 +3253,15 @@
 				"1.0.0 ported from CeVIO AI",
 				"2.0.0"
 			],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"vocalRange": {
+				"high": "E5",
+				"low": "F3"
+			},
+			"vocalTempo": {
+				"high": 180,
+				"low": 60
+			}
 		}
 		,{
 			"id": "techno-sp_ja_JP_f811_svss",
@@ -2988,7 +3284,15 @@
 				"1.1.0 ported from CeVIO AI",
 				"2.0.0"
 			],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"vocalRange": {
+				"high": "D5",
+				"low": "G3"
+			},
+			"vocalTempo": {
+				"high": 145,
+				"low": 80
+			}
 		}
 		,{
 			"id": "techno-sp_ja_JP_m867_svss",
@@ -3014,9 +3318,17 @@
 				"2.1.0 Beta"
 			],
 			"hasEmotions": false,
+			"vocalRange": {
+				"high": "B4",
+				"low": "D#3"
+			},
+			"vocalTempo": {
+				"high": 190,
+				"low": 100
+			},
 			"spSymbols": [
 				{
-					"id": "bounceuppitch",
+					"id": "pitchflipup",
 					"symbols":["@","＠"],
 					"names":[
 						{
@@ -3025,7 +3337,7 @@
 						},
 						{
 							"lang": "English",
-							"display": "Bounce-up pitch"
+							"display": "Pitch flip up"
 						}
 					]
 				},
@@ -3044,22 +3356,21 @@
 					]
 				},
 				{
-					"id": "rough",
+					"id": "strained",
 					"symbols":["%","％"],
 					"names":[
 						{
 							"lang": "Japanese",
-							"display": "がなり"
+							"display": "いきり"
 						},
 						{
 							"lang": "English",
-							"display": "Rough"
+							"display": "Strained"
 						}
 					]
 				}
 			]
 		}
-
 		,{
 			"id": "techno-sp_ja_JP_f830_svss",
 			"cname": "techno-sp_ja_JP_f830_svss.tsnvoice",
@@ -3083,9 +3394,17 @@
 				"2.0.0"
 			],
 			"hasEmotions": false,
+			"vocalRange": {
+				"high": "F5",
+				"low": "G3"
+			},
+			"vocalTempo": {
+				"high": 140,
+				"low": 70
+			},
 			"spSymbols": [
 				{
-					"id": "bounceuppitch",
+					"id": "pitchflipup",
 					"symbols":["@","＠"],
 					"names":[
 						{
@@ -3094,8 +3413,25 @@
 						},
 						{
 							"lang": "English",
-							"display": "Bounce-up pitch"
+							"display": "Pitch flip up"
 						}
+					]
+				},
+				{
+					"id": "tailfall",
+					"symbols":["^","＾"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "末尾フォール"
+						},
+						{
+							"lang": "English",
+							"display": "Tail fall"
+						}
+					],
+					"versions":[
+						"2.0.0"
 					]
 				},
 				{
@@ -3136,6 +3472,14 @@
 				"2.0.0"
 			],
 			"hasEmotions": true,
+			"vocalRange": {
+				"high": "D#5",
+				"low": "F#3"
+			},
+			"vocalTempo": {
+				"high": 150,
+				"low": 75
+			},
 			"emotions": [
 				{
 					"id": "0",
@@ -3185,7 +3529,15 @@
 			"versions": [
 				"2.0.0"
 			],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"vocalRange": {
+				"high": "C#5",
+				"low": "A3"
+			},
+			"vocalTempo": {
+				"high": 120,
+				"low": 80
+			}
 		}
 		,{
 			"id": "techno-sp_ja_JP_f808_svss",
@@ -3208,9 +3560,17 @@
 				"1.0.1 ported from CeVIO AI"
 			],
 			"hasEmotions": false,
+			"vocalRange": {
+				"high": "G5",
+				"low": "B3"
+			},
+			"vocalTempo": {
+				"high": 130,
+				"low": 70
+			},
 			"spSymbols": [
 				{
-					"id": "bounceuppitch",
+					"id": "pitchflipup",
 					"symbols":["@","＠"],
 					"names":[
 						{
@@ -3219,12 +3579,12 @@
 						},
 						{
 							"lang": "English",
-							"display": "Bounce-up pitch"
+							"display": "Pitch flip up"
 						}
 					]
 				},
 				{
-					"id": "rough",
+					"id": "soft",
 					"symbols":["%","％"],
 					"names":[
 						{
@@ -3233,7 +3593,7 @@
 						},
 						{
 							"lang": "English",
-							"display": "Relux"
+							"display": "Soft"
 						}
 					]
 				}
@@ -3259,7 +3619,15 @@
 			"versions": [
 				"1.0.2 ported from CeVIO AI"
 			],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"vocalRange": {
+				"high": "F5",
+				"low": "F3"
+			},
+			"vocalTempo": {
+				"high": 170,
+				"low": 70
+			}
 		}
 		,{
 			"id": "techno-sp_ja_JP_f803_svss",
@@ -3281,7 +3649,15 @@
 			"versions": [
 				"1.0.1 ported from CeVIO AI"
 			],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"vocalRange": {
+				"high": "E5",
+				"low": "G3"
+			},
+			"vocalTempo": {
+				"high": 180,
+				"low": 80
+			}
 		},
 		{
 			"id": "techno-sp_ja_JP_f815_svss",
@@ -3305,33 +3681,58 @@
 				"2.0.0"
 			],
 			"hasEmotions": false,
+			"vocalRange": {
+				"high": "E5",
+				"low": "G3"
+			},
+			"vocalTempo": {
+				"high": 170,
+				"low": 90
+			},
 			"spSymbols": [
 				{
-					"id": "bounceuppitch",
+					"id": "pitchflipup",
 					"symbols":["@","＠"],
 					"names":[
 						{
 							"lang": "Japanese",
-							"display": "はね上げ"
+							"display": "跳ね上げ"
 						},
 						{
 							"lang": "English",
-							"display": "Bounce-up pitch"
+							"display": "Pitch flip up"
 						}
 					]
 				},
 				{
-					"id": "roughness",
+					"id": "raspy",
 					"symbols":["^","＾"],
 					"names":[
 						{
 							"lang": "Japanese",
-							"display": "ガサガサ"
+							"display": "ガラガラ声"
 						},
 						{
 							"lang": "English",
-							"display": "Roughness"
+							"display": "Raspy"
 						}
+					]
+				},
+				{
+					"id": "exhale",
+					"symbols":["＿"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "吐き捨て"
+						},
+						{
+							"lang": "English",
+							"display": "Exhale"
+						}
+					],
+					"versions":[
+						"2.0.0"
 					]
 				}
 			]
@@ -3358,9 +3759,17 @@
 				"2.0.0"
 			],
 			"hasEmotions": false,
+			"vocalRange": {
+				"high": "B4",
+				"low": "F#3"
+			},
+			"vocalTempo": {
+				"high": 199,
+				"low": 116
+			},
 			"spSymbols": [
 				{
-					"id": "bounceuppitch",
+					"id": "pitchflipup",
 					"symbols":["@","＠"],
 					"names":[
 						{
@@ -3369,12 +3778,12 @@
 						},
 						{
 							"lang": "English",
-							"display": "Bounce-up pitch"
+							"display": "Pitch flip up"
 						}
 					]
 				},
 				{
-					"id": "downattack",
+					"id": "headfall",
 					"symbols":["%", "％"],
 					"names":[
 						{
@@ -3411,9 +3820,17 @@
 				"2.1.0"
 			],
 			"hasEmotions": false,
+			"vocalRange": {
+				"high": "D5",
+				"low": "F#3"
+			},
+			"vocalTempo": {
+				"high": 192,
+				"low": 71
+			},
 			"spSymbols": [
 				{
-					"id": "bounceuppitch",
+					"id": "pitchflipup",
 					"symbols":["@","＠"],
 					"names":[
 						{
@@ -3422,12 +3839,12 @@
 						},
 						{
 							"lang": "English",
-							"display": "Bounce-up pitch"
+							"display": "Pitch flip up"
 						}
 					]
 				},
 				{
-					"id": "roughness",
+					"id": "exhale",
 					"symbols":["^","＾"],
 					"names":[
 						{
@@ -3436,21 +3853,21 @@
 						},
 						{
 							"lang": "English",
-							"display": "Breathe out"
+							"display": "Exhale"
 						}
 					]
 				},
 				{
-					"id": "downattack",
+					"id": "headfall",
 					"symbols":["%", "％"],
 					"names":[
 						{
 							"lang": "Japanese",
-							"display": "下降アタック"
+							"display": "先頭フォール"
 						},
 						{
 							"lang": "English",
-							"display": "Down attack"
+							"display": "Head fall"
 						}
 					]
 				}
@@ -3478,50 +3895,14 @@
 				"2.1.0"
 			],
 			"hasEmotions": false,
-			"spSymbols": [
-				{
-					"id": "bounceuppitch",
-					"symbols":["@","＠"],
-					"names":[
-						{
-							"lang": "Japanese",
-							"display": "跳ね上げ"
-						},
-						{
-							"lang": "English",
-							"display": "Bounce-up pitch"
-						}
-					]
-				},
-				{
-					"id": "trembling",
-					"symbols":["^","＾"],
-					"names":[
-						{
-							"lang": "Japanese",
-							"display": "ふるえ"
-						},
-						{
-							"lang": "English",
-							"display": "Trembling"
-						}
-					]
-				},
-				{
-					"id": "downattack",
-					"symbols":["%", "％"],
-					"names":[
-						{
-							"lang": "Japanese",
-							"display": "下降アタック"
-						},
-						{
-							"lang": "English",
-							"display": "Down attack"
-						}
-					]
-				}
-			]
+			"vocalRange": {
+				"high": "E5",
+				"low": "G3"
+			},
+			"vocalTempo": {
+				"high": 200,
+				"low": 70
+			}
 		}
 		,{
 			"id": "techno-sp_ja_JP_f975_svss",
@@ -3545,9 +3926,17 @@
 				"2.2.0"
 			],
 			"hasEmotions": false,
+			"vocalRange": {
+				"high": "C#5",
+				"low": "A3"
+			},
+			"vocalTempo": {
+				"high": 181,
+				"low": 74
+			},
 			"spSymbols": [
 				{
-					"id": "bounceuppitch",
+					"id": "pitchflipup",
 					"symbols":["@","＠"],
 					"names":[
 						{
@@ -3561,7 +3950,7 @@
 					]
 				},
 				{
-					"id": "roughness",
+					"id": "exhale",
 					"symbols":["^","＾"],
 					"names":[
 						{
@@ -3570,21 +3959,21 @@
 						},
 						{
 							"lang": "English",
-							"display": "Breathe out"
+							"display": "Exhale"
 						}
 					]
 				},
 				{
-					"id": "downattack",
+					"id": "headfall",
 					"symbols":["%", "％"],
 					"names":[
 						{
 							"lang": "Japanese",
-							"display": "下降アタック"
+							"display": "先頭フォール"
 						},
 						{
 							"lang": "English",
-							"display": "Down attack"
+							"display": "Head fall"
 						}
 					]
 				}
@@ -3612,6 +4001,14 @@
 				"2.0.0"
 			],
 			"hasEmotions": false,
+			"vocalRange": {
+				"high": "D#5",
+				"low": "G#3"
+			},
+			"vocalTempo": {
+				"high": 150,
+				"low": 80
+			},
 			"spSymbols": [
 				{
 					"id": "raspy",
@@ -3625,6 +4022,10 @@
 							"lang": "English",
 							"display": "Raspy"
 						}
+					],
+					"versions": [
+						"1.0.1 ported from CeVIO AI",
+						"2.0.0"
 					]
 				},
 				{
@@ -3664,6 +4065,14 @@
 				"2.1.0"
 			],
 			"hasEmotions": false,
+			"vocalRange": {
+				"high": "F5",
+				"low": "G3"
+			},
+			"vocalTempo": {
+				"high": 175,
+				"low": 115
+			},
 			"spSymbols": [
 				{
 					"id": "pitchflipup",

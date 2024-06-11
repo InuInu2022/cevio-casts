@@ -11,7 +11,7 @@
   "author": "InuInu2022",
   "license": "MIT",
   "devDependencies": {
-    "ajv": "^8.12.0",
-    "quicktype": "^23.0.12"
+    "ajv": "^8.16.0",
+    "quicktype": "^23.0.170"
   }
 }

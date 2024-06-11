@@ -30,6 +30,10 @@ interface Cast{
 	hasEmotions: boolean;
 	emotions?: Emotion[];
 	emotionOrder?: EmotionOrder[];
+	/** recommended for vocal range */
+	vocalRange?: RecommendedVocalRange;
+	/** recommended tempo */
+	vocalTempo?: RecommendedVocalTempo;
 	/** special label definitions */
 	symbols?: SpSymbol[];
 }
@@ -84,6 +88,24 @@ interface SpSymbol{
 	id: string;
 	symbols: string[];
 	names: DisplayName[];
+	/** voice versions of label exists */
+	versions?: VoiceVersion[];
+}
+
+/**
+ * Recommended for vocal range
+ */
+interface RecommendedVocalRange{
+	high: string;
+	low: string;
+}
+
+/**
+ * Recommended tempo (BPM)
+ */
+interface RecommendedVocalTempo{
+	high: number;
+	low: number;
 }
 
 /*

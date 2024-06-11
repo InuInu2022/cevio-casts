@@ -112,6 +112,16 @@
                     },
                     "title": "emotionOrder"
                 },
+                "vocalRange": {
+                    "description": "recommended for vocal range",
+                    "$ref": "#/definitions/RecommendedVocalRange",
+                    "title": "vocalRange"
+                },
+                "vocalTempo": {
+                    "description": "recommended tempo",
+                    "$ref": "#/definitions/RecommendedVocalTempo",
+                    "title": "vocalTempo"
+                },
                 "symbols": {
                     "description": "special label definitions",
                     "type": "array",
@@ -260,6 +270,17 @@
                         "$ref": "#/definitions/DisplayName"
                     },
                     "title": "names"
+                },
+                "versions": {
+                    "description": "voice versions of label exists",
+                    "type": "array",
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "title": "versions"
                 }
             },
             "additionalProperties": false,
@@ -267,6 +288,46 @@
                 "id",
                 "names",
                 "symbols"
+            ]
+        },
+        "RecommendedVocalRange": {
+            "description": "Recommended for vocal range",
+            "title": "RecommendedVocalRange",
+            "type": "object",
+            "properties": {
+                "high": {
+                    "type": "string",
+                    "title": "high"
+                },
+                "low": {
+                    "type": "string",
+                    "title": "low"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "high",
+                "low"
+            ]
+        },
+        "RecommendedVocalTempo": {
+            "description": "Recommended tempo (BPM)",
+            "title": "RecommendedVocalTempo",
+            "type": "object",
+            "properties": {
+                "high": {
+                    "type": "number",
+                    "title": "high"
+                },
+                "low": {
+                    "type": "number",
+                    "title": "low"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "high",
+                "low"
             ]
         }
     }
