@@ -101,6 +101,25 @@ public class UnitTest1 : IDisposable
 	}
 
 	[Fact]
+	public void SumRange()
+	{
+		var defs = Definitions.FromJson(jsonString);
+		var list = defs
+			.Casts
+			.ToList()
+			.Where(v => v.VocalRange is not null)
+			.OrderBy(v => GetNumber(v.VocalRange.High))
+			.ThenBy(v => GetOctave(v.VocalRange.High))
+			.ThenBy(v => GetNumber(v.VocalRange.Low))
+			.ThenBy(v => GetOctave(v.VocalRange.Low))
+			;
+		foreach(var v in list)
+		{
+			output.WriteLine($"|{v.Product} |{v.Names[0].Display} |{v.VocalRange.Low} |{v.VocalRange.High} |");
+		}
+	}
+
+	[Fact]
 	public void ChechCName()
 	{
 		var defs = Definitions.FromJson(jsonString);
@@ -159,28 +178,28 @@ public class UnitTest1 : IDisposable
 				);
 			}
 		}
+	}
 
-		static int GetOctave(string name)
-		{
-			var oct = name[0];
-			return oct switch
-			{
-				'C' => 0,
-				'D' => 1,
-				'E' => 2,
-				'F' => 3,
-				'G' => 4,
-				'A' => 5,
-				'B' => 6,
-				_ => throw new ArgumentException("Invalid note name"),
-			};
-		}
+	private static int GetNumber(string name)
+	{
+		var num = name[^1];
+		return Convert.ToInt32(num);
+	}
 
-		static int GetNumber(string name)
+	private static int GetOctave(string name)
+	{
+		var oct = name[0];
+		return oct switch
 		{
-			var num = name[^1];
-			return Convert.ToInt32(num);
-		}
+			'C' => 0,
+			'D' => 1,
+			'E' => 2,
+			'F' => 3,
+			'G' => 4,
+			'A' => 5,
+			'B' => 6,
+			_ => throw new ArgumentException("Invalid note name"),
+		};
 	}
 
 	[Fact]
