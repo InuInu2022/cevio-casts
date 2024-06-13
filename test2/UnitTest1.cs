@@ -84,6 +84,23 @@ public class UnitTest1 : IDisposable
 	}
 
 	[Fact]
+	public void SumTempo()
+	{
+		var defs = Definitions.FromJson(jsonString);
+		var list = defs
+			.Casts
+			.ToList()
+			.Where(v => v.VocalTempo is not null)
+			.OrderBy(v => v.VocalTempo.High)
+			.ThenBy(v => v.VocalTempo.Low)
+			;
+		foreach(var v in list)
+		{
+			output.WriteLine($"|{v.Product} |{v.Names[0].Display} |{v.VocalTempo.Low} |{v.VocalTempo.High} |");
+		}
+	}
+
+	[Fact]
 	public void ChechCName()
 	{
 		var defs = Definitions.FromJson(jsonString);
@@ -103,7 +120,7 @@ public class UnitTest1 : IDisposable
 		foreach(var cast in defs.Casts)
 		{
 			if(cast?.SpSymbols is null){continue;}
-			if(cast.SpSymbols.Length == 0){continue;}
+			if(cast!.SpSymbols.Length == 0){continue;}
 			var result =
 				cast
 					.SpSymbols
@@ -111,6 +128,73 @@ public class UnitTest1 : IDisposable
 						.Names
 						.Any(a2 => a2.Display != ""));
 			Assert.True(result);
+		}
+	}
+
+	[Fact]
+	public void CheckRange()
+	{
+		var defs = Definitions.FromJson(jsonString);
+		foreach (var cast in defs.Casts)
+		{
+			if(cast.VocalRange is null){ continue;}
+
+			var range = cast.VocalRange;
+			Assert.NotEmpty(range.High);
+			Assert.NotEmpty(range.Low);
+
+			var low = GetNumber(range.Low);
+			var high = GetNumber(range.High);
+			Assert.True(
+				low <= high,
+				$"[{cast.Names[0].Display}] low:{low}, high:{high}, range:{range.Low} - {range.High} "
+			);
+			if(low == high)
+			{
+				var lowOct = GetOctave(range.Low);
+				var highOct = GetOctave(range.High);
+				Assert.True(
+					lowOct < highOct,
+					$"[{cast.Names[0].Display}] low:{lowOct}, high:{highOct}, range:{range.Low} - {range.High} "
+				);
+			}
+		}
+
+		static int GetOctave(string name)
+		{
+			var oct = name[0];
+			return oct switch
+			{
+				'C' => 0,
+				'D' => 1,
+				'E' => 2,
+				'F' => 3,
+				'G' => 4,
+				'A' => 5,
+				'B' => 6,
+				_ => throw new ArgumentException("Invalid note name"),
+			};
+		}
+
+		static int GetNumber(string name)
+		{
+			var num = name[^1];
+			return Convert.ToInt32(num);
+		}
+	}
+
+	[Fact]
+	public void CheckTempo()
+	{
+		var defs = Definitions.FromJson(jsonString);
+		foreach (var cast in defs.Casts)
+		{
+			if (cast.VocalTempo is null) { continue; }
+			var tempo = cast.VocalTempo;
+
+			Assert.True(0 < tempo.Low);
+			Assert.True(0 < tempo.High);
+			Assert.True(tempo.Low < tempo.High);
 		}
 	}
 
