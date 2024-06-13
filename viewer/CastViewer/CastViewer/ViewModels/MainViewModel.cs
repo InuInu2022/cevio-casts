@@ -200,13 +200,20 @@ public class MainViewModel : ViewModelBase
 	{
 		if(PgPile is null){return;}
 
+
 		IsLoading = true;
-		await PgPile.RentAsync(async pg =>
+		try
 		{
-			await Task.Delay(300);
-			pg.DataContext = value;
-			await Task.Delay(500);
-		});
+			await PgPile.RentAsync(async pg =>
+			{
+				await Task.Delay(300);
+				pg.DataContext = value;
+				await Task.Delay(500);
+			});
+		}
+		catch (Exception ex)
+		{
+		}
 		IsLoading = false;
 
 		//return default;

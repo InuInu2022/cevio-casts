@@ -40,7 +40,7 @@
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="$(AvaloniaVersion)" />
     <PackageReference Include="bodong.Avalonia.PropertyGrid" Version="11.0.6.3" />
     <PackageReference Include="bodong.PropertyModels" Version="11.0.6.2" />
-    <PackageReference Include="Epoxy.Avalonia11" Version="1.14.0" />
+    <PackageReference Include="Epoxy.Avalonia11" Version="1.15.0" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Condition="$(DefineConstants.Contains(ENABLE_XAML_HOT_RELOAD))" Include="Avalonia.Markup.Xaml.Loader" Version="$(AvaloniaVersion)" />

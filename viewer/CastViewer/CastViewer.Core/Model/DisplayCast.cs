@@ -1,7 +1,9 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Reflection;
+using System.Runtime.Serialization;
 using CevioCasts;
+using PropertyModels.ComponentModel;
 using PropertyModels.ComponentModel.DataAnnotations;
 using PropertyModels.Extensions;
 
@@ -43,15 +45,37 @@ public sealed class DisplayCast : Cast
 	[VisibilityPropertyCondition(nameof(HasEmotions), true)]
 	new public BindingList<DisplayEmotion>? Emotions { get; set; }
 
+	[Category("Emotion")]
+	[Editable(false)]
+	[VisibilityPropertyCondition(nameof(HasEmotions), true)]
+	new public BindingList<DisplayEmotionOrder>? EmotionOrder { get; set; }
+
+	[Category("Song")]
+	[VisibilityPropertyCondition(nameof(IsShowRange), true)]
+	new public DisplayVocalRange? VocalRange { get; set; }
+
+	[Category("Song")]
+	[VisibilityPropertyCondition(nameof(IsShowTempo), true)]
+	new public DisplayVocalTempo? VocalTempo { get; set; }
+
 	[Category("Song")]
 	[Editable(false)]
 	[VisibilityPropertyCondition(nameof(Category), CevioCasts.Category.SingerSong)]
 	new public BindingList<DisplaySpSymbol>? SpSymbols { get; set; }
 
-	[Category("Emotion")]
-	[Editable(false)]
-	[VisibilityPropertyCondition(nameof(HasEmotions), true)]
-	new public BindingList<DisplayEmotionOrder>? EmotionOrder { get; set; }
+
+
+
+
+	[ConditionTarget]
+	[IgnoreDataMember]
+	[DependsOnProperty(nameof(Category))]
+	public bool IsShowRange { get; set; }
+
+	[ConditionTarget]
+	[IgnoreDataMember]
+	[DependsOnProperty(nameof(Category))]
+	public bool IsShowTempo { get; set; } = false;
 
 	public DisplayCast(Cast? instance)
 	{
@@ -73,6 +97,21 @@ public sealed class DisplayCast : Cast
 		Versions = new(instance.Versions);
 		Category = instance.Category;
 		HasEmotions = instance.HasEmotions;
+
+		if(instance.VocalRange is not null)
+		{
+			IsShowRange =
+				Category == CevioCasts.Category.SingerSong &&
+				instance.VocalRange.High != "" && instance.VocalRange.Low != "";
+			VocalRange = new(instance.VocalRange);
+		}
+		if(instance.VocalTempo is not null)
+		{
+			IsShowTempo =
+				Category == CevioCasts.Category.SingerSong &&
+				instance.VocalTempo.High != 0 && instance.VocalTempo.Low != 0;
+			VocalTempo = new(instance.VocalTempo);
+		}
 
 		var emotions = (instance?.Emotions ?? [])
 			.Select<Emotion, DisplayEmotion>(v => new(v));
@@ -112,6 +151,10 @@ public class DisplaySpSymbol
 	[Editable(false)]
 	public BindingList<string>? Symbols { get; set; }
 
+	[Category("Song")]
+	[Editable(false)]
+	public BindingList<string>? Versions { get; set; }
+
 	public DisplaySpSymbol(SpSymbol instance)
 	{
 		if (instance is null) { return; }
@@ -120,6 +163,9 @@ public class DisplaySpSymbol
 		Names =
         new(instance.Names.Select(v => v.Display).ToList());
 		Symbols = [.. instance.Symbols];
+		Versions = instance.Versions is null
+			? []
+			: [.. instance.Versions];
 	}
 
 	public override string ToString()
@@ -147,4 +193,56 @@ public class DisplayEmotionOrder
 		Version = instance.Version;
 		Order = [..instance.Order];
 	}
+}
+
+[Category("Song")]
+[TypeConverter(typeof(ExpandableObjectConverter))]
+public class DisplayVocalRange
+{
+	public DisplayVocalRange(VocalRange instance)
+	{
+		if (instance is null) { return; }
+
+		High = instance.High;
+		Low = instance.Low;
+	}
+
+	[Category("Song")]
+	[Editable(false)]
+	public string? High { get; set; } = "UNKNOWN";
+
+	[Category("Song")]
+	[Editable(false)]
+	[Watermark("low vocal range")]
+	public string? Low { get; set; } = "UNKNOWN";
+}
+
+[Category("Song")]
+[TypeConverter(typeof(ExpandableObjectConverter))]
+public class DisplayVocalTempo
+{
+	public DisplayVocalTempo(VocalTempo instance)
+	{
+		if (instance is null) { return; }
+
+		High = instance.High;
+		Low = instance.Low;
+		IsShowTempo = High > 0 && Low > 0 && High > Low;
+	}
+
+	[ConditionTarget]
+	[IgnoreDataMember]
+	public bool IsShowTempo { get; set; } = false;
+
+	[Category("Song")]
+	[Editable(false)]
+	[VisibilityPropertyCondition(nameof(IsShowTempo), true)]
+	[ProgressAttribute(0,250,"{0:G} bpm")]
+	public double High { get; set; }
+
+	[Category("Song")]
+	[Editable(false)]
+	[VisibilityPropertyCondition(nameof(IsShowTempo), true)]
+	[ProgressAttribute(0,250,"{0:G} bpm")]
+	public double Low { get; set; }
 }
