@@ -715,6 +715,7 @@
 			"gender": "Female",
 			"lang": "Japanese",
 			"versions": [
+				"1.0.0",
 				"1.1.0",
 				"2.0.0"
 			],
@@ -746,6 +747,7 @@
 			"gender": "Female",
 			"lang": "Japanese",
 			"versions": [
+				"1.0.1",
 				"1.1.0"
 			],
 			"hasEmotions": false
@@ -1803,7 +1805,7 @@
 			"gender": "Female",
 			"lang": "Japanese",
 			"versions": [
-				"1.0.0",
+				"1.0.2",
 				"1.1.0",
 				"1.2.0"
 			],
@@ -3902,7 +3904,51 @@
 			"vocalTempo": {
 				"high": 200,
 				"low": 70
-			}
+			},
+			"spSymbols": [
+				{
+					"id": "pitchflipup",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "跳ね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Pitch flip up"
+						}
+					]
+				},
+				{
+					"id": "shakey",
+					"symbols":["^","＾"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ふるえ"
+						},
+						{
+							"lang": "English",
+							"display": "Shakey"
+						}
+					]
+				},
+				{
+					"id": "headfall",
+					"symbols":["%", "％"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "先頭フォール"
+						},
+						{
+							"lang": "English",
+							"display": "Head fall"
+						}
+					]
+				}
+			]
 		}
 		,{
 			"id": "techno-sp_ja_JP_f975_svss",
