@@ -1711,6 +1711,66 @@
 			]
 		},
 		{
+			"id": "CSNV-JPF-AHS8",
+			"cname": "CSNV-JPF-AHS8",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "ずんだもん"
+				},
+				{
+					"lang": "English",
+					"display": "Zundamon"
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"2.0.0"
+			],
+			"hasEmotions": false
+		},
+		{
+			"id": "CSNV-JPF-AHS9",
+			"cname": "CSNV-JPF-AHS9",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "四国めたん"
+				},
+				{
+					"lang": "English",
+					"display": "Shikoku Metan"
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"2.0.0"
+			],
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "bounceuppitch",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "はね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Bounce-up pitch"
+						}
+					]
+				}
+			]
+		},
+		{
 			"id": "CTNV-JPF-A",
 			"cname": "CTNV-JPF-A",
 			"names": [
