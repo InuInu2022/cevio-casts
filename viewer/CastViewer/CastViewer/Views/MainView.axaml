@@ -18,11 +18,57 @@
     ColumnDefinitions="*, 3, 2*"
     RowDefinitions="Auto, *">
     <!--                                                    -->
+    <StackPanel
+      Grid.Column="0"
+      Grid.Row="0"
+      VerticalAlignment="Stretch">
+      <WrapPanel
+        Margin="5"
+        Orientation="Horizontal">
+        <TextBox
+          MinWidth="100"
+          IsVisible="False" />
+        <!--  voice category  -->
+        <WrapPanel
+          Margin="5">
+          <ToggleButton
+            IsChecked="{Binding IsShowTalkVoice}"
+            Command="{Binding CastFilterEvent}"
+            CommandParameter="Talk"
+            Content="Talk" />
+          <ToggleButton
+            IsChecked="{Binding IsShowSongVoice}"
+            Command="{Binding CastFilterEvent}"
+            CommandParameter="Talk"
+            Content="Song" />
+        </WrapPanel>
+        <!--  app  -->
+        <WrapPanel
+          Margin="5">
+          <ToggleButton
+            IsChecked="{Binding IsShowCS}"
+            ToolTip.Tip="CeVIO CS"
+            Command="{Binding CastFilterEvent}"
+            Content="CS" />
+          <ToggleButton
+            IsChecked="{Binding IsShowAI}"
+            ToolTip.Tip="CeVIO AI"
+            Command="{Binding CastFilterEvent}"
+            Content="AI" />
+          <ToggleButton
+            IsChecked="{Binding IsShowVS}"
+            ToolTip.Tip="VoiSona"
+            Command="{Binding CastFilterEvent}"
+            Content="VS" />
+        </WrapPanel>
+      </WrapPanel>
+    </StackPanel>
+    <!--                                                    -->
     <ListBox
       x:Name="casts"
       Grid.Column="0"
-      Grid.Row="0"
-      Grid.RowSpan="2"
+      Grid.Row="1"
+      VerticalAlignment="Stretch"
       ItemsSource="{Binding CastList}"
       SelectedItem="{Binding SelectedCast}"
       SelectedIndex="{Binding SelectedCastIndex}"
@@ -64,8 +110,12 @@
         </DataTemplate>
       </ListBox.ItemTemplate>
     </ListBox>
+    <!--                                                    -->
     <GridSplitter
-      Grid.Column="1" ResizeDirection="Columns"/>
+      Grid.Column="1"
+      Grid.Row="0"
+      Grid.RowSpan="2"
+      ResizeDirection="Columns"/>
     <!--                                                    -->
     <StackPanel
       Grid.Column="2"
@@ -102,9 +152,8 @@
       <pgc:PropertyGrid
         x:Name="propertyGrid_Basic"
         Margin="4"
-        IsEnabled="{Binding IsPgEnabled}"
-        epoxy:Anchor.Pile="{Binding PgPile}"
-        >
+        DataContext="{Binding SelectedCast}"
+      >
       </pgc:PropertyGrid>
     </ScrollViewer>
   </Grid>

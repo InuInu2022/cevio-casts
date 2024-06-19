@@ -11,6 +11,7 @@ using Avalonia.Platform;
 using System.IO;
 using Avalonia.PropertyGrid.Controls;
 using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics;
 
 namespace CastViewer.ViewModels;
 
@@ -28,6 +29,19 @@ public class MainViewModel : ViewModelBase
 
 	public bool IsLoading { get; set; }
 	public bool IsPgEnabled { get; set; }
+
+	#region filterbuttons
+
+	public bool IsShowTalkVoice { get; set; } = true;
+	public bool IsShowSongVoice { get; set; } = true;
+	public bool IsShowCS { get; set; } = true;
+	public bool IsShowAI { get; set; } = true;
+	public bool IsShowVS { get; set; } = true;
+
+	public Command? CastFilterEvent { get; }
+
+
+	#endregion filterbuttons
 
 	public Command? CastDataChanged { get; }
 
@@ -174,6 +188,22 @@ public class MainViewModel : ViewModelBase
 			.ToImmutableList();
 		CastList = new(loadedList);
 
+		CastFilterEvent = Command.Factory.Create(()=>{
+			var filterd = loadedList
+				.Where(v =>
+					(IsShowSongVoice || v.Category != Category.SingerSong)
+						&& (IsShowTalkVoice || v.Category != Category.TextVocal)
+						&& (IsShowCS || v.Product != Product.CeVIO_CS)
+						&& (IsShowAI || v.Product != Product.CeVIO_AI)
+						&& (IsShowVS || v.Product != Product.VoiSona)
+				)
+				;
+			CastList.Clear();
+			CastList = new(filterd);
+			SelectedCastIndex = 0;
+			return default;
+		});
+
 		IsPgEnabled = true;
 	}
 
@@ -194,12 +224,12 @@ public class MainViewModel : ViewModelBase
 		});
 	}
 
+	/*
 	[PropertyChanged(nameof(SelectedCast))]
 	[SuppressMessage("","IDE0051")]
 	private async ValueTask SelectedCastChangedAsync(DisplayCast value)
 	{
 		if(PgPile is null){return;}
-
 
 		IsLoading = true;
 		try
@@ -213,9 +243,12 @@ public class MainViewModel : ViewModelBase
 		}
 		catch (Exception ex)
 		{
+			Debug.WriteLine(ex.Message);
 		}
+
 		IsLoading = false;
 
 		//return default;
 	}
+	*/
 }
