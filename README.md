@@ -13,19 +13,22 @@ Definition data for CeVIO casts (voice library) defined in JSON format.
 
 # Features
 
+- CeVIO / VoiSona のキャスト（ボイスライブラリ）の情報を定義したデータです
+  - json形式で提供しています
+  - ライブラリごとのバージョン情報データを含みます
+- 【ソング】特殊歌詞記号のデータも含まれます
+- 【ソング】推奨音域・推奨テンポの情報を含みます（v1.21.0以降）
+- キャスト名・感情名・歌詞特殊記号(ソング)は日本語表記の他、英語表記の定義も含まれます
 - CeVIOトークの外部連携インターフェイスを経由せずにキャスト（ボイスライブラリ）の名前やIDを取得できます
 - CeVIOトークボイスの感情パラメータの名前やIDも同様に静的に取得できます
-- CeVIOソングボイスの内部IDも静的に取得できます
-- キャスト名・感情名は日本語表記の他、一部英語表記の定義も含まれます
-- ソングボイスの特殊歌詞記号のデータも含まれます
-- VoiSona, VoiSona Talkのライブラリにも対応しています
+- CeVIOソングボイス/VoiSonaソングボイスライブラリの内部IDも静的に取得できます
 
 |Product|Talk|Song|Total|
 |---|---:|---:|---:|
 |CeVIO CS|5|11|16|
-|CeVIO AI|14|21|35|
+|CeVIO AI|14|23|37|
 |VoiSona|5|21|26|
-|Sum|24|53|77|
+|Sum|24|55|79|
 
 ## Definitions
 
@@ -34,6 +37,16 @@ Definition data for CeVIO casts (voice library) defined in JSON format.
   - CeVIO CSの一部キャストIDはトークとソングで共通の文字列で、ユニークではありません。そこで独自のIDを降っています。
   - The IDs of some of the casts in CeVIO CS are common strings for talks and songs and are not unique. Therefore, we are raining unique IDs.
 - Cast internal names in ccs/ccst/tssprj/tstprj
+
+## CastViewer
+
+![castviwer](viewer\screenshots\castviewer_standalone_desktop.png)
+
+WIP
+
+- cast-dataを見ることができるアプリです
+- Desktop版とWasm版のみ動きます
+- .NET SDKを入れた状態で `dotnet run` してください
 
 # Requirement
 
