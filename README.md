@@ -40,7 +40,7 @@ Definition data for CeVIO casts (voice library) defined in JSON format.
 
 ## CastViewer
 
-![castviwer](viewer\screenshots\castviewer_standalone_desktop.png)
+![castviwer](viewer/screenshots/castviewer_standalone_desktop.png)
 
 WIP
 
