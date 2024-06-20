@@ -29,6 +29,7 @@ public class MainViewModel : ViewModelBase
 
 	public bool IsLoading { get; set; }
 	public bool IsPgEnabled { get; set; }
+	public string DataVersion { get; } = "x.x.x";
 
 	#region filterbuttons
 
@@ -187,6 +188,7 @@ public class MainViewModel : ViewModelBase
 			.Select<Cast, DisplayCast>(v => new(v))
 			.ToImmutableList();
 		CastList = new(loadedList);
+		DataVersion = definitions.Version;
 
 		CastFilterEvent = Command.Factory.Create(()=>{
 			var filterd = loadedList

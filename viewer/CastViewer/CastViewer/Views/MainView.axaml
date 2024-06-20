@@ -14,148 +14,175 @@
     <vm:MainViewModel />
   </Design.DataContext>
 
-  <Grid
-    ColumnDefinitions="*, 3, 2*"
-    RowDefinitions="Auto, *">
-    <!--                                                    -->
-    <StackPanel
-      Grid.Column="0"
-      Grid.Row="0"
-      VerticalAlignment="Stretch">
-      <WrapPanel
-        Margin="5"
-        Orientation="Horizontal">
-        <TextBox
-          MinWidth="100"
-          IsVisible="False" />
-        <!--  voice category  -->
-        <WrapPanel
-          Margin="5">
-          <ToggleButton
-            IsChecked="{Binding IsShowTalkVoice}"
-            Command="{Binding CastFilterEvent}"
-            CommandParameter="Talk"
-            Content="Talk" />
-          <ToggleButton
-            IsChecked="{Binding IsShowSongVoice}"
-            Command="{Binding CastFilterEvent}"
-            CommandParameter="Talk"
-            Content="Song" />
-        </WrapPanel>
-        <!--  app  -->
-        <WrapPanel
-          Margin="5">
-          <ToggleButton
-            IsChecked="{Binding IsShowCS}"
-            ToolTip.Tip="CeVIO CS"
-            Command="{Binding CastFilterEvent}"
-            Content="CS" />
-          <ToggleButton
-            IsChecked="{Binding IsShowAI}"
-            ToolTip.Tip="CeVIO AI"
-            Command="{Binding CastFilterEvent}"
-            Content="AI" />
-          <ToggleButton
-            IsChecked="{Binding IsShowVS}"
-            ToolTip.Tip="VoiSona"
-            Command="{Binding CastFilterEvent}"
-            Content="VS" />
-        </WrapPanel>
-      </WrapPanel>
-    </StackPanel>
-    <!--                                                    -->
-    <ListBox
-      x:Name="casts"
-      Grid.Column="0"
-      Grid.Row="1"
-      VerticalAlignment="Stretch"
-      ItemsSource="{Binding CastList}"
-      SelectedItem="{Binding SelectedCast}"
-      SelectedIndex="{Binding SelectedCastIndex}"
-      SelectionChanged="Listbox_SelectionChanged"
-      >
-      <ListBox.ItemTemplate>
-        <DataTemplate>
-          <Border
-            BorderThickness="1"
-            CornerRadius="4"
-            Padding="5"
-            Margin="0"
-            BorderBrush="#88888888">
-            <DockPanel
-              >
-              <TextBlock
-                Text="{Binding Names[0]}"
-                FontFamily="{StaticResource NotoSansCJKjp}"
-                DockPanel.Dock="Left"
-                />
-              <TextBlock
-                Text="{Binding Category}"
-                FontSize="11"
-                Padding="2"
-                FontWeight="Thin"
-                HorizontalAlignment="Right"
-                DockPanel.Dock="Right"
-                />
-              <TextBlock
-                Text="{Binding Product}"
-                FontSize="11"
-                Padding="2"
-                FontWeight="Thin"
-                HorizontalAlignment="Right"
-                DockPanel.Dock="Right"
-                />
-            </DockPanel>
-          </Border>
-        </DataTemplate>
-      </ListBox.ItemTemplate>
-    </ListBox>
-    <!--                                                    -->
-    <GridSplitter
-      Grid.Column="1"
-      Grid.Row="0"
-      Grid.RowSpan="2"
-      ResizeDirection="Columns"/>
-    <!--                                                    -->
-    <StackPanel
-      Grid.Column="2"
-      Grid.Row="0"
-      VerticalAlignment="Stretch">
-      <StackPanel
-        Orientation="Horizontal">
-        <SelectableTextBlock
-          FontSize="30"
-          FontWeight="Bold"
-          LetterSpacing="1.5"
-          Padding="5"
-          Text="{Binding SelectedCast.Names[0]}" />
-        <TextBlock
-          Text="{Binding SelectedCast.Category}"
-          Padding="5"
-          FontWeight="Thin"
-          VerticalAlignment="Bottom" />
-        <TextBlock
-          Text="{Binding SelectedCast.Product}"
-          Padding="5"
-          FontWeight="Thin"
-          VerticalAlignment="Bottom" />
-      </StackPanel>
-      <ProgressBar
-        IsVisible="{Binding IsLoading}"
-        IsIndeterminate="{Binding IsLoading}" />
-    </StackPanel>
+  <TabControl
+    TabStripPlacement="Bottom"
+    >
+    <TabItem
+      FontSize="14"
+      Header="Data">
+      <Grid
+        ColumnDefinitions="*, 3, 2*"
+        RowDefinitions="Auto, *">
+        <!--                                                    -->
+        <StackPanel
+          Grid.Column="0"
+          Grid.Row="0"
+          VerticalAlignment="Stretch">
+          <WrapPanel
+            Margin="5"
+            Orientation="Horizontal">
+            <TextBox
+              MinWidth="100"
+              IsVisible="False" />
+            <!--  voice category  -->
+            <WrapPanel
+              Margin="5">
+              <ToggleButton
+                IsChecked="{Binding IsShowTalkVoice}"
+                Command="{Binding CastFilterEvent}"
+                CommandParameter="Talk"
+                Content="Talk" />
+              <ToggleButton
+                IsChecked="{Binding IsShowSongVoice}"
+                Command="{Binding CastFilterEvent}"
+                CommandParameter="Talk"
+                Content="Song" />
+            </WrapPanel>
+            <!--  app  -->
+            <WrapPanel
+              Margin="5">
+              <ToggleButton
+                IsChecked="{Binding IsShowCS}"
+                ToolTip.Tip="CeVIO CS"
+                Command="{Binding CastFilterEvent}"
+                Content="CS" />
+              <ToggleButton
+                IsChecked="{Binding IsShowAI}"
+                ToolTip.Tip="CeVIO AI"
+                Command="{Binding CastFilterEvent}"
+                Content="AI" />
+              <ToggleButton
+                IsChecked="{Binding IsShowVS}"
+                ToolTip.Tip="VoiSona"
+                Command="{Binding CastFilterEvent}"
+                Content="VS" />
+            </WrapPanel>
+            <TextBlock
+              Text="{Binding DataVersion}"
+              FontSize="11"
+              FontWeight="Thin"
+              HorizontalAlignment="Right"
+              VerticalAlignment="Bottom"
+              />
+          </WrapPanel>
+        </StackPanel>
+        <!--                                                    -->
+        <ListBox
+          x:Name="casts"
+          Grid.Column="0"
+          Grid.Row="1"
+          VerticalAlignment="Stretch"
+          ItemsSource="{Binding CastList}"
+          SelectedItem="{Binding SelectedCast}"
+          SelectedIndex="{Binding SelectedCastIndex}"
+          SelectionChanged="Listbox_SelectionChanged"
+          >
+          <ListBox.ItemTemplate>
+            <DataTemplate>
+              <Border
+                BorderThickness="1"
+                CornerRadius="4"
+                Padding="5"
+                Margin="0"
+                BorderBrush="#88888888">
+                <DockPanel
+                  >
+                  <TextBlock
+                    Text="{Binding Names[0]}"
+                    FontFamily="{StaticResource NotoSansCJKjp}"
+                    DockPanel.Dock="Left"
+                    />
+                  <TextBlock
+                    Text="{Binding Category}"
+                    FontSize="11"
+                    Padding="2"
+                    FontWeight="Thin"
+                    HorizontalAlignment="Right"
+                    DockPanel.Dock="Right"
+                    />
+                  <TextBlock
+                    Text="{Binding Product}"
+                    FontSize="11"
+                    Padding="2"
+                    FontWeight="Thin"
+                    HorizontalAlignment="Right"
+                    DockPanel.Dock="Right"
+                    />
+                </DockPanel>
+              </Border>
+            </DataTemplate>
+          </ListBox.ItemTemplate>
+        </ListBox>
+        <!--                                                    -->
+        <GridSplitter
+          Grid.Column="1"
+          Grid.Row="0"
+          Grid.RowSpan="2"
+          ResizeDirection="Columns"/>
+        <!--                                                    -->
+        <StackPanel
+          Grid.Column="2"
+          Grid.Row="0"
+          VerticalAlignment="Stretch">
+          <StackPanel
+            Orientation="Horizontal">
+            <SelectableTextBlock
+              FontSize="30"
+              FontWeight="Bold"
+              LetterSpacing="1.5"
+              Padding="5"
+              Text="{Binding SelectedCast.Names[0]}" />
+            <TextBlock
+              Text="{Binding SelectedCast.Category}"
+              Padding="5"
+              FontWeight="Thin"
+              VerticalAlignment="Bottom" />
+            <TextBlock
+              Text="{Binding SelectedCast.Product}"
+              Padding="5"
+              FontWeight="Thin"
+              VerticalAlignment="Bottom" />
+          </StackPanel>
+          <ProgressBar
+            IsVisible="{Binding IsLoading}"
+            IsIndeterminate="{Binding IsLoading}" />
+        </StackPanel>
 
-    <ScrollViewer
-      Grid.Column="2"
-      Grid.Row="1"
-      >
-      <pgc:PropertyGrid
-        x:Name="propertyGrid_Basic"
-        Margin="4"
-        DataContext="{Binding SelectedCast}"
-      >
-      </pgc:PropertyGrid>
-    </ScrollViewer>
-  </Grid>
+        <ScrollViewer
+          Grid.Column="2"
+          Grid.Row="1"
+          >
+          <pgc:PropertyGrid
+            x:Name="propertyGrid_Basic"
+            Margin="4"
+            DataContext="{Binding SelectedCast}"
+          >
+          </pgc:PropertyGrid>
+        </ScrollViewer>
+      </Grid>
+    </TabItem>
+    <TabItem
+      FontSize="14"
+      IsEnabled="False"
+      Header="Tab 2">
+      <TextBlock Margin="5">This is tab 2 content</TextBlock>
+    </TabItem>
+    <TabItem
+      FontSize="14"
+      IsEnabled="False"
+      Header="Tab 3">
+      <TextBlock Margin="5">This is tab 3 content</TextBlock>
+    </TabItem>
+  </TabControl>
 
 </UserControl>
