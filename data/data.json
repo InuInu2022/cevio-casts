@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.21.0",
+	"version": "1.22.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -748,9 +748,18 @@
 			"lang": "Japanese",
 			"versions": [
 				"1.0.1",
-				"1.1.0"
+				"1.1.0",
+				"2.0.0"
 			],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"vocalRange": {
+				"high": "D5",
+				"low": "G#3"
+			},
+			"vocalTempo": {
+				"high": 184,
+				"low": 123
+			}
 		},
 		{
 			"id": "CSNV-JPF-AHS5",
@@ -770,9 +779,18 @@
 			"gender": "Female",
 			"lang": "Japanese",
 			"versions": [
-				"1.0.2"
+				"1.0.2",
+				"2.0.0"
 			],
 			"hasEmotions": false,
+			"vocalRange": {
+				"high": "F#4",
+				"low": "F#3"
+			},
+			"vocalTempo": {
+				"high": 170,
+				"low": 70
+			},
 			"spSymbols": [
 				{
 					"id": "bounceuppitch",
@@ -808,9 +826,18 @@
 			"gender": "Female",
 			"lang": "Japanese",
 			"versions": [
-				"1.0.1"
+				"1.0.1",
+				"2.0.0"
 			],
 			"hasEmotions": false,
+			"vocalRange": {
+				"high": "D5",
+				"low": "G3"
+			},
+			"vocalTempo": {
+				"high": 187,
+				"low": 75
+			},
 			"spSymbols": [
 				{
 					"id": "bounceuppitch",
@@ -824,6 +851,23 @@
 							"lang": "English",
 							"display": "Bounce-up pitch"
 						}
+					]
+				},
+				{
+					"id": "tailfall",
+					"symbols":["＿"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "末尾フォール"
+						},
+						{
+							"lang": "English",
+							"display": "Tail fall"
+						}
+					],
+					"versions":[
+						"2.0.0"
 					]
 				}
 			]
@@ -1730,7 +1774,15 @@
 			"versions": [
 				"2.0.0"
 			],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"vocalRange": {
+				"high": "E5",
+				"low": "A3"
+			},
+			"vocalTempo": {
+				"high": 200,
+				"low": 80
+			}
 		},
 		{
 			"id": "CSNV-JPF-AHS9",
@@ -1753,6 +1805,14 @@
 				"2.0.0"
 			],
 			"hasEmotions": false,
+			"vocalRange": {
+				"high": "F5",
+				"low": "F3"
+			},
+			"vocalTempo": {
+				"high": 180,
+				"low": 70
+			},
 			"spSymbols": [
 				{
 					"id": "bounceuppitch",
@@ -1867,7 +1927,8 @@
 			"versions": [
 				"1.0.2",
 				"1.1.0",
-				"1.2.0"
+				"1.2.0",
+				"2.0.0"
 			],
 			"hasEmotions": true,
 			"emotions": [
@@ -2111,7 +2172,8 @@
 			"lang": "Japanese",
 			"versions": [
 				"1.0.0",
-				"1.1.0"
+				"1.1.0",
+				"2.0.0"
 			],
 			"hasEmotions": true,
 			"emotions": [
@@ -2124,7 +2186,7 @@
 						},
 						{
 							"lang": "English",
-							"display": ""
+							"display": "Fine"
 						}
 					]
 				},
@@ -2137,7 +2199,7 @@
 						},
 						{
 							"lang": "English",
-							"display": ""
+							"display": "Angry"
 						}
 					]
 				},
@@ -2150,7 +2212,7 @@
 						},
 						{
 							"lang": "English",
-							"display": ""
+							"display": "Calm"
 						}
 					]
 				},
@@ -2163,7 +2225,7 @@
 						},
 						{
 							"lang": "English",
-							"display": ""
+							"display": "Sad"
 						}
 					]
 				},
@@ -2176,7 +2238,7 @@
 						},
 						{
 							"lang": "English",
-							"display": ""
+							"display": "Mild"
 						}
 					]
 				}
@@ -2201,7 +2263,8 @@
 			"lang": "English",
 			"versions": [
 				"1.0.0",
-				"1.1.0"
+				"1.1.0",
+				"2.0.0"
 			],
 			"hasEmotions": true,
 			"emotions": [
@@ -2214,7 +2277,7 @@
 						},
 						{
 							"lang": "English",
-							"display": ""
+							"display": "Fine"
 						}
 					]
 				},
@@ -2227,7 +2290,7 @@
 						},
 						{
 							"lang": "English",
-							"display": ""
+							"display": "Angry"
 						}
 					]
 				},
@@ -2240,7 +2303,7 @@
 						},
 						{
 							"lang": "English",
-							"display": ""
+							"display": "Calm"
 						}
 					]
 				},
@@ -2253,7 +2316,7 @@
 						},
 						{
 							"lang": "English",
-							"display": ""
+							"display": "Sad"
 						}
 					]
 				},
@@ -2266,7 +2329,7 @@
 						},
 						{
 							"lang": "English",
-							"display": ""
+							"display": "Mild"
 						}
 					]
 				}
@@ -2290,7 +2353,8 @@
 			"gender": "Female",
 			"lang": "Japanese",
 			"versions": [
-				"1.0.1"
+				"1.0.1",
+				"2.0.0"
 			],
 			"hasEmotions": true,
 			"emotions": [
@@ -4237,8 +4301,226 @@
 					]
 				}
 			]
-		}
-		,{
+		},
+		{
+			"id": "s-s-s-llc_ja_JP_f820_svss",
+			"cname": "s-s-s-llc_ja_JP_f820_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "東北ずん子"
+				},
+				{
+					"lang": "English",
+					"display": "Tohoku Zunko"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.0.2 ported from CeVIO AI",
+				"2.0.0"
+			],
+			"hasEmotions": false,
+			"vocalRange": {
+				"high": "F#4",
+				"low": "F#3"
+			},
+			"vocalTempo": {
+				"high": 170,
+				"low": 70
+			},
+			"spSymbols": [
+				{
+					"id": "pitchflipup",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "跳ね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Pitch flip up"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "s-s-s-llc_ja_JP_f821_svss",
+			"cname": "s-s-s-llc_ja_JP_f821_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "東北イタコ"
+				},
+				{
+					"lang": "English",
+					"display": "Tohoku Itako"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.0.1 ported from CeVIO AI",
+				"2.0.0"
+			],
+			"hasEmotions": false,
+			"vocalRange": {
+				"high": "D5",
+				"low": "G3"
+			},
+			"vocalTempo": {
+				"high": 187,
+				"low": 75
+			},
+			"spSymbols": [
+				{
+					"id": "pitchflipup",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "跳ね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Pitch flip up"
+						}
+					]
+				},
+				{
+					"id": "tailfall",
+					"symbols":["＿"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "末尾フォール"
+						},
+						{
+							"lang": "English",
+							"display": "Tail fall"
+						}
+					],
+					"versions":[
+						"2.0.0"
+					]
+				}
+			]
+		},
+		{
+			"id": "s-s-s-llc_ja_JP_f812_svss",
+			"cname": "s-s-s-llc_ja_JP_f812_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "東北きりたん"
+				},
+				{
+					"lang": "English",
+					"display": "Tohoku Kiritan"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.1.0 ported from CeVIO AI",
+				"2.0.0"
+			],
+			"hasEmotions": false,
+			"vocalRange": {
+				"high": "D5",
+				"low": "G#3"
+			},
+			"vocalTempo": {
+				"high": 184,
+				"low": 123
+			}
+		},
+		{
+			"id": "s-s-s-llc_ja_JP_f843_svss",
+			"cname": "s-s-s-llc_ja_JP_f843_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "ずんだもん"
+				},
+				{
+					"lang": "English",
+					"display": "Zundamon"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"2.0.0"
+			],
+			"hasEmotions": false,
+			"vocalRange": {
+				"high": "E5",
+				"low": "A3"
+			},
+			"vocalTempo": {
+				"high": 200,
+				"low": 80
+			}
+		},
+		{
+			"id": "s-s-s-llc_ja_JP_f844_svss",
+			"cname": "s-s-s-llc_ja_JP_f844_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "四国めたん"
+				},
+				{
+					"lang": "English",
+					"display": "Shikoku Metan"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"2.0.0"
+			],
+			"hasEmotions": false,
+			"vocalRange": {
+				"high": "F5",
+				"low": "F3"
+			},
+			"vocalTempo": {
+				"high": 180,
+				"low": 70
+			},
+			"spSymbols": [
+				{
+					"id": "pitchflipup",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "跳ね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Pitch flip up"
+						}
+					]
+				}
+			]
+		},
+		{
 			"id": "techno-sp_ja_JP_f701_tts",
 			"cname": "techno-sp_ja_JP_f701_tts.tsnvoice",
 			"names": [
@@ -4670,6 +4952,366 @@
 						{
 							"lang": "English",
 							"display": "Child"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "techno-sp_ja_JP_f814_tts",
+			"cname": "techno-sp_ja_JP_f814_tts.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "小春六花"
+				},
+				{
+					"lang": "English",
+					"display": "Koharu Rikka"
+				}
+			],
+			"category": "TextVocal",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.2.0 ported from CeVIO AI",
+				"2.0.3"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "0",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Happy"
+						},
+						{
+							"lang": "English",
+							"display": "Happy"
+						}
+					]
+				},
+				{
+					"id": "1",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Normal"
+						},
+						{
+							"lang": "English",
+							"display": "Normal"
+						}
+					]
+				},
+				{
+					"id": "2",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Angry"
+						},
+						{
+							"lang": "English",
+							"display": "Angry"
+						}
+					]
+				},
+				{
+					"id": "3",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Sad"
+						},
+						{
+							"lang": "English",
+							"display": "Sad"
+						}
+					]
+				},
+				{
+					"id": "4",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Calm"
+						},
+						{
+							"lang": "English",
+							"display": "Calm"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "techno-sp_ja_JP_f813_tts",
+			"cname": "techno-sp_ja_JP_f813_tts.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "弦巻マキ"
+				},
+				{
+					"lang": "English",
+					"display": "Tsurumaki Maki"
+				}
+			],
+			"category": "TextVocal",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.1.0 ported from CeVIO AI",
+				"2.0.2"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "0",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Fine"
+						},
+						{
+							"lang": "English",
+							"display": "Fine"
+						}
+					]
+				},
+				{
+					"id": "1",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Angry"
+						},
+						{
+							"lang": "English",
+							"display": "Angry"
+						}
+					]
+				},
+				{
+					"id": "2",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Calm"
+						},
+						{
+							"lang": "English",
+							"display": "Calm"
+						}
+					]
+				},
+				{
+					"id": "3",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Sad"
+						},
+						{
+							"lang": "English",
+							"display": "Sad"
+						}
+					]
+				},
+				{
+					"id": "4",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Mild"
+						},
+						{
+							"lang": "English",
+							"display": "Mild"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "techno-sp_en_US_f813_tts",
+			"cname": "techno-sp_en_US_f813_tts.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "弦巻マキ English"
+				},
+				{
+					"lang": "English",
+					"display": "Tsurumaki Maki English"
+				}
+			],
+			"category": "TextVocal",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "English",
+			"versions": [
+				"1.1.0 ported from CeVIO AI",
+				"2.0.2"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "0",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Fine"
+						},
+						{
+							"lang": "English",
+							"display": "Fine"
+						}
+					]
+				},
+				{
+					"id": "1",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Angry"
+						},
+						{
+							"lang": "English",
+							"display": "Angry"
+						}
+					]
+				},
+				{
+					"id": "2",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Calm"
+						},
+						{
+							"lang": "English",
+							"display": "Calm"
+						}
+					]
+				},
+				{
+					"id": "3",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Sad"
+						},
+						{
+							"lang": "English",
+							"display": "Sad"
+						}
+					]
+				},
+				{
+					"id": "4",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Mild"
+						},
+						{
+							"lang": "English",
+							"display": "Mild"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "techno-sp_ja_JP_f817_tts",
+			"cname": "techno-sp_ja_JP_f817_tts.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "夏色花梨"
+				},
+				{
+					"lang": "English",
+					"display": "Natsuki Karin"
+				}
+			],
+			"category": "TextVocal",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.0.1 ported from CeVIO AI",
+				"2.0.3"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "0",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Happy"
+						},
+						{
+							"lang": "English",
+							"display": "Happy"
+						}
+					]
+				},
+				{
+					"id": "1",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Normal"
+						},
+						{
+							"lang": "English",
+							"display": "Normal"
+						}
+					]
+				},
+				{
+					"id": "2",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Angry"
+						},
+						{
+							"lang": "English",
+							"display": "Angry"
+						}
+					]
+				},
+				{
+					"id": "3",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Sad"
+						},
+						{
+							"lang": "English",
+							"display": "Sad"
+						}
+					]
+				},
+				{
+					"id": "4",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Calm"
+						},
+						{
+							"lang": "English",
+							"display": "Calm"
 						}
 					]
 				}
