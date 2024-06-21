@@ -228,6 +228,7 @@ public class UnitTest1 : IDisposable
 			if(!isTarget){continue;}
 
 			Assert.True(cast.Product == CevioCasts.Product.VoiSona);
+			Assert.True(cast.Id == cast.Cname.Split(".")[0]);
 		}
 	}
 
