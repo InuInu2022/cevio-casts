@@ -17,6 +17,7 @@ using Avalonia.Controls;
 using ScottPlot;
 using ScottPlot.TickGenerators;
 using System.Collections.Generic;
+using CastViewer.Core.Utils;
 
 namespace CastViewer.ViewModels;
 
@@ -248,6 +249,7 @@ public class MainViewModel : ViewModelBase
 			.Where(c => c.VocalTempo is not null)
 			.OrderBy(c => c.VocalTempo!.High)
 			.ThenByDescending(c => c.VocalTempo!.Low)
+			.ThenBy(c => c.Names[1].Display)
 			;
 		Tick[] ticks =
 		{
@@ -263,19 +265,6 @@ public class MainViewModel : ViewModelBase
 				.ToArray()
 				;
 		}
-		avaPlot.Plot.Axes.Left.TickGenerator = new NumericManual(ticks);
-		avaPlot.Plot.Axes.Left.MajorTickStyle.Length = 0;
-		avaPlot.Plot.Axes.Left.Label.FontName = "Noto Sans CJK";
-		avaPlot.Plot.Axes.Title.Label.Text = "Recommended vocal tempo";
-
-		avaPlot.Plot.Axes.Color(Color.FromHex("#a0acb5"));
-		avaPlot.Plot.Grid.MajorLineColor = Color.FromHex("#0e3d54");
-		avaPlot.Plot.FigureBackground.Color = Color.FromHex("#07263b");
-		avaPlot.Plot.DataBackground.Color = Color.FromHex("#0b3049");
-		//avaPlot.Plot.Font.Automatic();
-		//avaPlot.Plot.Add.Palette = new ScottPlot.Palettes.Penumbra();
-
-		var fontName = Fonts.Detect("日本語あいうえお");
 
 		ScottPlot.Bar[] bars =
 		{
@@ -300,9 +289,105 @@ public class MainViewModel : ViewModelBase
 				;
 
 		}
+
+		SetBarPlot(
+			avaPlot, bars,
+			castTicks: ticks,
+			//valueTicks: rangeTicks,
+			title:"Recommended vocal tempo (bpm)",
+			isHorizontal:true);
+
+		return default;
+
+
+	}
+
+	private ValueTask ShowRangeTabAsync(AvaPlot avaPlot)
+	{
+		var targets = RawCastList
+			//.Where(c => c.IsShowTempo)
+			.Where(c => c.Category == Category.SingerSong)
+			.Where(c => c.VocalRange is not null)
+			.OrderBy(c => VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.High))
+			.ThenBy(c => VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.Low))
+			.ThenBy(c => c.Names[1].Display)
+			;
+
+		Tick[] castTicks = targets
+			.Select((c, i) => new Tick(i, c.Names[1].Display))
+			.ToArray()
+			;
+
+		Tick[] rangeTicks = VocalRangeUtil
+			.GetAllNoteNameTicks()
+			.Select(t => new Tick(t.Value, t.Key))
+			.ToArray();
+
+		ScottPlot.Bar[] bars =
+		{
+			new() { Position = 1, Value = 5, ValueBase = 3, FillColor = Colors.Red },
+			new() { Position = 2, Value = 7, ValueBase = 0, FillColor = Colors.Blue },
+			new() { Position = 4, Value = 3, ValueBase = 2, FillColor = Colors.Green },
+		};
+		bars = targets
+			.Select((c,i) => new Bar()
+			{
+				Label = $"{c.VocalRange.Low} - {c.VocalRange.High}",
+				Position = i,
+				ValueBase = VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.Low),
+				Value = VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.High),
+				FillColor = GetColor(c.Product),
+				BorderLineWidth = 0,
+				//BorderColor = Colors.Gray,
+			})
+			.ToArray()
+			;
+
+		SetBarPlot(
+			avaPlot, bars,
+			castTicks: castTicks,
+			valueTicks: rangeTicks,
+			title:"Recommended vocal range",
+			isHorizontal:true);
+
+		return default;
+	}
+
+	private void SetBarPlot(
+		AvaPlot avaPlot,
+		IEnumerable<ScottPlot.Bar> bars,
+		string title = "plot name",
+		IEnumerable<Tick>? castTicks = null,
+		IEnumerable<Tick>? valueTicks = null,
+		bool isHorizontal = false
+	)
+	{
+		//title
+		avaPlot.Plot.Axes.Title.Label.Text = title;
+
+		//color
+		avaPlot.Plot.Axes.Color(Color.FromHex("#a0acb5"));
+		avaPlot.Plot.Grid.MajorLineColor = Color.FromHex("#0e3d54");
+		avaPlot.Plot.FigureBackground.Color = Color.FromHex("#07263b");
+		avaPlot.Plot.DataBackground.Color = Color.FromHex("#0b3049");
+
+		//bar plot
 		var barPlot = avaPlot.Plot.Add.Bars(bars);
-		barPlot.Horizontal = true;
+		barPlot.Horizontal = isHorizontal;
 		barPlot.ValueLabelStyle.ForeColor = Color.FromHex("#a0acb5");
+
+		if(castTicks is not null)
+		{
+			avaPlot.Plot.Axes.Left.TickGenerator = new NumericManual([.. castTicks]);
+			avaPlot.Plot.Axes.Left.MajorTickStyle.Length = 0;
+			avaPlot.Plot.Axes.Left.Label.FontName = "Noto Sans CJK";
+		}
+
+		if(valueTicks is not null)
+		{
+			avaPlot.Plot.Axes.Bottom.TickGenerator = new NumericManual([.. valueTicks]);
+			avaPlot.Plot.Axes.Bottom.MajorTickStyle.Length = 0;
+		}
 
 		// build the legend manually
 		var legend = avaPlot.Plot.Legend;
@@ -313,18 +398,16 @@ public class MainViewModel : ViewModelBase
 			new(){LabelText = Product.VoiSona.ToString(), FillColor = Colors.LightBlue},
 			new(){LabelText = Product.CeVIO_CS.ToString(), FillColor = Colors.Gray},
 		];
+	}
 
-		return default;
-
-		static Color GetColor(Product product)
+	static Color GetColor(Product product)
+	{
+		return product switch
 		{
-			return product switch
-			{
-				Product.CeVIO_AI => ScottPlot.Colors.LightSalmon,
-				Product.VoiSona => ScottPlot.Colors.LightBlue,
-				_ => Colors.Gray,
-			};
-		}
+			Product.CeVIO_AI => ScottPlot.Colors.LightSalmon,
+			Product.VoiSona => ScottPlot.Colors.LightBlue,
+			_ => Colors.Gray,
+		};
 	}
 
 	[PropertyChanged(nameof(SelectedPlotTab))]
@@ -335,11 +418,21 @@ public class MainViewModel : ViewModelBase
 
 		switch(value.Name){
 			case "TempoPlotTab":
+			{
 				if(value.Content is AvaPlot plot)
 				{
 					await ShowTempoTabAsync(plot);
 				}
 				break;
+			}
+			case "RangePlotTab":
+			{
+				if(value.Content is AvaPlot plot)
+				{
+					await ShowRangeTabAsync(plot);
+				}
+				break;
+			}
 			default:
 				break;
 		}
