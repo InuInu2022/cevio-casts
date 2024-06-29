@@ -1,4 +1,5 @@
 using System.Collections.ObjectModel;
+using System.Globalization;
 using Melanchall.DryWetMidi.Common;
 using Melanchall.DryWetMidi.MusicTheory;
 namespace CastViewer.Core.Utils;
@@ -28,7 +29,7 @@ public static class VocalRangeUtil
 						.Replace("Sharp","#")
 					+ NoteUtilities
 						.GetNoteOctave((SevenBitNumber)v)
-						.ToString()
+						.ToString(CultureInfo.InvariantCulture)
 					,
 					v
 				))

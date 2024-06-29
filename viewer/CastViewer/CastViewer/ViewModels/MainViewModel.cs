@@ -18,12 +18,14 @@ using ScottPlot;
 using ScottPlot.TickGenerators;
 using System.Collections.Generic;
 using CastViewer.Core.Utils;
+using Avalonia.Collections;
 
 namespace CastViewer.ViewModels;
 
 [ViewModel]
 public class MainViewModel : ViewModelBase
 {
+	public string WindowTitle { get; set; } = "C v0.0.0";
 	public IEnumerable<Cast> RawCastList { get; private set; }
 
 	private ImmutableList<DisplayCast>? loadedList;
@@ -187,6 +189,10 @@ public class MainViewModel : ViewModelBase
 	public Pile<AvaPlot> TempoPlotPile { get; } = Pile.Factory.Create<AvaPlot>();
 	public Pile<AvaPlot> RangePlotPile { get; } = Pile.Factory.Create<AvaPlot>();
 
+	// ------------- table tab --------------- //
+	public TabItem? SelectedTableTab { get; set; }
+	public ObservableCollection<EmotionTableColumn>? EmotionTableCastList { get; set; } = [];
+
 	public MainViewModel()
 	{
 		var list = TestList
@@ -204,6 +210,7 @@ public class MainViewModel : ViewModelBase
 			.ToImmutableList();
 		CastList = new(loadedList);
 		DataVersion = definitions.Version;
+		WindowTitle = $"CastViewer ver.{DataVersion}";
 
 		CastFilterEvent = Command.Factory.Create(()=>{
 			var filterd = loadedList
@@ -410,6 +417,29 @@ public class MainViewModel : ViewModelBase
 		};
 	}
 
+	private ValueTask ShowEmotionTableAsync(DataGrid grid)
+	{
+		var casts = CastList
+			.Where(c => c.HasEmotions)
+			.ToList()
+			.Select(c => new EmotionTableColumn(
+				category: c.Category,
+				castName: c.Names?[0] ?? "NO NAME",
+				product: c.Product,
+				emotions: [..c.Emotions ?? []]
+			))
+			;
+		EmotionTableCastList = [.. casts];
+		grid.ItemsSource = new DataGridCollectionView(EmotionTableCastList)
+		{
+			GroupDescriptions =
+            {
+                new DataGridPathGroupDescription("Category")
+            }
+		};
+		return default;
+	}
+
 	[PropertyChanged(nameof(SelectedPlotTab))]
 	[SuppressMessage("","IDE0051")]
 	private async ValueTask SelectedPlotTabChangedAsync(TabItem value)
@@ -433,6 +463,25 @@ public class MainViewModel : ViewModelBase
 				}
 				break;
 			}
+			default:
+				break;
+		}
+
+		//return default;
+	}
+
+	[PropertyChanged(nameof(SelectedTableTab))]
+	[SuppressMessage("","IDE0051")]
+	private async ValueTask SelectedTableTabChangedAsync(TabItem value)
+	{
+		if(value is null) return;
+		if(value.Content is not DataGrid grid) return;
+
+		switch(value.Name)
+		{
+			case "EmotionsTab":
+				await ShowEmotionTableAsync(grid);
+				break;
 			default:
 				break;
 		}

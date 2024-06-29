@@ -7,6 +7,8 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="CastViewer.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
-        Title="CastViewer">
+        Title="{Binding WindowTitle}"
+        x:DataType="vm:MainViewModel"
+        >
         <views:MainView />
 </Window>
