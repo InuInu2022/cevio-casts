@@ -12,12 +12,19 @@ using System.IO;
 using Avalonia.PropertyGrid.Controls;
 using System.Diagnostics.CodeAnalysis;
 using System.Diagnostics;
+using ScottPlot.Avalonia;
+using Avalonia.Controls;
+using ScottPlot;
+using ScottPlot.TickGenerators;
+using System.Collections.Generic;
 
 namespace CastViewer.ViewModels;
 
 [ViewModel]
 public class MainViewModel : ViewModelBase
 {
+	public IEnumerable<Cast> RawCastList { get; private set; }
+
 	private ImmutableList<DisplayCast>? loadedList;
 
 	public ObservableCollection<Core.Model.DisplayCast> CastList { get; set; }
@@ -173,6 +180,12 @@ public class MainViewModel : ViewModelBase
 		},
 	];
 
+
+	// ------------- plot tab --------------- //
+	public TabItem? SelectedPlotTab { get; set; }
+	public Pile<AvaPlot> TempoPlotPile { get; } = Pile.Factory.Create<AvaPlot>();
+	public Pile<AvaPlot> RangePlotPile { get; } = Pile.Factory.Create<AvaPlot>();
+
 	public MainViewModel()
 	{
 		var list = TestList
@@ -183,6 +196,7 @@ public class MainViewModel : ViewModelBase
 		using var fs = new StreamReader(AssetLoader.Open(new Uri("avares://CastViewer/Assets/data.json")));
 		string jsonString = fs.ReadToEnd();
 		var definitions = Definitions.FromJson(jsonString, true);
+		RawCastList = definitions.Casts;
 		loadedList = definitions
 			.Casts
 			.Select<Cast, DisplayCast>(v => new(v))
@@ -226,31 +240,110 @@ public class MainViewModel : ViewModelBase
 		});
 	}
 
-	/*
-	[PropertyChanged(nameof(SelectedCast))]
-	[SuppressMessage("","IDE0051")]
-	private async ValueTask SelectedCastChangedAsync(DisplayCast value)
+	private ValueTask ShowTempoTabAsync(AvaPlot avaPlot)
 	{
-		if(PgPile is null){return;}
-
-		IsLoading = true;
-		try
+		var targets = RawCastList
+			//.Where(c => c.IsShowTempo)
+			.Where(c => c.Category == Category.SingerSong)
+			.Where(c => c.VocalTempo is not null)
+			.OrderBy(c => c.VocalTempo!.High)
+			.ThenByDescending(c => c.VocalTempo!.Low)
+			;
+		Tick[] ticks =
 		{
-			await PgPile.RentAsync(async pg =>
+			new(1, "Apple"),
+			new(2, "Orange"),
+			new(3, "Pear"),
+			new(4, "Banana"),
+		};
+		if(CastList is not null)
+		{
+			ticks = targets
+				.Select((c, i) => new Tick(i, c.Names[1].Display))
+				.ToArray()
+				;
+		}
+		avaPlot.Plot.Axes.Left.TickGenerator = new NumericManual(ticks);
+		avaPlot.Plot.Axes.Left.MajorTickStyle.Length = 0;
+		avaPlot.Plot.Axes.Left.Label.FontName = "Noto Sans CJK";
+		avaPlot.Plot.Axes.Title.Label.Text = "Recommended vocal tempo";
+
+		avaPlot.Plot.Axes.Color(Color.FromHex("#a0acb5"));
+		avaPlot.Plot.Grid.MajorLineColor = Color.FromHex("#0e3d54");
+		avaPlot.Plot.FigureBackground.Color = Color.FromHex("#07263b");
+		avaPlot.Plot.DataBackground.Color = Color.FromHex("#0b3049");
+		//avaPlot.Plot.Font.Automatic();
+		//avaPlot.Plot.Add.Palette = new ScottPlot.Palettes.Penumbra();
+
+		var fontName = Fonts.Detect("日本語あいうえお");
+
+		ScottPlot.Bar[] bars =
+		{
+			new() { Position = 1, Value = 5, ValueBase = 3, FillColor = Colors.Red },
+			new() { Position = 2, Value = 7, ValueBase = 0, FillColor = Colors.Blue },
+			new() { Position = 4, Value = 3, ValueBase = 2, FillColor = Colors.Green },
+		};
+		if(CastList is not null)
+		{
+			bars = targets
+				.Select((c,i) => new Bar()
+				{
+					Label = $"{c.VocalTempo.Low} - {c.VocalTempo.High}",
+					Position = i,
+					ValueBase = c.VocalTempo?.Low ?? 0,
+					Value = c.VocalTempo?.High ?? 0,
+					FillColor = GetColor(c.Product),
+					BorderLineWidth = 0,
+					//BorderColor = Colors.Gray,
+				})
+				.ToArray()
+				;
+
+		}
+		var barPlot = avaPlot.Plot.Add.Bars(bars);
+		barPlot.Horizontal = true;
+		barPlot.ValueLabelStyle.ForeColor = Color.FromHex("#a0acb5");
+
+		// build the legend manually
+		var legend = avaPlot.Plot.Legend;
+		legend.IsVisible = true;
+		legend.Alignment = Alignment.LowerRight;
+		legend.ManualItems = [
+			new(){LabelText = Product.CeVIO_AI.ToString(), FillColor = Colors.LightSalmon},
+			new(){LabelText = Product.VoiSona.ToString(), FillColor = Colors.LightBlue},
+			new(){LabelText = Product.CeVIO_CS.ToString(), FillColor = Colors.Gray},
+		];
+
+		return default;
+
+		static Color GetColor(Product product)
+		{
+			return product switch
 			{
-				await Task.Delay(300);
-				pg.DataContext = value;
-				await Task.Delay(500);
-			});
+				Product.CeVIO_AI => ScottPlot.Colors.LightSalmon,
+				Product.VoiSona => ScottPlot.Colors.LightBlue,
+				_ => Colors.Gray,
+			};
 		}
-		catch (Exception ex)
-		{
-			Debug.WriteLine(ex.Message);
-		}
+	}
 
-		IsLoading = false;
+	[PropertyChanged(nameof(SelectedPlotTab))]
+	[SuppressMessage("","IDE0051")]
+	private async ValueTask SelectedPlotTabChangedAsync(TabItem value)
+	{
+		if(value is null) return;
+
+		switch(value.Name){
+			case "TempoPlotTab":
+				if(value.Content is AvaPlot plot)
+				{
+					await ShowTempoTabAsync(plot);
+				}
+				break;
+			default:
+				break;
+		}
 
 		//return default;
 	}
-	*/
 }

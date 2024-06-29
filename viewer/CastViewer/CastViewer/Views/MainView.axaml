@@ -5,6 +5,7 @@
              xmlns:vm="clr-namespace:CastViewer.ViewModels"
              xmlns:pgc="clr-namespace:Avalonia.PropertyGrid.Controls;assembly=Avalonia.PropertyGrid"
              xmlns:epoxy="https://github.com/kekyo/Epoxy"
+             xmlns:ScottPlot="clr-namespace:ScottPlot.Avalonia;assembly=ScottPlot.Avalonia"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="CastViewer.Views.MainView"
              x:DataType="vm:MainViewModel">
@@ -173,9 +174,38 @@
     </TabItem>
     <TabItem
       FontSize="14"
-      IsEnabled="False"
-      Header="Tab 2">
-      <TextBlock Margin="5">This is tab 2 content</TextBlock>
+      IsEnabled="True"
+      Header="Plot">
+      <TabControl
+        TabStripPlacement="Left"
+        FontSize="14"
+        SelectedItem="{Binding SelectedPlotTab}"
+        >
+        <TabItem
+          Header="Default"
+          Name="DefaultTab"
+          >
+          <TextBlock Text="Please select a left plot tab" />
+        </TabItem>
+        <TabItem
+          Header="Vocal Tempo"
+          Name="TempoPlotTab"
+          >
+          <ScottPlot:AvaPlot
+            Name="TempoPlot"
+            epoxy:Anchor.Pile="{Binding TempoPlotPile}"
+            />
+        </TabItem>
+        <TabItem
+          Header="Vocal Range"
+          Name="RangePlotTab"
+          >
+          <ScottPlot:AvaPlot
+            Name="RangePlot"
+            epoxy:Anchor.Pile="{Binding RangePlotPile}"
+            />
+        </TabItem>
+      </TabControl>
     </TabItem>
     <TabItem
       FontSize="14"
