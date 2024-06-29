@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.23.1",
+	"version": "1.23.2",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -945,6 +945,34 @@
 				"1.0.0"
 			],
 			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "0",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "感情"
+						},
+						{
+							"lang": "English",
+							"display": "Emotion"
+						}
+					]
+				},
+				{
+					"id": "1",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "感情"
+						},
+						{
+							"lang": "English",
+							"display": "Emotion"
+						}
+					]
+				}
+			],
 			"spSymbols": [
 				{
 					"id": "bounceuppitch",
@@ -1077,6 +1105,34 @@
 				"1.0.0"
 			],
 			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "0",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "感情"
+						},
+						{
+							"lang": "English",
+							"display": "Emotion"
+						}
+					]
+				},
+				{
+					"id": "1",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "感情"
+						},
+						{
+							"lang": "English",
+							"display": "Emotion"
+						}
+					]
+				}
+			],
 			"spSymbols": [
 				{
 					"id": "bounceuppitch",
@@ -1143,6 +1199,34 @@
 				"1.0.2"
 			],
 			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "0",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "ラップ"
+						},
+						{
+							"lang": "English",
+							"display": "Rap"
+						}
+					]
+				},
+				{
+					"id": "1",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "ラップ"
+						},
+						{
+							"lang": "English",
+							"display": "Rap"
+						}
+					]
+				}
+			],
 			"spSymbols": [
 				{
 					"id": "bounceuppitch",
