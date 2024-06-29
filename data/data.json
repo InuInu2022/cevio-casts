@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.23.0",
+	"version": "1.23.1",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -1723,6 +1723,14 @@
 				"1.0.1"
 			],
 			"hasEmotions": false,
+			"vocalRange": {
+				"high": "F5",
+				"low": "F#3"
+			},
+			"vocalTempo": {
+				"high": 180,
+				"low": 100
+			},
 			"spSymbols": [
 				{
 					"id": "bounceuppitch",
@@ -4542,6 +4550,14 @@
 				"2.0.0"
 			],
 			"hasEmotions": false,
+			"vocalRange": {
+				"high": "F5",
+				"low": "F#3"
+			},
+			"vocalTempo": {
+				"high": 180,
+				"low": 100
+			},
 			"spSymbols": [
 				{
 					"id": "pitchflipup",
