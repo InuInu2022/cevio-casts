@@ -13,6 +13,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <PublishSingleFile>true</PublishSingleFile>
     <Deterministic>true</Deterministic>
     <DeterministicSourceRoot>/_/</DeterministicSourceRoot>
     <RepoRoot>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\..\'))</RepoRoot>
