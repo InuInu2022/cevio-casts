@@ -129,6 +129,12 @@ public class UnitTest1 : IDisposable
 			{
 				Assert.Equal(cast.Id, cast.Cname);
 			}
+
+			if(cast.Product == CevioCasts.Product.VoiSona)
+			{
+				var check = cast.Cname.Split(".")[0];
+				Assert.Equal(cast.Id, check);
+			}
 		}
 	}
 
@@ -140,6 +146,8 @@ public class UnitTest1 : IDisposable
 		{
 			if(cast?.SpSymbols is null){continue;}
 			if(cast!.SpSymbols.Length == 0){continue;}
+
+			Assert.True(cast.SpSymbols.Any(v => v.Id != ""));
 			var result =
 				cast
 					.SpSymbols
