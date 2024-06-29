@@ -42,11 +42,17 @@ Definition data for CeVIO casts (voice library) defined in JSON format.
 
 ![castviwer](viewer/screenshots/castviewer_standalone_desktop.png)
 
+|![vocal range](viewer/screenshots/castviewer_vocal_range_plot.png)|![vocal range](viewer/screenshots/castviewer_vocal_tempo_plot.png)|
+|---|---|
+|vocal range plot|vocal tempo plot|
+
 WIP
 
 - cast-dataを見ることができるアプリです
 - Desktop版とWasm版のみ動きます
 - .NET SDKを入れた状態で `dotnet run` してください
+
+- [License](viewer/CastViewer/License/)
 
 # Requirement
 
