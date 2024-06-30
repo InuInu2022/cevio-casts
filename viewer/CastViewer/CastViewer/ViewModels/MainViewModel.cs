@@ -189,6 +189,7 @@ public class MainViewModel : ViewModelBase
 	public Pile<AvaPlot> TempoPlotPile { get; } = Pile.Factory.Create<AvaPlot>();
 	public Pile<AvaPlot> RangePlotPile { get; } = Pile.Factory.Create<AvaPlot>();
 	public Pile<AvaPlot> TempoRangePlotPile { get; } = Pile.Factory.Create<AvaPlot>();
+	public Pile<AvaPlot> EmotionsPlotPile { get; } = Pile.Factory.Create<AvaPlot>();
 
 	// ------------- table tab --------------- //
 	public TabItem? SelectedTableTab { get; set; }
@@ -259,13 +260,7 @@ public class MainViewModel : ViewModelBase
 			.ThenByDescending(c => c.VocalTempo!.Low)
 			.ThenBy(c => c.Names[1].Display)
 			;
-		Tick[] ticks =
-		{
-			new(1, "Apple"),
-			new(2, "Orange"),
-			new(3, "Pear"),
-			new(4, "Banana"),
-		};
+		Tick[] ticks = [];
 		if(CastList is not null)
 		{
 			ticks = targets
@@ -274,12 +269,7 @@ public class MainViewModel : ViewModelBase
 				;
 		}
 
-		ScottPlot.Bar[] bars =
-		{
-			new() { Position = 1, Value = 5, ValueBase = 3, FillColor = Colors.Red },
-			new() { Position = 2, Value = 7, ValueBase = 0, FillColor = Colors.Blue },
-			new() { Position = 4, Value = 3, ValueBase = 2, FillColor = Colors.Green },
-		};
+		ScottPlot.Bar[] bars = [];
 		if(CastList is not null)
 		{
 			bars = targets
@@ -420,6 +410,62 @@ public class MainViewModel : ViewModelBase
 		return default;
 	}
 
+	private ValueTask ShowEmotionsTabAsync(AvaPlot avaPlot)
+	{
+		var targets = RawCastList
+			.Where(c => c.Emotions is not null && c.Emotions.Any())
+			.OrderByDescending(c => c.Emotions.Count())
+			.ThenBy(c => c.Names[0].Display)
+			;
+		Tick[] castTicks = targets
+			.Select((c, i) => new Tick(
+				i,
+				$"{c.Names[1].Display} - {TextUtil.GetAppCatText(c.Product, c.Category)}"))
+			.ToArray()
+			;
+		Bar[] bars = targets
+			.Select((c,i) => new Bar()
+			{
+				Label = $"{ c.Emotions.Count() }",
+				Position = i,
+				Value = c.Emotions.Count(),
+				FillColor = GetColor(c.Product),
+				BorderLineWidth = 0,
+				//BorderColor = Colors.Gray,
+			})
+			.ToArray()
+			;
+		SetPlot(
+			avaPlot,
+			bars,
+			//castTicks: ,
+			valueTicks: castTicks,
+			title:"Voice Lib emotion counts",
+			isHorizontal:false,
+			isShowRegend:false);
+		avaPlot.Plot.Axes.Left.TickGenerator = new ScottPlot.TickGenerators.NumericFixedInterval();
+		avaPlot.Plot.Axes.Bottom.TickLabelStyle.Alignment = Alignment.MiddleLeft;
+		avaPlot.Plot.Axes.Margins(bottom: 0);
+		avaPlot.Plot.Axes.Bottom.TickLabelStyle.Rotation = 45;
+		avaPlot.Plot.Axes.Bottom.TickLabelStyle.OffsetY = 10;
+
+		// determine the width of the largest tick label
+		float largestLabelWidth = 0;
+		using SkiaSharp.SKPaint paint = new();
+		foreach (Tick tick in castTicks)
+		{
+			ScottPlot.PixelSize size = avaPlot.Plot.Axes.Bottom.TickLabelStyle.Measure(tick.Label, paint).Size;
+			largestLabelWidth = Math.Max(largestLabelWidth, size.Width);
+		}
+
+		// ensure axis panels do not get smaller than the largest label
+		avaPlot.Plot.Axes.Bottom.MinimumSize = largestLabelWidth;
+		avaPlot.Plot.Axes.Right.MinimumSize = largestLabelWidth;
+
+		avaPlot.Plot.Axes.Left.MajorTickStyle.Length = 5;
+		return default;
+	}
+
 	private void SetPlot<T>(
 		AvaPlot avaPlot,
 		IEnumerable<T> plots,
@@ -544,6 +590,11 @@ public class MainViewModel : ViewModelBase
 			case "TempoRangePlotTab":
 			{
 				await ShowTempoRangeTabAsync(plot);
+				break;
+			}
+			case "EmotionsPlotTab":
+			{
+				await ShowEmotionsTabAsync(plot);
 				break;
 			}
 			default:

@@ -219,6 +219,16 @@
             epoxy:Anchor.Pile="{Binding TempoRangePlotPile}"
             />
         </TabItem>
+        <TabItem
+          Header="Emotions"
+          Name="EmotionsPlotTab"
+          FontSize="16"
+          >
+          <ScottPlot:AvaPlot
+            Name="EmotionsPlot"
+            epoxy:Anchor.Pile="{Binding EmotionsPlotPile}"
+            />
+        </TabItem>
       </TabControl>
     </TabItem>
     <TabItem
