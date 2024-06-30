@@ -188,6 +188,7 @@ public class MainViewModel : ViewModelBase
 	public TabItem? SelectedPlotTab { get; set; }
 	public Pile<AvaPlot> TempoPlotPile { get; } = Pile.Factory.Create<AvaPlot>();
 	public Pile<AvaPlot> RangePlotPile { get; } = Pile.Factory.Create<AvaPlot>();
+	public Pile<AvaPlot> TempoRangePlotPile { get; } = Pile.Factory.Create<AvaPlot>();
 
 	// ------------- table tab --------------- //
 	public TabItem? SelectedTableTab { get; set; }
@@ -297,7 +298,7 @@ public class MainViewModel : ViewModelBase
 
 		}
 
-		SetBarPlot(
+		SetPlot(
 			avaPlot, bars,
 			castTicks: ticks,
 			//valueTicks: rangeTicks,
@@ -350,7 +351,7 @@ public class MainViewModel : ViewModelBase
 			.ToArray()
 			;
 
-		SetBarPlot(
+		SetPlot(
 			avaPlot, bars,
 			castTicks: castTicks,
 			valueTicks: rangeTicks,
@@ -360,13 +361,73 @@ public class MainViewModel : ViewModelBase
 		return default;
 	}
 
-	private void SetBarPlot(
+	private ValueTask ShowTempoRangeTabAsync(AvaPlot avaPlot)
+	{
+		var targets = RawCastList
+			//.Where(c => c.IsShowTempo)
+			.Where(c => c.Category == Category.SingerSong)
+			.Where(c => c.VocalRange is not null)
+			.Where(c => c.VocalTempo is not null)
+			.OrderBy(c => c.Names[0].Display)
+			//.OrderBy(c => VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.High))
+			//.ThenBy(c => VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.Low))
+			//.ThenBy(c => c.Names[1].Display)
+			;
+
+		Tick[] rangeTicks = VocalRangeUtil
+			.GetAllNoteNameTicks()
+			.Select(t => new Tick(t.Value, t.Key))
+			.ToArray();
+
+		CoordinateRect[] rects = targets
+			.Select((c, i) => new CoordinateRect(
+				VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.Low),
+				VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.High),
+				c.VocalTempo.Low,
+				c.VocalTempo.High
+			))
+			.Distinct()
+			.ToArray();
+
+		SetPlot(
+			avaPlot,
+			rects,
+			//castTicks: castTicks,
+			valueTicks: rangeTicks,
+			title:"Recommended vocal tempo & range area",
+			isHorizontal:true,
+			isShowRegend:false);
+
+		var texts = targets
+			.Select(c => (cast: c.Names[1].Display, rect: (
+				left: VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.Low),
+				//VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.High),
+				//c.VocalTempo.Low,
+				top: c.VocalTempo.High
+			)))
+			.GroupBy(v => v.rect)
+			.Select(v => (
+				casts: string.Join(", ", v.Select(v => v.cast).Distinct()),
+				rect: v.Key
+			))
+			;
+		foreach (var text in texts)
+		{
+			var textPlot = avaPlot.Plot.Add.Text(text.casts, text.rect.left, text.rect.top);
+			textPlot.LabelFontColor = Colors.Yellow;
+		}
+
+		return default;
+	}
+
+	private void SetPlot<T>(
 		AvaPlot avaPlot,
-		IEnumerable<ScottPlot.Bar> bars,
+		IEnumerable<T> plots,
 		string title = "plot name",
 		IEnumerable<Tick>? castTicks = null,
 		IEnumerable<Tick>? valueTicks = null,
-		bool isHorizontal = false
+		bool isHorizontal = false,
+		bool isShowRegend = true
 	)
 	{
 		//title
@@ -379,9 +440,28 @@ public class MainViewModel : ViewModelBase
 		avaPlot.Plot.DataBackground.Color = Color.FromHex("#0b3049");
 
 		//bar plot
-		var barPlot = avaPlot.Plot.Add.Bars(bars);
-		barPlot.Horizontal = isHorizontal;
-		barPlot.ValueLabelStyle.ForeColor = Color.FromHex("#a0acb5");
+		if(typeof(T) == typeof(ScottPlot.Bar))
+		{
+			if(plots is IEnumerable<Bar> _bars)
+			{
+				var barPlot = avaPlot.Plot.Add.Bars(_bars);
+				barPlot.Horizontal = isHorizontal;
+				barPlot.ValueLabelStyle.ForeColor = Color.FromHex("#a0acb5");
+			}
+		}
+		if(plots is IEnumerable<CoordinateRect> rects)
+		{
+			var pallet = new ScottPlot.Palettes.Category20();
+			int i = 0;
+			foreach (var r in rects)
+			{
+				var rp = avaPlot.Plot.Add.Rectangle(r);
+				rp.FillStyle.Color = pallet.Colors[i].WithOpacity(0.01);
+				rp.LineColor = pallet.Colors[i];
+				i++;
+				if(i>=20){i = 0;}
+			}
+		}
 
 		if(castTicks is not null)
 		{
@@ -397,14 +477,17 @@ public class MainViewModel : ViewModelBase
 		}
 
 		// build the legend manually
-		var legend = avaPlot.Plot.Legend;
-		legend.IsVisible = true;
-		legend.Alignment = Alignment.LowerRight;
-		legend.ManualItems = [
-			new(){LabelText = Product.CeVIO_AI.ToString(), FillColor = Colors.LightSalmon},
-			new(){LabelText = Product.VoiSona.ToString(), FillColor = Colors.LightBlue},
-			new(){LabelText = Product.CeVIO_CS.ToString(), FillColor = Colors.Gray},
-		];
+		if(isShowRegend)
+		{
+			var legend = avaPlot.Plot.Legend;
+			legend.IsVisible = true;
+			legend.Alignment = Alignment.LowerRight;
+			legend.ManualItems = [
+				new(){LabelText = Product.CeVIO_AI.ToString(), FillColor = Colors.LightSalmon},
+				new(){LabelText = Product.VoiSona.ToString(), FillColor = Colors.LightBlue},
+				new(){LabelText = Product.CeVIO_CS.ToString(), FillColor = Colors.Gray},
+			];
+		}
 	}
 
 	static Color GetColor(Product product)
@@ -445,22 +528,22 @@ public class MainViewModel : ViewModelBase
 	private async ValueTask SelectedPlotTabChangedAsync(TabItem value)
 	{
 		if(value is null) return;
+		if(value.Content is not AvaPlot plot) return;
 
 		switch(value.Name){
 			case "TempoPlotTab":
 			{
-				if(value.Content is AvaPlot plot)
-				{
-					await ShowTempoTabAsync(plot);
-				}
+				await ShowTempoTabAsync(plot);
 				break;
 			}
 			case "RangePlotTab":
 			{
-				if(value.Content is AvaPlot plot)
-				{
-					await ShowRangeTabAsync(plot);
-				}
+				await ShowRangeTabAsync(plot);
+				break;
+			}
+			case "TempoRangePlotTab":
+			{
+				await ShowTempoRangeTabAsync(plot);
 				break;
 			}
 			default:

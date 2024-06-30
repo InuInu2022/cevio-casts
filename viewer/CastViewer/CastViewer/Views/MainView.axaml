@@ -209,6 +209,16 @@
             epoxy:Anchor.Pile="{Binding RangePlotPile}"
             />
         </TabItem>
+        <TabItem
+          Header="Tempo Range"
+          Name="TempoRangePlotTab"
+          FontSize="16"
+          >
+          <ScottPlot:AvaPlot
+            Name="TempoRangePlot"
+            epoxy:Anchor.Pile="{Binding TempoRangePlotPile}"
+            />
+        </TabItem>
       </TabControl>
     </TabItem>
     <TabItem
