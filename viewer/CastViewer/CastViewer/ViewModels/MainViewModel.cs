@@ -28,15 +28,12 @@ public class MainViewModel : ViewModelBase
 	public string WindowTitle { get; set; } = "C v0.0.0";
 	public IEnumerable<Cast> RawCastList { get; private set; }
 
-	private ImmutableList<DisplayCast>? loadedList;
+	private readonly ImmutableList<DisplayCast>? loadedList;
 
 	public ObservableCollection<Core.Model.DisplayCast> CastList { get; set; }
-
 	public DisplayCast? SelectedCast { get; set; }
-
 	public int SelectedCastIndex { get; set; }
 	public Task<DisplayCast> AsyncSelectedCast => GetCastDataAsync();
-
 	public bool IsLoading { get; set; }
 	public bool IsPgEnabled { get; set; }
 	public string DataVersion { get; } = "x.x.x";
@@ -50,7 +47,6 @@ public class MainViewModel : ViewModelBase
 	public bool IsShowVS { get; set; } = true;
 
 	public Command? CastFilterEvent { get; }
-
 
 	#endregion filterbuttons
 
@@ -183,7 +179,6 @@ public class MainViewModel : ViewModelBase
 		},
 	];
 
-
 	// ------------- plot tab --------------- //
 	public TabItem? SelectedPlotTab { get; set; }
 	public Pile<AvaPlot> TempoPlotPile { get; } = Pile.Factory.Create<AvaPlot>();
@@ -254,8 +249,7 @@ public class MainViewModel : ViewModelBase
 	{
 		var targets = RawCastList
 			//.Where(c => c.IsShowTempo)
-			.Where(c => c.Category == Category.SingerSong)
-			.Where(c => c.VocalTempo is not null)
+			.Where(c => c.Category == Category.SingerSong && c.VocalTempo is not null)
 			.OrderBy(c => c.VocalTempo!.High)
 			.ThenByDescending(c => c.VocalTempo!.Low)
 			.ThenBy(c => c.Names[1].Display)
@@ -274,38 +268,35 @@ public class MainViewModel : ViewModelBase
 		{
 			bars = targets
 				.Select((c,i) => new Bar()
-				{
-					Label = $"{c.VocalTempo.Low} - {c.VocalTempo.High}",
-					Position = i,
-					ValueBase = c.VocalTempo?.Low ?? 0,
-					Value = c.VocalTempo?.High ?? 0,
-					FillColor = GetColor(c.Product),
-					BorderLineWidth = 0,
-					//BorderColor = Colors.Gray,
-				})
+					{
+						Label = $"{c.VocalTempo.Low} - {c.VocalTempo.High}",
+						Position = i,
+						ValueBase = c.VocalTempo?.Low ?? 0,
+						Value = c.VocalTempo?.High ?? 0,
+						FillColor = GetColor(c.Product),
+						BorderLineWidth = 0,
+						//BorderColor = Colors.Gray,
+					})
 				.ToArray()
 				;
-
 		}
 
 		SetPlot(
-			avaPlot, bars,
-			castTicks: ticks,
+			avaPlot,
+			bars,
 			//valueTicks: rangeTicks,
-			title:"Recommended vocal tempo (bpm)",
-			isHorizontal:true);
+			title: "Recommended vocal tempo (bpm)",
+			castTicks: ticks,
+			isHorizontal: true);
 
 		return default;
-
-
 	}
 
 	private ValueTask ShowRangeTabAsync(AvaPlot avaPlot)
 	{
 		var targets = RawCastList
 			//.Where(c => c.IsShowTempo)
-			.Where(c => c.Category == Category.SingerSong)
-			.Where(c => c.VocalRange is not null)
+			.Where(c => c.Category == Category.SingerSong && c.VocalRange is not null)
 			.OrderBy(c => VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.High))
 			.ThenBy(c => VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.Low))
 			.ThenBy(c => c.Names[1].Display)
@@ -322,31 +313,32 @@ public class MainViewModel : ViewModelBase
 			.ToArray();
 
 		ScottPlot.Bar[] bars =
-		{
+		[
 			new() { Position = 1, Value = 5, ValueBase = 3, FillColor = Colors.Red },
 			new() { Position = 2, Value = 7, ValueBase = 0, FillColor = Colors.Blue },
 			new() { Position = 4, Value = 3, ValueBase = 2, FillColor = Colors.Green },
-		};
+		];
 		bars = targets
 			.Select((c,i) => new Bar()
-			{
-				Label = $"{c.VocalRange.Low} - {c.VocalRange.High}",
-				Position = i,
-				ValueBase = VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.Low),
-				Value = VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.High),
-				FillColor = GetColor(c.Product),
-				BorderLineWidth = 0,
-				//BorderColor = Colors.Gray,
-			})
+				{
+					Label = $"{c.VocalRange.Low} - {c.VocalRange.High}",
+					Position = i,
+					ValueBase = VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.Low),
+					Value = VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.High),
+					FillColor = GetColor(c.Product),
+					BorderLineWidth = 0,
+					//BorderColor = Colors.Gray,
+				})
 			.ToArray()
 			;
 
 		SetPlot(
-			avaPlot, bars,
+			avaPlot,
+			bars,
+			title: "Recommended vocal range",
 			castTicks: castTicks,
 			valueTicks: rangeTicks,
-			title:"Recommended vocal range",
-			isHorizontal:true);
+			isHorizontal: true);
 
 		return default;
 	}
@@ -355,9 +347,9 @@ public class MainViewModel : ViewModelBase
 	{
 		var targets = RawCastList
 			//.Where(c => c.IsShowTempo)
-			.Where(c => c.Category == Category.SingerSong)
-			.Where(c => c.VocalRange is not null)
-			.Where(c => c.VocalTempo is not null)
+			.Where(c => c.Category == Category.SingerSong
+				&& c.VocalRange is not null
+				&& c.VocalTempo is not null)
 			.OrderBy(c => c.Names[0].Display)
 			//.OrderBy(c => VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.High))
 			//.ThenBy(c => VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.Low))
@@ -370,7 +362,7 @@ public class MainViewModel : ViewModelBase
 			.ToArray();
 
 		CoordinateRect[] rects = targets
-			.Select((c, i) => new CoordinateRect(
+			.Select((c, _) => new CoordinateRect(
 				VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.Low),
 				VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.High),
 				c.VocalTempo.Low,
@@ -382,19 +374,21 @@ public class MainViewModel : ViewModelBase
 		SetPlot(
 			avaPlot,
 			rects,
+			title: "Recommended vocal tempo & range area",
 			//castTicks: castTicks,
 			valueTicks: rangeTicks,
-			title:"Recommended vocal tempo & range area",
-			isHorizontal:true,
-			isShowRegend:false);
+			isHorizontal: true,
+			isShowRegend: false);
 
 		var texts = targets
-			.Select(c => (cast: c.Names[1].Display, rect: (
-				left: VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.Low),
-				//VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.High),
-				//c.VocalTempo.Low,
-				top: c.VocalTempo.High
-			)))
+			.Select(c => (
+				cast: c.Names[1].Display,
+				rect: (
+					left: VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.Low),
+					//VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.High),
+					//c.VocalTempo.Low,
+					top: c.VocalTempo.High
+					)))
 			.GroupBy(v => v.rect)
 			.Select(v => (
 				casts: string.Join(", ", v.Select(v => v.cast).Distinct()),
@@ -410,11 +404,11 @@ public class MainViewModel : ViewModelBase
 		return default;
 	}
 
-	private ValueTask ShowEmotionsTabAsync(AvaPlot avaPlot)
+	private async ValueTask ShowEmotionsTabAsync(AvaPlot avaPlot)
 	{
 		var targets = RawCastList
-			.Where(c => c.Emotions is not null && c.Emotions.Any())
-			.OrderByDescending(c => c.Emotions.Count())
+			.Where(c => c.Emotions is not null && c.Emotions.Length != 0)
+			.OrderByDescending(c => c.Emotions.Length)
 			.ThenBy(c => c.Names[0].Display)
 			;
 		Tick[] castTicks = targets
@@ -425,24 +419,24 @@ public class MainViewModel : ViewModelBase
 			;
 		Bar[] bars = targets
 			.Select((c,i) => new Bar()
-			{
-				Label = $"{ c.Emotions.Count() }",
-				Position = i,
-				Value = c.Emotions.Count(),
-				FillColor = GetColor(c.Product),
-				BorderLineWidth = 0,
-				//BorderColor = Colors.Gray,
-			})
+				{
+					Label = $"{c.Emotions.Length}",
+					Position = i,
+					Value = c.Emotions.Length,
+					FillColor = GetColor(c.Product),
+					BorderLineWidth = 0,
+					//BorderColor = Colors.Gray,
+				})
 			.ToArray()
 			;
 		SetPlot(
 			avaPlot,
 			bars,
+			title: "Voice Lib emotion counts",
 			//castTicks: ,
 			valueTicks: castTicks,
-			title:"Voice Lib emotion counts",
-			isHorizontal:false,
-			isShowRegend:false);
+			isHorizontal: false,
+			isShowRegend: false);
 		avaPlot.Plot.Axes.Left.TickGenerator = new ScottPlot.TickGenerators.NumericFixedInterval();
 		avaPlot.Plot.Axes.Bottom.TickLabelStyle.Alignment = Alignment.MiddleLeft;
 		avaPlot.Plot.Axes.Margins(bottom: 0);
@@ -463,10 +457,10 @@ public class MainViewModel : ViewModelBase
 		avaPlot.Plot.Axes.Right.MinimumSize = largestLabelWidth;
 
 		avaPlot.Plot.Axes.Left.MajorTickStyle.Length = 5;
-		return default;
+		await Task.CompletedTask;
 	}
 
-	private void SetPlot<T>(
+	private static void SetPlot<T>(
 		AvaPlot avaPlot,
 		IEnumerable<T> plots,
 		string title = "plot name",
@@ -486,16 +480,17 @@ public class MainViewModel : ViewModelBase
 		avaPlot.Plot.DataBackground.Color = Color.FromHex("#0b3049");
 
 		//bar plot
-		if(typeof(T) == typeof(ScottPlot.Bar))
+		if (typeof(T) == typeof(ScottPlot.Bar))
 		{
-			if(plots is IEnumerable<Bar> _bars)
+			if (plots is IEnumerable<Bar> _bars)
 			{
 				var barPlot = avaPlot.Plot.Add.Bars(_bars);
 				barPlot.Horizontal = isHorizontal;
 				barPlot.ValueLabelStyle.ForeColor = Color.FromHex("#a0acb5");
 			}
 		}
-		if(plots is IEnumerable<CoordinateRect> rects)
+
+		if (plots is IEnumerable<CoordinateRect> rects)
 		{
 			var pallet = new ScottPlot.Palettes.Category20();
 			int i = 0;
@@ -505,35 +500,37 @@ public class MainViewModel : ViewModelBase
 				rp.FillStyle.Color = pallet.Colors[i].WithOpacity(0.01);
 				rp.LineColor = pallet.Colors[i];
 				i++;
-				if(i>=20){i = 0;}
+				if (i >= 20) { i = 0; }
 			}
 		}
 
-		if(castTicks is not null)
+		if (castTicks is not null)
 		{
 			avaPlot.Plot.Axes.Left.TickGenerator = new NumericManual([.. castTicks]);
 			avaPlot.Plot.Axes.Left.MajorTickStyle.Length = 0;
 			avaPlot.Plot.Axes.Left.Label.FontName = "Noto Sans CJK";
 		}
 
-		if(valueTicks is not null)
+		if (valueTicks is not null)
 		{
 			avaPlot.Plot.Axes.Bottom.TickGenerator = new NumericManual([.. valueTicks]);
 			avaPlot.Plot.Axes.Bottom.MajorTickStyle.Length = 0;
 		}
 
 		// build the legend manually
-		if(isShowRegend)
+		if (!isShowRegend)
 		{
-			var legend = avaPlot.Plot.Legend;
-			legend.IsVisible = true;
-			legend.Alignment = Alignment.LowerRight;
-			legend.ManualItems = [
-				new(){LabelText = Product.CeVIO_AI.ToString(), FillColor = Colors.LightSalmon},
-				new(){LabelText = Product.VoiSona.ToString(), FillColor = Colors.LightBlue},
-				new(){LabelText = Product.CeVIO_CS.ToString(), FillColor = Colors.Gray},
-			];
+			return;
 		}
+
+		var legend = avaPlot.Plot.Legend;
+		legend.IsVisible = true;
+		legend.Alignment = Alignment.LowerRight;
+		legend.ManualItems = [
+			new(){LabelText = nameof(Product.CeVIO_AI), FillColor = Colors.LightSalmon},
+			new(){LabelText = nameof(Product.VoiSona), FillColor = Colors.LightBlue},
+			new(){LabelText = nameof(Product.CeVIO_CS), FillColor = Colors.Gray},
+		];
 	}
 
 	static Color GetColor(Product product)
@@ -552,10 +549,10 @@ public class MainViewModel : ViewModelBase
 			.Where(c => c.HasEmotions)
 			.ToList()
 			.Select(c => new EmotionTableColumn(
-				category: c.Category,
 				castName: c.Names?[0] ?? "NO NAME",
+				category: c.Category,
 				product: c.Product,
-				emotions: [..c.Emotions ?? []]
+				emotions: [.. c.Emotions ?? []]
 			))
 			;
 		EmotionTableCastList = [.. casts];
@@ -563,7 +560,7 @@ public class MainViewModel : ViewModelBase
 		{
 			GroupDescriptions =
             {
-                new DataGridPathGroupDescription("Category")
+             new DataGridPathGroupDescription("Category")
             }
 		};
 		return default;
@@ -614,8 +611,11 @@ public class MainViewModel : ViewModelBase
 		switch(value.Name)
 		{
 			case "EmotionsTab":
+			{
 				await ShowEmotionTableAsync(grid);
 				break;
+			}
+
 			default:
 				break;
 		}
