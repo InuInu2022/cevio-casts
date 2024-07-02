@@ -189,6 +189,7 @@ public class MainViewModel : ViewModelBase
 	// ------------- table tab --------------- //
 	public TabItem? SelectedTableTab { get; set; }
 	public ObservableCollection<EmotionTableColumn>? EmotionTableCastList { get; set; } = [];
+	public ObservableCollection<SpSymbolTableColumn>? SpSymbolTableCastList { get; private set; } = [];
 
 	public MainViewModel()
 	{
@@ -566,6 +567,29 @@ public class MainViewModel : ViewModelBase
 		return default;
 	}
 
+	private ValueTask ShowSpSymbolTableAsync(DataGrid grid)
+	{
+		var casts = CastList
+			.Where(c => c.SpSymbols?.Count != 0)
+			.ToList()
+			.Select(c => new SpSymbolTableColumn(
+				Cat: c.Category,
+				CastName: c.Names?[0] ?? "NO NAME",
+				Product: c.Product,
+				SpSymbols: [.. c.SpSymbols]
+			))
+			;
+		SpSymbolTableCastList = [.. casts];
+		grid.ItemsSource = new DataGridCollectionView(SpSymbolTableCastList)
+		{
+			GroupDescriptions =
+            {
+             new DataGridPathGroupDescription("Product")
+            }
+		};
+		return default;
+	}
+
 	[PropertyChanged(nameof(SelectedPlotTab))]
 	[SuppressMessage("","IDE0051")]
 	private async ValueTask SelectedPlotTabChangedAsync(TabItem value)
@@ -613,6 +637,12 @@ public class MainViewModel : ViewModelBase
 			case "EmotionsTab":
 			{
 				await ShowEmotionTableAsync(grid);
+				break;
+			}
+
+			case "SpSymbolTab":
+			{
+				await ShowSpSymbolTableAsync(grid);
 				break;
 			}
 

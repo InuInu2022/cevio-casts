@@ -276,6 +276,34 @@
             </DataGrid.Columns>
           </DataGrid>
         </TabItem>
+        <TabItem
+          Header="Special symbols"
+          Name="SpSymbolTab"
+          FontSize="16"
+          >
+          <DataGrid
+            x:DataType="cvm:SpSymbolTableColumn"
+            Margin="20"
+            AutoGenerateColumns="False"
+            IsReadOnly="True"
+            CanUserReorderColumns="True"
+            CanUserResizeColumns="True"
+            GridLinesVisibility="All"
+            FrozenColumnCount="3"
+            BorderThickness="1" BorderBrush="Gray">
+            <DataGrid.Columns>
+              <DataGridTextColumn Header="Type" Binding="{Binding Category}"/>
+              <DataGridTextColumn Header="Name" Binding="{Binding CastName}"/>
+              <DataGridTextColumn Header="Product" Binding="{Binding Product}" />
+              <DataGridTextColumn Header="※ $ ＄" Binding="{Binding LabelFalsetto}" />
+              <DataGridTextColumn Header="@ ＠" Binding="{Binding LabelAtmark}" />
+              <DataGridTextColumn Header="^ ＾" Binding="{Binding LabelCaret}" />
+              <DataGridTextColumn Header="% ％" Binding="{Binding LabelPercent}" />
+              <DataGridTextColumn Header="= ＝" Binding="{Binding LabelEqual}" />
+              <DataGridTextColumn Header="_ ＿" Binding="{Binding LabelUnderscore}" />
+            </DataGrid.Columns>
+          </DataGrid>
+        </TabItem>
       </TabControl>
     </TabItem>
   </TabControl>
