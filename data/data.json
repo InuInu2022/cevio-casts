@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.24.0",
+	"version": "1.25.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -1348,7 +1348,8 @@
 			"gender": "Female",
 			"lang": "Japanese",
 			"versions": [
-				"1.0.1"
+				"1.0.1",
+				"2.0.0"
 			],
 			"hasEmotions": false,
 			"vocalRange": {
@@ -1386,6 +1387,57 @@
 							"lang": "English",
 							"display": "Relux"
 						}
+					]
+				},
+				{
+					"id": "breatheout",
+					"symbols":["^","＾"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "吐き捨て"
+						},
+						{
+							"lang": "English",
+							"display": "Breathe out"
+						}
+					],
+					"versions":[
+						"2.0.0"
+					]
+				},
+				{
+					"id": "edgevoice",
+					"symbols":["=","＝"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "エッジボイス"
+						},
+						{
+							"lang": "English",
+							"display": "Edge voice"
+						}
+					],
+					"versions":[
+						"2.0.0"
+					]
+				},
+				{
+					"id": "whisper",
+					"symbols":["_","＿"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ささやき"
+						},
+						{
+							"lang": "English",
+							"display": "Whisper"
+						}
+					],
+					"versions":[
+						"2.0.0"
 					]
 				}
 			]
@@ -3776,7 +3828,8 @@
 			"gender": "Female",
 			"lang": "Japanese",
 			"versions": [
-				"1.0.1 ported from CeVIO AI"
+				"1.0.1 ported from CeVIO AI",
+				"2.0.1"
 			],
 			"hasEmotions": false,
 			"vocalRange": {
@@ -3815,6 +3868,57 @@
 							"display": "Soft"
 						}
 					]
+				},
+				{
+					"id": "exhale",
+					"symbols":["^","＾"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "吐き捨て"
+						},
+						{
+							"lang": "English",
+							"display": "Exhale"
+						}
+					],
+					"versions":[
+						"2.0.1"
+					]
+				},
+				{
+					"id": "edgevoice",
+					"symbols":["=","＝"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "エッジボイス"
+						},
+						{
+							"lang": "English",
+							"display": "Edge voice"
+						}
+					],
+					"versions":[
+						"2.0.1"
+					]
+				},
+				{
+					"id": "whisper",
+					"symbols":["_","＿"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ささやき"
+						},
+						{
+							"lang": "English",
+							"display": "Whisper"
+						}
+					],
+					"versions":[
+						"2.0.1"
+					]
 				}
 			]
 		},
@@ -3836,7 +3940,8 @@
 			"gender": "Female",
 			"lang": "English",
 			"versions": [
-				"1.0.2 ported from CeVIO AI"
+				"1.0.2 ported from CeVIO AI",
+				"2.0.0"
 			],
 			"hasEmotions": false,
 			"vocalRange": {
@@ -3846,7 +3951,43 @@
 			"vocalTempo": {
 				"high": 170,
 				"low": 70
-			}
+			},
+			"spSymbols": [
+				{
+					"id": "pitchflipup",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "跳ね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Pitch flip up"
+						}
+					],
+					"versions":[
+						"2.0.0"
+					]
+				},
+				{
+					"id": "exhale",
+					"symbols":["^","＾"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "吐き捨て"
+						},
+						{
+							"lang": "English",
+							"display": "Exhale"
+						}
+					],
+					"versions":[
+						"2.0.0"
+					]
+				}
+			]
 		}
 		,{
 			"id": "techno-sp_ja_JP_f803_svss",
@@ -3866,7 +4007,8 @@
 			"gender": "Female",
 			"lang": "Japanese",
 			"versions": [
-				"1.0.1 ported from CeVIO AI"
+				"1.0.1 ported from CeVIO AI",
+				"2.0.1"
 			],
 			"hasEmotions": false,
 			"vocalRange": {
@@ -3876,7 +4018,43 @@
 			"vocalTempo": {
 				"high": 180,
 				"low": 80
-			}
+			},
+			"spSymbols": [
+				{
+					"id": "pitchflipup",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "跳ね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Pitch flip up"
+						}
+					],
+					"versions":[
+						"2.0.1"
+					]
+				},
+				{
+					"id": "exhale",
+					"symbols":["^","＾"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "吐き捨て"
+						},
+						{
+							"lang": "English",
+							"display": "Exhale"
+						}
+					],
+					"versions":[
+						"2.0.1"
+					]
+				}
+			]
 		},
 		{
 			"id": "techno-sp_ja_JP_f815_svss",
