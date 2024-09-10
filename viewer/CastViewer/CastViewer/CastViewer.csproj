@@ -42,7 +42,7 @@
     <PackageReference Include="bodong.Avalonia.PropertyGrid" Version="11.0.6.3" />
     <PackageReference Include="bodong.PropertyModels" Version="11.0.6.2" />
     <PackageReference Include="Epoxy.Avalonia11" Version="1.15.0" />
-    <PackageReference Include="ScottPlot.Avalonia" Version="5.0.37" />
+    <PackageReference Include="ScottPlot.Avalonia" Version="5.0.39" />
     <PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="2.88.8" />
   </ItemGroup>
   <ItemGroup>
