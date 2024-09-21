@@ -27,8 +27,8 @@ Definition data for CeVIO casts (voice library) defined in JSON format.
 |---|---:|---:|---:|
 |CeVIO CS|5|11|16|
 |CeVIO AI|14|23|37|
-|VoiSona|9|27|36|
-|Sum|28|61|89|
+|VoiSona|10|27|37|
+|Sum|29|61|90|
 
 ## Definitions
 
