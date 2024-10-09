@@ -9,6 +9,6 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="bodong.PropertyModels" Version="11.0.6.2" />
-    <PackageReference Include="Melanchall.DryWetMidi.Nativeless" Version="7.1.0" />
+    <PackageReference Include="Melanchall.DryWetMidi.Nativeless" Version="7.2.0" />
   </ItemGroup>
 </Project>
