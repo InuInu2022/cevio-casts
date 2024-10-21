@@ -15,5 +15,10 @@
     },
 	"workbench.settings.useSplitJSON": false,
 	"dotnet.defaultSolution": "cevio-casts.sln",
-	"dotnet.server.useOmnisharp":true
+	"dotnet.server.useOmnisharp": true,
+	"cSpell.words": [
+		"CSNV",
+		"Itako",
+		"VCLMK"
+	]
 }
