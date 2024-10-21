@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.27.0",
+	"version": "1.28.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -2945,6 +2945,7 @@
 			"gender": "Female",
 			"lang": "Japanese",
 			"versions": [
+				"2.0.0",
 				"1.0.0"
 			],
 			"hasEmotions": true,
@@ -5736,6 +5737,96 @@
 						{
 							"lang": "English",
 							"display": "Sad"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "techno-sp_ja_JP_f823_tts",
+			"cname": "techno-sp_ja_JP_f823_tts.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "花隈千冬"
+				},
+				{
+					"lang": "English",
+					"display": "Hanakuma Chifuyu"
+				}
+			],
+			"category": "TextVocal",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.0.0 ported from CeVIO AI",
+				"2.0.3"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "0",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Happy"
+						},
+						{
+							"lang": "English",
+							"display": "Happy"
+						}
+					]
+				},
+				{
+					"id": "1",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Normal"
+						},
+						{
+							"lang": "English",
+							"display": "Normal"
+						}
+					]
+				},
+				{
+					"id": "2",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Angry"
+						},
+						{
+							"lang": "English",
+							"display": "Angry"
+						}
+					]
+				},
+				{
+					"id": "3",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Sad"
+						},
+						{
+							"lang": "English",
+							"display": "Sad"
+						}
+					]
+				},
+				{
+					"id": "4",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Calm"
+						},
+						{
+							"lang": "English",
+							"display": "Calm"
 						}
 					]
 				}
