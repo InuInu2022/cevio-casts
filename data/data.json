@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.29.0",
+	"version": "1.30.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -353,7 +353,23 @@
 				"1.6.0",
 				"1.7.0"
 			],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "CSV-JPF-FP1",
@@ -375,7 +391,23 @@
 			"versions": [
 				"1.0.0"
 			],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "CSV-ENF-FP3-N",
@@ -395,7 +427,23 @@
 			"gender": "Female",
 			"lang": "English",
 			"versions": [],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "CSV-ENF-FP3-P",
@@ -415,7 +463,23 @@
 			"gender": "Female",
 			"lang": "English",
 			"versions": [],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "XSV-JPM-HRM-P",
@@ -437,7 +501,23 @@
 			"versions": [
 				"1.0.0"
 			],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "XSV-JPM-P",
@@ -459,7 +539,23 @@
 			"versions": [
 				"1.1.0"
 			],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "XSV-JPF-W",
@@ -481,7 +577,23 @@
 			"versions": [
 				"1.1.0"
 			],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "XSV-JPM-E",
@@ -503,7 +615,23 @@
 			"versions": [
 				"1.1.0"
 			],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "XSV-JPF-E",
@@ -525,7 +653,23 @@
 			"versions": [
 				"1.1.0"
 			],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "XSV-JPM-W",
@@ -547,7 +691,23 @@
 			"versions": [
 				"1.1.0"
 			],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "XSV-JPF-P",
@@ -569,7 +729,23 @@
 			"versions": [
 				"1.1.0"
 			],
-			"hasEmotions": false
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "CSNV-JPF-A",
@@ -602,6 +778,20 @@
 				"low": 80
 			},
 			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
 				{
 					"id": "bounceuppitch",
 					"symbols":["@","＠"],
@@ -695,6 +885,22 @@
 						}
 					]
 				}
+			],
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				}
 			]
 		},
 		{
@@ -727,7 +933,23 @@
 			"vocalTempo": {
 				"high": 145,
 				"low": 80
-			}
+			},
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "CSNV-JPF-AHS1",
@@ -759,7 +981,23 @@
 			"vocalTempo": {
 				"high": 184,
 				"low": 123
-			}
+			},
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "CSNV-JPF-AHS5",
@@ -792,6 +1030,20 @@
 				"low": 70
 			},
 			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
 				{
 					"id": "bounceuppitch",
 					"symbols":["@","＠"],
@@ -839,6 +1091,20 @@
 				"low": 75
 			},
 			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
 				{
 					"id": "bounceuppitch",
 					"symbols":["@","＠"],
@@ -894,6 +1160,20 @@
 			],
 			"hasEmotions": false,
 			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
 				{
 					"id": "trembling",
 					"symbols":["@","＠"],
@@ -975,6 +1255,20 @@
 			],
 			"spSymbols": [
 				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
 					"id": "bounceuppitch",
 					"symbols":["@","＠"],
 					"names":[
@@ -1040,6 +1334,20 @@
 			],
 			"hasEmotions": false,
 			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
 				{
 					"id": "bounceuppitch",
 					"symbols":["@","＠"],
@@ -1135,6 +1443,20 @@
 			],
 			"spSymbols": [
 				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
 					"id": "bounceuppitch",
 					"symbols":["@","＠"],
 					"names":[
@@ -1228,6 +1550,20 @@
 				}
 			],
 			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
 				{
 					"id": "bounceuppitch",
 					"symbols":["@","＠"],
@@ -1328,7 +1664,23 @@
 			"vocalTempo": {
 				"high": 180,
 				"low": 80
-			}
+			},
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "CSNV-JPF-FP5",
@@ -1361,6 +1713,20 @@
 				"low": 70
 			},
 			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
 				{
 					"id": "bounceuppitch",
 					"symbols":["@","＠"],
@@ -1470,7 +1836,23 @@
 			"vocalTempo": {
 				"high": 170,
 				"low": 70
-			}
+			},
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "CSNV-JPF-KZA1",
@@ -1501,7 +1883,23 @@
 			"vocalTempo": {
 				"high": 180,
 				"low": 60
-			}
+			},
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "CSNV-JPF-GLA1",
@@ -1534,6 +1932,20 @@
 				"low": 70
 			},
 			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
 				{
 					"id": "bounceuppitch",
 					"symbols":["@","＠"],
@@ -1604,6 +2016,20 @@
 			"hasEmotions": false,
 			"spSymbols": [
 				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
 					"id": "bounceuppitch",
 					"symbols":["@","＠"],
 					"names":[
@@ -1670,6 +2096,20 @@
 			"hasEmotions": false,
 			"spSymbols": [
 				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
 					"id": "irritation",
 					"symbols":["@","＠"],
 					"names":[
@@ -1730,6 +2170,20 @@
 				"low": 90
 			},
 			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
 				{
 					"id": "bounceuppitch",
 					"symbols":["@","＠"],
@@ -1809,6 +2263,20 @@
 			},
 			"spSymbols": [
 				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
 					"id": "roughness",
 					"symbols":["@","＠"],
 					"names":[
@@ -1870,6 +2338,20 @@
 			},
 			"spSymbols": [
 				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
 					"id": "bounceuppitch",
 					"symbols":["@","＠"],
 					"names":[
@@ -1927,7 +2409,23 @@
 			"vocalTempo": {
 				"high": 200,
 				"low": 80
-			}
+			},
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "CSNV-JPF-AHS9",
@@ -1959,6 +2457,20 @@
 				"low": 70
 			},
 			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
 				{
 					"id": "bounceuppitch",
 					"symbols":["@","＠"],
@@ -3219,6 +3731,20 @@
 			},
 			"spSymbols": [
 				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
 					"id": "rapsy",
 					"symbols":["@","＠"],
 					"names":[
@@ -3267,6 +3793,20 @@
 			},
 			"spSymbols": [
 				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
 					"id": "rapsy",
 					"symbols":["@","＠"],
 					"names":[
@@ -3313,6 +3853,20 @@
 				"low": 80
 			},
 			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
 				{
 					"id": "pitchflipup",
 					"symbols":["@","＠"],
@@ -3380,6 +3934,20 @@
 				"low": 110
 			},
 			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
 				{
 					"id": "pitchflipup",
 					"symbols":["@","＠"],
@@ -3455,6 +4023,20 @@
 				"low": 125
 			},
 			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
 				{
 					"id": "pitchflipup",
 					"symbols":["@","＠"],
@@ -3534,7 +4116,23 @@
 			"vocalTempo": {
 				"high": 180,
 				"low": 60
-			}
+			},
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				}
+			]
 		}
 		,{
 			"id": "techno-sp_ja_JP_f811_svss",
@@ -3565,7 +4163,23 @@
 			"vocalTempo": {
 				"high": 145,
 				"low": 80
-			}
+			},
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				}
+			]
 		}
 		,{
 			"id": "techno-sp_ja_JP_m867_svss",
@@ -3601,6 +4215,20 @@
 				"low": 100
 			},
 			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
 				{
 					"id": "pitchflipup",
 					"symbols":["@","＠"],
@@ -3677,6 +4305,20 @@
 				"low": 70
 			},
 			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
 				{
 					"id": "pitchflipup",
 					"symbols":["@","＠"],
@@ -3781,6 +4423,22 @@
 						}
 					]
 				}
+			],
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				}
 			]
 		}
 		,{
@@ -3844,6 +4502,20 @@
 				"low": 70
 			},
 			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
 				{
 					"id": "pitchflipup",
 					"symbols":["@","＠"],
@@ -3957,6 +4629,20 @@
 			},
 			"spSymbols": [
 				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
 					"id": "pitchflipup",
 					"symbols":["@","＠"],
 					"names":[
@@ -4024,6 +4710,20 @@
 			},
 			"spSymbols": [
 				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
 					"id": "pitchflipup",
 					"symbols":["@","＠"],
 					"names":[
@@ -4090,6 +4790,20 @@
 				"low": 90
 			},
 			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
 				{
 					"id": "pitchflipup",
 					"symbols":["@","＠"],
@@ -4169,6 +4883,20 @@
 			},
 			"spSymbols": [
 				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
 					"id": "pitchflipup",
 					"symbols":["@","＠"],
 					"names":[
@@ -4229,6 +4957,20 @@
 				"low": 71
 			},
 			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
 				{
 					"id": "pitchflipup",
 					"symbols":["@","＠"],
@@ -4304,6 +5046,20 @@
 				"low": 70
 			},
 			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
 				{
 					"id": "pitchflipup",
 					"symbols":["@","＠"],
@@ -4381,6 +5137,20 @@
 			},
 			"spSymbols": [
 				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
 					"id": "pitchflipup",
 					"symbols":["@","＠"],
 					"names":[
@@ -4456,6 +5226,20 @@
 			},
 			"spSymbols": [
 				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
 					"id": "raspy",
 					"symbols":["@","＠"],
 					"names":[
@@ -4519,6 +5303,20 @@
 				"low": 115
 			},
 			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
 				{
 					"id": "pitchflipup",
 					"symbols":["@","＠"],
@@ -4609,6 +5407,20 @@
 			},
 			"spSymbols": [
 				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
 					"id": "pitchflipup",
 					"symbols":["@","＠"],
 					"names":[
@@ -4655,6 +5467,20 @@
 				"low": 75
 			},
 			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
 				{
 					"id": "pitchflipup",
 					"symbols":["@","＠"],
@@ -4717,7 +5543,23 @@
 			"vocalTempo": {
 				"high": 184,
 				"low": 123
-			}
+			},
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "s-s-s-llc_ja_JP_f843_svss",
@@ -4747,7 +5589,23 @@
 			"vocalTempo": {
 				"high": 200,
 				"low": 80
-			}
+			},
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				}
+			]
 		},
 		{
 			"id": "s-s-s-llc_ja_JP_f844_svss",
@@ -4779,6 +5637,20 @@
 				"low": 70
 			},
 			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
 				{
 					"id": "pitchflipup",
 					"symbols":["@","＠"],
@@ -4827,6 +5699,20 @@
 			},
 			"spSymbols": [
 				{
+					"id": "falsetto",
+					"symbols":["$","※","＄"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
 					"id": "pitchflipup",
 					"symbols":["@","＠"],
 					"names":[
@@ -4851,6 +5737,58 @@
 						{
 							"lang": "English",
 							"display": "Exhale"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "techno-sp_ja_JP_m701_svss",
+			"cname": "techno-sp_ja_JP_m701_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "vs-m701"
+				},
+				{
+					"lang": "English",
+					"display": "vs-m701"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Male",
+			"lang": "Japanese",
+			"versions": [
+				"2.0.0"
+			],
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "pitchflipup",
+					"symbols":["@","＠"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "跳ね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Pitch flip up"
+						}
+					]
+				},
+				{
+					"id": "tailfall",
+					"symbols":["%","％"],
+					"names":[
+						{
+							"lang": "Japanese",
+							"display": "末尾フォール"
+						},
+						{
+							"lang": "English",
+							"display": "Tail fall"
 						}
 					]
 				}
