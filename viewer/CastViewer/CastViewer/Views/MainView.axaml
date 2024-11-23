@@ -21,6 +21,140 @@
     >
     <TabItem
       FontSize="14"
+      IsEnabled="True"
+      Header="Plot">
+      <TabControl
+        TabStripPlacement="Left"
+        FontSize="14"
+        SelectedItem="{Binding SelectedPlotTab}"
+        >
+        <TabItem
+          Header="Default"
+          Name="DefaultTab"
+          FontSize="16"
+          >
+          <TextBlock Text="Please select a left plot tab" />
+        </TabItem>
+        <TabItem
+          Header="Vocal Tempo"
+          Name="TempoPlotTab"
+          FontSize="16"
+          >
+          <ScottPlot:AvaPlot
+            Name="TempoPlot"
+            epoxy:Anchor.Pile="{Binding TempoPlotPile}"
+            />
+        </TabItem>
+        <TabItem
+          Header="Vocal Range"
+          Name="RangePlotTab"
+          FontSize="16"
+          >
+          <ScottPlot:AvaPlot
+            Name="RangePlot"
+            epoxy:Anchor.Pile="{Binding RangePlotPile}"
+            />
+        </TabItem>
+        <TabItem
+          Header="Tempo Range"
+          Name="TempoRangePlotTab"
+          FontSize="16"
+          >
+          <ScottPlot:AvaPlot
+            Name="TempoRangePlot"
+            epoxy:Anchor.Pile="{Binding TempoRangePlotPile}"
+            />
+        </TabItem>
+        <TabItem
+          Header="Emotions"
+          Name="EmotionsPlotTab"
+          FontSize="16"
+          >
+          <ScottPlot:AvaPlot
+            Name="EmotionsPlot"
+            epoxy:Anchor.Pile="{Binding EmotionsPlotPile}"
+            />
+        </TabItem>
+      </TabControl>
+    </TabItem>
+    <TabItem
+      FontSize="14"
+      IsEnabled="True"
+      Header="Table">
+      <TabControl
+        TabStripPlacement="Left"
+        FontSize="14"
+        SelectedItem="{Binding SelectedTableTab}"
+        >
+        <TabItem
+          Header="Default"
+          Name="DefaultTableTab"
+          FontSize="16"
+          >
+          <TextBlock Text="Please select a left plot tab" />
+        </TabItem>
+        <TabItem
+          Header="Emotions"
+          Name="EmotionsTab"
+          FontSize="16"
+          >
+          <DataGrid
+            x:DataType="cvm:EmotionTableColumn"
+            Margin="20"
+            AutoGenerateColumns="False"
+            IsReadOnly="True"
+            CanUserReorderColumns="True"
+            CanUserResizeColumns="True"
+            GridLinesVisibility="All"
+            FrozenColumnCount="3"
+            BorderThickness="1" BorderBrush="Gray">
+            <DataGrid.Columns>
+              <DataGridTextColumn Header="Type" Binding="{Binding Category}"/>
+              <DataGridTextColumn Header="Name" Binding="{Binding CastName}"/>
+              <DataGridTextColumn Header="Product" Binding="{Binding Product}" />
+              <DataGridTextColumn Header="#" Binding="{Binding EmotionCount}" />
+              <DataGridTextColumn Header="感情1" Binding="{Binding Emo1}" />
+              <DataGridTextColumn Header="感情2" Binding="{Binding Emo2}" />
+              <DataGridTextColumn Header="感情3" Binding="{Binding Emo3}" />
+              <DataGridTextColumn Header="感情4" Binding="{Binding Emo4}" />
+              <DataGridTextColumn Header="感情5" Binding="{Binding Emo5}" />
+              <DataGridTextColumn Header="感情6" Binding="{Binding Emo6}" />
+            </DataGrid.Columns>
+          </DataGrid>
+        </TabItem>
+        <TabItem
+          Header="Special symbols"
+          Name="SpSymbolTab"
+          FontSize="16"
+          >
+          <DataGrid
+            x:DataType="cvm:SpSymbolTableColumn"
+            Margin="20"
+            AutoGenerateColumns="False"
+            IsReadOnly="True"
+            CanUserReorderColumns="True"
+            CanUserResizeColumns="True"
+            GridLinesVisibility="All"
+            FrozenColumnCount="3"
+            BorderThickness="1" BorderBrush="Gray">
+            <DataGrid.Columns>
+              <DataGridTextColumn Header="Type" Binding="{Binding Category}"/>
+              <DataGridTextColumn Header="Name" Binding="{Binding CastName}"/>
+              <DataGridTextColumn Header="Product" Binding="{Binding Product}" />
+              <DataGridTextColumn Header="※ $ ＄" Binding="{Binding LabelFalsetto}" />
+              <DataGridTextColumn Header="@ ＠" Binding="{Binding LabelAtmark}" />
+              <DataGridTextColumn Header="^ ＾" Binding="{Binding LabelCaret}" />
+              <DataGridTextColumn Header="% ％" Binding="{Binding LabelPercent}" />
+              <DataGridTextColumn Header="= ＝" Binding="{Binding LabelEqual}" />
+              <DataGridTextColumn Header="_ ＿" Binding="{Binding LabelUnderscore}" />
+            </DataGrid.Columns>
+          </DataGrid>
+        </TabItem>
+      </TabControl>
+    </TabItem>
+
+    <TabItem
+      FontSize="14"
       Header="Data">
       <Grid
         ColumnDefinitions="*, 3, 2*"
@@ -172,139 +306,6 @@
           </pgc:PropertyGrid>
         </ScrollViewer>
       </Grid>
-    </TabItem>
-    <TabItem
-      FontSize="14"
-      IsEnabled="True"
-      Header="Plot">
-      <TabControl
-        TabStripPlacement="Left"
-        FontSize="14"
-        SelectedItem="{Binding SelectedPlotTab}"
-        >
-        <TabItem
-          Header="Default"
-          Name="DefaultTab"
-          FontSize="16"
-          >
-          <TextBlock Text="Please select a left plot tab" />
-        </TabItem>
-        <TabItem
-          Header="Vocal Tempo"
-          Name="TempoPlotTab"
-          FontSize="16"
-          >
-          <ScottPlot:AvaPlot
-            Name="TempoPlot"
-            epoxy:Anchor.Pile="{Binding TempoPlotPile}"
-            />
-        </TabItem>
-        <TabItem
-          Header="Vocal Range"
-          Name="RangePlotTab"
-          FontSize="16"
-          >
-          <ScottPlot:AvaPlot
-            Name="RangePlot"
-            epoxy:Anchor.Pile="{Binding RangePlotPile}"
-            />
-        </TabItem>
-        <TabItem
-          Header="Tempo Range"
-          Name="TempoRangePlotTab"
-          FontSize="16"
-          >
-          <ScottPlot:AvaPlot
-            Name="TempoRangePlot"
-            epoxy:Anchor.Pile="{Binding TempoRangePlotPile}"
-            />
-        </TabItem>
-        <TabItem
-          Header="Emotions"
-          Name="EmotionsPlotTab"
-          FontSize="16"
-          >
-          <ScottPlot:AvaPlot
-            Name="EmotionsPlot"
-            epoxy:Anchor.Pile="{Binding EmotionsPlotPile}"
-            />
-        </TabItem>
-      </TabControl>
-    </TabItem>
-    <TabItem
-      FontSize="14"
-      IsEnabled="True"
-      Header="Table">
-      <TabControl
-        TabStripPlacement="Left"
-        FontSize="14"
-        SelectedItem="{Binding SelectedTableTab}"
-        >
-        <TabItem
-          Header="Default"
-          Name="DefaultTableTab"
-          FontSize="16"
-          >
-          <TextBlock Text="Please select a left plot tab" />
-        </TabItem>
-        <TabItem
-          Header="Emotions"
-          Name="EmotionsTab"
-          FontSize="16"
-          >
-          <DataGrid
-            x:DataType="cvm:EmotionTableColumn"
-            Margin="20"
-            AutoGenerateColumns="False"
-            IsReadOnly="True"
-            CanUserReorderColumns="True"
-            CanUserResizeColumns="True"
-            GridLinesVisibility="All"
-            FrozenColumnCount="3"
-            BorderThickness="1" BorderBrush="Gray">
-            <DataGrid.Columns>
-              <DataGridTextColumn Header="Type" Binding="{Binding Category}"/>
-              <DataGridTextColumn Header="Name" Binding="{Binding CastName}"/>
-              <DataGridTextColumn Header="Product" Binding="{Binding Product}" />
-              <DataGridTextColumn Header="#" Binding="{Binding EmotionCount}" />
-              <DataGridTextColumn Header="感情1" Binding="{Binding Emo1}" />
-              <DataGridTextColumn Header="感情2" Binding="{Binding Emo2}" />
-              <DataGridTextColumn Header="感情3" Binding="{Binding Emo3}" />
-              <DataGridTextColumn Header="感情4" Binding="{Binding Emo4}" />
-              <DataGridTextColumn Header="感情5" Binding="{Binding Emo5}" />
-              <DataGridTextColumn Header="感情6" Binding="{Binding Emo6}" />
-            </DataGrid.Columns>
-          </DataGrid>
-        </TabItem>
-        <TabItem
-          Header="Special symbols"
-          Name="SpSymbolTab"
-          FontSize="16"
-          >
-          <DataGrid
-            x:DataType="cvm:SpSymbolTableColumn"
-            Margin="20"
-            AutoGenerateColumns="False"
-            IsReadOnly="True"
-            CanUserReorderColumns="True"
-            CanUserResizeColumns="True"
-            GridLinesVisibility="All"
-            FrozenColumnCount="3"
-            BorderThickness="1" BorderBrush="Gray">
-            <DataGrid.Columns>
-              <DataGridTextColumn Header="Type" Binding="{Binding Category}"/>
-              <DataGridTextColumn Header="Name" Binding="{Binding CastName}"/>
-              <DataGridTextColumn Header="Product" Binding="{Binding Product}" />
-              <DataGridTextColumn Header="※ $ ＄" Binding="{Binding LabelFalsetto}" />
-              <DataGridTextColumn Header="@ ＠" Binding="{Binding LabelAtmark}" />
-              <DataGridTextColumn Header="^ ＾" Binding="{Binding LabelCaret}" />
-              <DataGridTextColumn Header="% ％" Binding="{Binding LabelPercent}" />
-              <DataGridTextColumn Header="= ＝" Binding="{Binding LabelEqual}" />
-              <DataGridTextColumn Header="_ ＿" Binding="{Binding LabelUnderscore}" />
-            </DataGrid.Columns>
-          </DataGrid>
-        </TabItem>
-      </TabControl>
     </TabItem>
   </TabControl>
 

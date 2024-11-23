@@ -379,7 +379,7 @@ public class MainViewModel : ViewModelBase
 			//castTicks: castTicks,
 			valueTicks: rangeTicks,
 			isHorizontal: true,
-			isShowRegend: false);
+			isShowLegend: false);
 
 		var texts = targets
 			.Select(c => (
@@ -437,7 +437,7 @@ public class MainViewModel : ViewModelBase
 			//castTicks: ,
 			valueTicks: castTicks,
 			isHorizontal: false,
-			isShowRegend: false);
+			isShowLegend: true);
 		avaPlot.Plot.Axes.Left.TickGenerator = new ScottPlot.TickGenerators.NumericFixedInterval();
 		avaPlot.Plot.Axes.Bottom.TickLabelStyle.Alignment = Alignment.MiddleLeft;
 		avaPlot.Plot.Axes.Margins(bottom: 0);
@@ -468,7 +468,7 @@ public class MainViewModel : ViewModelBase
 		IEnumerable<Tick>? castTicks = null,
 		IEnumerable<Tick>? valueTicks = null,
 		bool isHorizontal = false,
-		bool isShowRegend = true
+		bool isShowLegend = true
 	)
 	{
 		//title
@@ -519,7 +519,7 @@ public class MainViewModel : ViewModelBase
 		}
 
 		// build the legend manually
-		if (!isShowRegend)
+		if (!isShowLegend)
 		{
 			return;
 		}

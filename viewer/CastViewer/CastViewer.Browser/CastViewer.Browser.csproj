@@ -6,7 +6,7 @@
     <WasmMainJSPath>wwwroot\main.js</WasmMainJSPath>
     <WasmRuntimeAssetsLocation>./_framework</WasmRuntimeAssetsLocation>
     <RunAOTCompilation>true</RunAOTCompilation>
-    <PublishTrimmed>false</PublishTrimmed>
+    <PublishTrimmed>true</PublishTrimmed>
 
     <WasmEnableThreads>false</WasmEnableThreads>
     <TrimMode>full</TrimMode>
