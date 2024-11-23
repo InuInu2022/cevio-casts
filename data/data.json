@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.30.0",
+	"version": "1.31.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -5789,6 +5789,178 @@
 						{
 							"lang": "English",
 							"display": "Tail fall"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "techno-sp_en_US_f845_svss",
+			"cname": "techno-sp_en_US_f845_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "SELENA"
+				},
+				{
+					"lang": "English",
+					"display": "SELENA"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "English",
+			"versions": [
+				"2.2.1"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "0",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Power"
+						},
+						{
+							"lang": "English",
+							"display": "Power"
+						}
+					]
+				},
+				{
+					"id": "1",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Soft"
+						},
+						{
+							"lang": "English",
+							"display": "Soft"
+						}
+					]
+				},
+				{
+					"id": "2",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Light"
+						},
+						{
+							"lang": "English",
+							"display": "Light"
+						}
+					]
+				},
+				{
+					"id": "3",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Heavy"
+						},
+						{
+							"lang": "English",
+							"display": "Heavy"
+						}
+					]
+				}
+			],
+			"vocalRange": {
+				"high": "F#5",
+				"low": "F3"
+			},
+			"vocalTempo": {
+				"high": 180,
+				"low": 80
+			},
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols": [
+						"$",
+						"※",
+						"＄"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
+					"id": "pitchflipup",
+					"symbols": [
+						"@",
+						"＠"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "跳ね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Pitch flip up"
+						}
+					]
+				},
+				{
+					"id": "edgevoice",
+					"symbols": [
+						"%",
+						"％"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "エッジボイス"
+						},
+						{
+							"lang": "English",
+							"display": "Edge voice"
+						}
+					]
+				},
+				{
+					"id": "exhale",
+					"symbols": [
+						"^",
+						"＾"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "吐き捨て"
+						},
+						{
+							"lang": "English",
+							"display": "Exhale"
+						}
+					]
+				},
+				{
+					"id": "rollrs",
+					"symbols": [
+						"=",
+						"＝"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "巻き舌"
+						},
+						{
+							"lang": "English",
+							"display": "Rolled Rs"
 						}
 					]
 				}
