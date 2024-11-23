@@ -155,6 +155,33 @@ public class UnitTest1 : IDisposable
 						.Names
 						.Any(a2 => a2.Display != ""));
 			Assert.True(result);
+
+			//すべてのIDがユニーク
+			var ids = cast.SpSymbols
+				.Select(v => v.Id);
+			Assert.Equal(ids.Count(), ids.Distinct().Count());
+		}
+	}
+
+	[Fact]
+	public void CheckEmotions()
+	{
+		var defs = Definitions.FromJson(jsonString);
+		foreach(var c in defs.Casts)
+		{
+			if(c is not Cast cast){ continue;}
+
+			//HasEmotions
+			Assert.Equal(cast.HasEmotions, cast.Emotions?.Count() > 0);
+
+			if(cast?.Emotions is null){ continue; }
+
+			Assert.True(cast?.Emotions.Any(v => v.Id != ""));
+
+			//すべてのIDがユニーク
+			var ids = cast?.Emotions
+				.Select(v => v.Id);
+			Assert.Equal(ids.Count(), ids.Distinct().Count());
 		}
 	}
 
