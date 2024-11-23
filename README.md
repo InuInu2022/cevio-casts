@@ -8,7 +8,7 @@ Definition data for CeVIO casts (voice library) defined in JSON format.
 
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 ![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/inuinu2022/cevio-casts?include_prereleases&label=%F0%9F%9A%80release) ![GitHub all releases](https://img.shields.io/github/downloads/InuInu2022/cevio-casts/total?color=green&label=%E2%AC%87%20downloads) ![GitHub Repo stars](https://img.shields.io/github/stars/InuInu2022/cevio-casts?label=%E2%98%85&logo=github&style=flat)
-[![CeVIO CS](https://img.shields.io/badge/CeVIO_Creative_Studio-7.0-d08cbb.svg?logo=&style=flat)](https://cevio.jp/) [![CeVIO AI](https://img.shields.io/badge/CeVIO_AI-9.1-lightgray.svg?logo=&style=flat)](https://cevio.jp/) [![VoiSona](https://img.shields.io/badge/VoiSona-1.11-53abdb.svg?logo=&style=flat)](https://voisona.com/) [![VoiSona Talk](https://img.shields.io/badge/VoiSona_Talk-1.2-53abdb.svg?logo=&style=flat)](https://voisona.com/talk/)
+[![CeVIO CS](https://img.shields.io/badge/CeVIO_Creative_Studio-7.0-d08cbb.svg?logo=&style=flat)](https://cevio.jp/) [![CeVIO AI](https://img.shields.io/badge/CeVIO_AI-9.1-lightgray.svg?logo=&style=flat)](https://cevio.jp/) [![VoiSona](https://img.shields.io/badge/VoiSona-1.12-53abdb.svg?logo=&style=flat)](https://voisona.com/) [![VoiSona Talk](https://img.shields.io/badge/VoiSona_Talk-1.2-53abdb.svg?logo=&style=flat)](https://voisona.com/talk/)
 
 
 # Features
@@ -27,8 +27,8 @@ Definition data for CeVIO casts (voice library) defined in JSON format.
 |---|---:|---:|---:|
 |CeVIO CS|5|11|16|
 |CeVIO AI|14|23|37|
-|VoiSona|11|28|39|
-|Sum|30|62|92|
+|VoiSona|11|29|40|
+|Sum|30|63|93|
 
 ## Definitions
 
