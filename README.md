@@ -46,11 +46,21 @@ Definition data for CeVIO casts (voice library) defined in JSON format.
 |---|---|
 |vocal range plot|vocal tempo plot|
 
-WIP
+https://inuinu2022.github.io/cevio-casts/
 
 - cast-dataを見ることができるアプリです
-- Desktop版とWasm版のみ動きます
-- .NET SDKを入れた状態で `dotnet run` してください
+- **「Plot」タブ**
+  - ボイスライブラリの推奨テンポ・推奨音域・テンポ＆音域の広さ・感情数のグラフをみることができます
+  - ※トークボイスも含まれます
+  - ※グラフはマウス操作で拡大縮小できます（中クリックでリセット）
+- **「Table」タブ**
+  - ボイスライブラリの感情（スタイル）や特殊記号を表で見ることができます
+  - ※トークボイスも含まれます
+- **「Data」タブ** (Desktop版のみ)
+  - ボイスライブラリの詳細なデータを見ることができます
+  - 一応ソフト・ソングorトークでフィルタできます
+- Desktop版とWeb（Wasm）版のみ動きます
+  - Web（Wasm）版は「Data」タブが正しく動きません
 
 - [License](viewer/CastViewer/License/)
 
