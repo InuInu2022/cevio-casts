@@ -49,6 +49,8 @@ public class MainViewModel : ViewModelBase
 
 	public Command? CastFilterEvent { get; }
 
+	public bool IsShowAllCast { get; set; } = true;
+
 	#endregion filterbuttons
 
 	public Command? CastDataChanged { get; }
@@ -219,7 +221,7 @@ public class MainViewModel : ViewModelBase
 		WindowTitle = $"CastViewer ver.{DataVersion}";
 
 		CastFilterEvent = Command.Factory.Create(async ()=>{
-			var filterd = loadedList
+			var filtered = loadedList
 				.Where(v =>
 					(IsShowSongVoice || v.Category != Category.SingerSong)
 						&& (IsShowTalkVoice || v.Category != Category.TextVocal)
@@ -229,7 +231,7 @@ public class MainViewModel : ViewModelBase
 				)
 				;
 			CastList.Clear();
-			CastList = new(filterd);
+			CastList = new(filtered);
 			SelectedCastIndex = 0;
 			await RedrawAsync();
 		});
@@ -254,11 +256,28 @@ public class MainViewModel : ViewModelBase
 		});
 	}
 
+	[PropertyChanged(nameof(IsShowAllCast))]
+	[SuppressMessage("","IDE0051")]
+	private async ValueTask IsShowAllCastChangedAsync(bool value)
+	{
+		if (CastList is null or []) return;
+		foreach (var cast in CastList)
+		{
+			if (cast is null) continue;
+			cast.IsVisible = value;
+		}
+
+		if(CastFilterEvent is not null)
+		{
+			await CastFilterEvent.ExecuteAsync(value);
+		}
+	}
+
 	private ValueTask ShowTempoTabAsync(AvaPlot avaPlot)
 	{
 		var targets = CastList
 			//.Where(c => c.IsShowTempo)
-			.Where(c => c is { Category: Category.SingerSong, VocalTempo: not null })
+			.Where(c => c is { Category: Category.SingerSong, VocalTempo: not null, IsVisible: true})
 			.OrderBy(c => c.VocalTempo!.High)
 			.ThenByDescending(c => c.VocalTempo!.Low)
 			.ThenBy(c => c.Names![1])
@@ -307,7 +326,7 @@ public class MainViewModel : ViewModelBase
 	{
 		var targets = CastList
 			//.Where(c => c.IsShowTempo)
-			.Where(c => c is { Category: Category.SingerSong, VocalRange: not null })
+			.Where(c => c is { Category: Category.SingerSong, VocalRange: not null, IsVisible: true})
 			.OrderBy(c => VocalRangeUtil.GetNoteNumberFromName(c.VocalRange?.High ?? "C4"))
 			.ThenBy(c => VocalRangeUtil.GetNoteNumberFromName(c.VocalRange?.Low ?? "C4"))
 			.ThenBy(c => c.Names![1])
@@ -358,7 +377,7 @@ public class MainViewModel : ViewModelBase
 	{
 		var targets = CastList
 			//.Where(c => c.IsShowTempo)
-			.Where(c => c is { Category: Category.SingerSong, VocalRange: not null, VocalTempo: not null })
+			.Where(c => c is { Category: Category.SingerSong, VocalRange: not null, VocalTempo: not null, IsVisible: true})
 			.OrderBy(c => c.Names![0])
 			;
 
@@ -413,8 +432,8 @@ public class MainViewModel : ViewModelBase
 	private async ValueTask ShowEmotionsTabAsync(AvaPlot avaPlot)
 	{
 		var targets = CastList
-			.Where(c => c.Emotions is not null && c.Emotions.Count != 0)
-			.OrderByDescending(c => c.Emotions.Count)
+			.Where(c => c.Emotions is not null && c.Emotions.Count != 0 && c.IsVisible is true)
+			.OrderByDescending(c => c.Emotions!.Count)
 			.ThenBy(c => c.Names![0])
 			;
 		Tick[] castTicks = targets
@@ -556,7 +575,7 @@ public class MainViewModel : ViewModelBase
 	private ValueTask ShowEmotionTableAsync(DataGrid grid)
 	{
 		var casts = CastList
-			.Where(c => c.HasEmotions)
+			.Where(c => c is { HasEmotions: true, IsVisible: true })
 			.ToList()
 			.Select(c => new EmotionTableColumn(
 				castName: c.Names?[0] ?? "NO NAME",
@@ -579,13 +598,13 @@ public class MainViewModel : ViewModelBase
 	private ValueTask ShowSpSymbolTableAsync(DataGrid grid)
 	{
 		var casts = CastList
-			.Where(c => c.SpSymbols?.Count != 0)
+			.Where(c => c.SpSymbols?.Count != 0 && c.IsVisible is true)
 			.ToList()
 			.Select(c => new SpSymbolTableColumn(
 				Cat: c.Category,
 				CastName: c.Names?[0] ?? "NO NAME",
 				Product: c.Product,
-				SpSymbols: [.. c.SpSymbols]
+				SpSymbols: [.. c.SpSymbols!]
 			))
 			;
 		SpSymbolTableCastList = [.. casts];

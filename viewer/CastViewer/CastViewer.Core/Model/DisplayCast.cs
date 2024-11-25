@@ -65,7 +65,9 @@ public sealed class DisplayCast : Cast
 
 
 
-
+	[Browsable(false)]
+	[IgnoreDataMember]
+	public bool IsVisible { get; set; } = true;
 
 	[ConditionTarget]
 	[IgnoreDataMember]

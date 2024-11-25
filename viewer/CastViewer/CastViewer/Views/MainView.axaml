@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:CastViewer.ViewModels"
              xmlns:cvm="using:CastViewer.Core.Model"
+             xmlns:cnv="using:CastViewer.Converters"
              xmlns:pgc="clr-namespace:Avalonia.PropertyGrid.Controls;assembly=Avalonia.PropertyGrid"
              xmlns:epoxy="https://github.com/kekyo/Epoxy"
              xmlns:ScottPlot="clr-namespace:ScottPlot.Avalonia;assembly=ScottPlot.Avalonia"
@@ -17,6 +18,8 @@
   </Design.DataContext>
 
   <UserControl.Resources>
+    <cnv:CategoryToTextConverter x:Key="CategoryToTextConverter" />
+    <cnv:ProductToTextConverter x:Key="ProductToTextConverter" />
     <ControlTemplate x:Key="CategoryFilterPanelTemplate">
       <WrapPanel
         Margin="2">
@@ -51,8 +54,80 @@
           Content="VS" />
       </WrapPanel>
     </ControlTemplate>
+    <ControlTemplate x:Key="CastSelectFilterPanelTemplate">
+      <StackPanel Margin="2">
+        <Button Content="Select Casts"
+                MinWidth="100">
+          <Button.Flyout>
+            <Flyout Placement="BottomEdgeAlignedLeft">
+              <!-- Flyout内にListBox -->
+              <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                  <CheckBox IsChecked="{Binding IsShowAllCast}">All</CheckBox>
+                </StackPanel>
+                <ItemsControl ItemsSource="{Binding CastList}">
+                  <ItemsControl.Styles>
+                    <Style Selector="ListBoxItem">
+                      <!-- マージンをゼロに設定 -->
+                      <Setter Property="Margin" Value="0" />
+                      <!-- パディングを調整 -->
+                      <Setter Property="Padding" Value="2" />
+                      <!-- 高さを調整 -->
+                      <Setter Property="MinHeight" Value="20" />
+                    </Style>
+                  </ItemsControl.Styles>
+                  <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                      <DockPanel>
+                        <!-- CheckBox -->
+                        <CheckBox
+                          Name="SelectedCastCheckBox"
+                          IsChecked="{Binding IsVisible, Mode=TwoWay}"
+                          Command="{Binding $parent[ItemsControl].((vm:MainViewModel)DataContext).CastFilterEvent}"
+                          DockPanel.Dock="Left">
+
+                          <!-- 名前 -->
+                          <TextBlock
+                            Name="CastName"
+                            Text="{Binding Names[0], FallbackValue='No Name'}"
+                            VerticalAlignment="Center"
+                            FontSize="11"
+                            DockPanel.Dock="Left" />
+                        </CheckBox>
+
+                        <!-- カテゴリ -->
+                        <TextBlock
+                          Name="CastCategory"
+                          Text="{Binding Category, Converter={StaticResource CategoryToTextConverter}}"
+                          FontSize="11"
+                          Padding="2"
+                          FontWeight="Thin"
+                          VerticalAlignment="Bottom"
+                          HorizontalAlignment="Right"
+                          DockPanel.Dock="Right" />
+
+                        <!-- プロダクト -->
+                        <TextBlock
+                          Name="CastProduct"
+                          Text="{Binding Product, Converter={StaticResource ProductToTextConverter}}"
+                          FontSize="11"
+                          Padding="2"
+                          FontWeight="Thin"
+                          VerticalAlignment="Bottom"
+                          HorizontalAlignment="Right"
+                          DockPanel.Dock="Right" />
+                      </DockPanel>
+                    </DataTemplate>
+                  </ItemsControl.ItemTemplate>
+                </ItemsControl>
+              </StackPanel>
+            </Flyout>
+          </Button.Flyout>
+        </Button>
+      </StackPanel>
+    </ControlTemplate>
   </UserControl.Resources>
-  
+
   <UserControl.Styles>
     <Style Selector="StackPanel.tabInfo">
       <Setter Property="Margin" Value="2 5"/>
@@ -115,6 +190,7 @@
                Orientation="Horizontal"
               >
               <ContentControl Template="{StaticResource CastFilterPanelTemplate}" />
+              <ContentControl Template="{StaticResource CastSelectFilterPanelTemplate}" />
               <ComboBox
                 IsEnabled="False"
                 Name="SortCombo"
@@ -149,6 +225,7 @@
               DockPanel.Dock="Top"
               Orientation="Horizontal">
               <ContentControl Template="{StaticResource CastFilterPanelTemplate}" />
+              <ContentControl Template="{StaticResource CastSelectFilterPanelTemplate}" />
             </StackPanel>
             <ScottPlot:AvaPlot
               Name="RangePlot"
@@ -165,6 +242,7 @@
               DockPanel.Dock="Top"
               Orientation="Horizontal">
               <ContentControl Template="{StaticResource CastFilterPanelTemplate}" />
+              <ContentControl Template="{StaticResource CastSelectFilterPanelTemplate}" />
             </StackPanel>
             <ScottPlot:AvaPlot
               Name="TempoRangePlot"
@@ -183,6 +261,7 @@
               <!--  voice category  -->
               <ContentControl Template="{StaticResource CategoryFilterPanelTemplate}" />
               <ContentControl Template="{StaticResource CastFilterPanelTemplate}" />
+              <ContentControl Template="{StaticResource CastSelectFilterPanelTemplate}" />
             </StackPanel>
             <ScottPlot:AvaPlot
               Name="EmotionsPlot"
@@ -230,6 +309,7 @@
               <!--  voice category  -->
               <ContentControl Template="{StaticResource CategoryFilterPanelTemplate}" />
               <ContentControl Template="{StaticResource CastFilterPanelTemplate}" />
+              <ContentControl Template="{StaticResource CastSelectFilterPanelTemplate}" />
             </StackPanel>
             <DataGrid
               x:DataType="cvm:EmotionTableColumn"
@@ -252,6 +332,8 @@
                 <DataGridTextColumn Header="感情4" Binding="{Binding Emo4}" />
                 <DataGridTextColumn Header="感情5" Binding="{Binding Emo5}" />
                 <DataGridTextColumn Header="感情6" Binding="{Binding Emo6}" />
+                <DataGridTextColumn Header="感情7" Binding="{Binding Emo7}" />
+                <DataGridTextColumn Header="感情8" Binding="{Binding Emo8}" />
               </DataGrid.Columns>
             </DataGrid>
           </DockPanel>
@@ -268,6 +350,7 @@
               <!--  voice category  -->
               <ContentControl Template="{StaticResource CategoryFilterPanelTemplate}" />
               <ContentControl Template="{StaticResource CastFilterPanelTemplate}" />
+              <ContentControl Template="{StaticResource CastSelectFilterPanelTemplate}" />
             </StackPanel>
             <DataGrid
               x:DataType="cvm:SpSymbolTableColumn"

@@ -15,6 +15,8 @@ public record EmotionTableColumn
 	public string Emo4 { get; } = string.Empty;
 	public string Emo5 { get; } = string.Empty;
 	public string Emo6 { get; } = string.Empty;
+	public string Emo7 { get; } = string.Empty;
+	public string Emo8 { get; } = string.Empty;
 
 	public EmotionTableColumn(
 		string castName,
@@ -32,7 +34,8 @@ public record EmotionTableColumn
 		CastName = castName;
 		this.Product = product;
 
-		if (!emotions.Any()) { return; }
+		if (emotions.Count == 0) { return; }
+
 		int length = emotions.Count;
 		EmotionCount = length;
 
@@ -47,8 +50,9 @@ public record EmotionTableColumn
 		this.Emo5 = emotions?[4]?.Names?[0] ?? "NO NAME";
 		if(length < 6) return;
 		this.Emo6 = emotions?[5]?.Names?[0] ?? "NO NAME";
-
+		if(length < 7) return;
+		this.Emo7 = emotions?[6]?.Names?[0] ?? "NO NAME";
+		if(length < 8) return;
+		this.Emo8 = emotions?[7]?.Names?[0] ?? "NO NAME";
 	}
-
-
 }
