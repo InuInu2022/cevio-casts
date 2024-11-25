@@ -218,7 +218,7 @@ public class MainViewModel : ViewModelBase
 		DataVersion = definitions.Version;
 		WindowTitle = $"CastViewer ver.{DataVersion}";
 
-		CastFilterEvent = Command.Factory.Create(()=>{
+		CastFilterEvent = Command.Factory.Create(async ()=>{
 			var filterd = loadedList
 				.Where(v =>
 					(IsShowSongVoice || v.Category != Category.SingerSong)
@@ -231,7 +231,7 @@ public class MainViewModel : ViewModelBase
 			CastList.Clear();
 			CastList = new(filterd);
 			SelectedCastIndex = 0;
-			RedrawAsync();
+			await RedrawAsync();
 			return default;
 		});
 
@@ -290,8 +290,8 @@ public class MainViewModel : ViewModelBase
 				.ToArray()
 				;
 		}
-		
-		
+
+
 
 		SetPlot(
 			avaPlot,
@@ -479,7 +479,7 @@ public class MainViewModel : ViewModelBase
 	{
 		avaPlot.Reset();
 		avaPlot.Plot.Clear();
-		
+
 		//title
 		avaPlot.Plot.Axes.Title.Label.Text = title;
 
@@ -539,9 +539,9 @@ public class MainViewModel : ViewModelBase
 				new(){LabelText = nameof(Product.CeVIO_CS), FillColor = Colors.Gray},
 			];
 		}
-		
+
 		avaPlot.Refresh();
-		
+
 	}
 
 	static Color GetColor(Product product)
