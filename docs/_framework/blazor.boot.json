@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "CastViewer.Browser.dll",
   "resources": {
-    "hash": "sha256-KKULhcAI7/c7UAysIq/1+yNesuQeO6BmfRgje9WnIPc=",
+    "hash": "sha256-31OnsMCR7nrYRh5+imm6RoGkId8vd7F9DFZDO5M6jtE=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-ZQ6xp4a8NyKV3KI4Ytq6eb610J/MM6x5VBD6br9X6iQ="
     },
@@ -9,7 +9,7 @@
       "dotnet.runtime.js": "sha256-nam8JTYKjhMKOTg6+FlihYP6JpWPGe3jjM9fiUFWzhY="
     },
     "wasmNative": {
-      "dotnet.native.wasm": "sha256-qz6j4bVd0PSfJT3TBBybmVdVN7BqKEemNWxVBECFLVQ="
+      "dotnet.native.wasm": "sha256-luQSTaZjx9HNAdevpVHnGe/JzVYLBCrlK+HvCzV+a/c="
     },
     "icu": {
       "icudt_CJK.dat": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
@@ -24,18 +24,18 @@
       "Avalonia.Controls.wasm": "sha256-qT1Ct6UKP2LBIYPkxcDjRSYFs+cbGu7m+/0uFzwzscY=",
       "Avalonia.Dialogs.wasm": "sha256-htq/8NOTNjA69x5g17qWC8Pw+qg7h8c25GtsoJfcnAk=",
       "Avalonia.Markup.wasm": "sha256-DqvfAqH+0bxMou4/JcqUvARwwMgUf3kCNgCktSF589Q=",
-      "Avalonia.Markup.Xaml.wasm": "sha256-znizUG0CBhzB2qmnwvc5nwhprXpKVqiAKLbMWHHP6OI=",
+      "Avalonia.Markup.Xaml.wasm": "sha256-l4Us8LBYQT1fAoiSmo/X+n//S8Tm4Va4Wz994sSGB4k=",
       "Avalonia.Metal.wasm": "sha256-bMa9Gwg7vQMrMMAtlQvkMUqtfXyqkOWX4VfoZ+EU5mU=",
       "Avalonia.OpenGL.wasm": "sha256-7GhoUr8uiHBOaTB81gyPMv2M54ly0MTK2TsOo/vl40A=",
       "Avalonia.PropertyGrid.wasm": "sha256-ieqDMOf3V1eOdKm+bkIdUOxTuZEyCUzOjjtuxWPBUms=",
       "Avalonia.ReactiveUI.wasm": "sha256-Rq+4dCGqYhtqj8PdODCxhg1Cxh0/rpD584pnw/EqUvo=",
       "Avalonia.Skia.wasm": "sha256-MyQaOQY2jzKjDCFCtAKB8POdsVoHAc0rwSbh5pwXekU=",
       "Avalonia.Themes.Fluent.wasm": "sha256-83wzc198a7/lrWmPtEIswWL9oGAPCJEJYduWphqzVgA=",
-      "CastViewer.Browser.wasm": "sha256-FKOIrrY742pfTkLOJe3Jsw2C7vEayy7BCrrFWT05P34=",
-      "CastViewer.Core.wasm": "sha256-E5m9y+xQVcE+TruY3V7b3fa9E4EaxUy/y2M+VRatiyw=",
-      "CastViewer.wasm": "sha256-uXK1V8IJLnJkbgdC0zFvF0rqZd05eWu5g96kI/Kf6oQ=",
-      "CevioCasts.wasm": "sha256-DA7D73R6yEmrY79VQMwc5LzJhbRK/GuQiVga3X4mT/E=",
-      "Epoxy.Core.wasm": "sha256-seOHdw9x4qb3+ezfQsVT0GijIdVCmssPz5DN6Uss0A8=",
+      "CastViewer.Browser.wasm": "sha256-ea5Iy7VO0oNUaEyaSLwMoltarH5eNkiw8XJ0zkJt0LA=",
+      "CastViewer.Core.wasm": "sha256-5dEvbMRLseDmeBHnuj7JBOr16ODnKETmJB+QBcFm6E4=",
+      "CastViewer.wasm": "sha256-vfYQgbmYmzVEBA5ECu/ZM16QSmYQlVcSejIgxBc7zsU=",
+      "CevioCasts.wasm": "sha256-S3/MDvsG0L6AOEHEH1Gt7T/AzmXl7ritsqBWPHXYu1s=",
+      "Epoxy.Core.wasm": "sha256-+8w9dgpoYqIYPblcd9SO6zoaZed4ZG4A13iW49ju+co=",
       "Epoxy.wasm": "sha256-+307+rErQ7AvMcAlQCL2mwGb6efN/HNHQPRlHYO2AF4=",
       "HarfBuzzSharp.wasm": "sha256-LbqVfB92XAt2NDopzX5TdpSUTtxQj93DgQ3s2fIkmCU=",
       "Melanchall.DryWetMidi.wasm": "sha256-nmyZKTIx0pgEksWu+d8BXDz2eTlLcyfLm7+FVNJUkBQ=",
