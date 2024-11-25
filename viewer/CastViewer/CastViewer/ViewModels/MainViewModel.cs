@@ -232,7 +232,6 @@ public class MainViewModel : ViewModelBase
 			CastList = new(filterd);
 			SelectedCastIndex = 0;
 			await RedrawAsync();
-			return default;
 		});
 
 		IsPgEnabled = true;
