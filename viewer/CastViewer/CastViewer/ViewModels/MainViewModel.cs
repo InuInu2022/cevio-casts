@@ -19,6 +19,7 @@ using ScottPlot.TickGenerators;
 using System.Collections.Generic;
 using CastViewer.Core.Utils;
 using Avalonia.Collections;
+using Avalonia.VisualTree;
 
 namespace CastViewer.ViewModels;
 
@@ -179,12 +180,19 @@ public class MainViewModel : ViewModelBase
 		},
 	];
 
+	// ------------- mode tab --------------- //
+	public TabItem? SelectedModeTab { get; set; }
+	public int SelectedModeTabIndex { get; set; }
+
 	// ------------- plot tab --------------- //
 	public TabItem? SelectedPlotTab { get; set; }
 	public Pile<AvaPlot> TempoPlotPile { get; } = Pile.Factory.Create<AvaPlot>();
 	public Pile<AvaPlot> RangePlotPile { get; } = Pile.Factory.Create<AvaPlot>();
 	public Pile<AvaPlot> TempoRangePlotPile { get; } = Pile.Factory.Create<AvaPlot>();
 	public Pile<AvaPlot> EmotionsPlotPile { get; } = Pile.Factory.Create<AvaPlot>();
+
+	public int SelectedTempoSortIndex { get; set; }
+	public int SelectedRangeSortIndex { get; set; }
 
 	// ------------- table tab --------------- //
 	public TabItem? SelectedTableTab { get; set; }
@@ -223,6 +231,7 @@ public class MainViewModel : ViewModelBase
 			CastList.Clear();
 			CastList = new(filterd);
 			SelectedCastIndex = 0;
+			RedrawAsync();
 			return default;
 		});
 
@@ -248,18 +257,18 @@ public class MainViewModel : ViewModelBase
 
 	private ValueTask ShowTempoTabAsync(AvaPlot avaPlot)
 	{
-		var targets = RawCastList
+		var targets = CastList
 			//.Where(c => c.IsShowTempo)
-			.Where(c => c.Category == Category.SingerSong && c.VocalTempo is not null)
+			.Where(c => c is { Category: Category.SingerSong, VocalTempo: not null })
 			.OrderBy(c => c.VocalTempo!.High)
 			.ThenByDescending(c => c.VocalTempo!.Low)
-			.ThenBy(c => c.Names[1].Display)
+			.ThenBy(c => c.Names![1])
 			;
 		Tick[] ticks = [];
 		if(CastList is not null)
 		{
 			ticks = targets
-				.Select((c, i) => new Tick(i, c.Names[1].Display))
+				.Select((c, i) => new Tick(i, c.Names![1]))
 				.ToArray()
 				;
 		}
@@ -270,7 +279,7 @@ public class MainViewModel : ViewModelBase
 			bars = targets
 				.Select((c,i) => new Bar()
 					{
-						Label = $"{c.VocalTempo.Low} - {c.VocalTempo.High}",
+						Label = $"{c.VocalTempo?.Low} - {c.VocalTempo?.High}",
 						Position = i,
 						ValueBase = c.VocalTempo?.Low ?? 0,
 						Value = c.VocalTempo?.High ?? 0,
@@ -281,6 +290,8 @@ public class MainViewModel : ViewModelBase
 				.ToArray()
 				;
 		}
+		
+		
 
 		SetPlot(
 			avaPlot,
@@ -295,16 +306,16 @@ public class MainViewModel : ViewModelBase
 
 	private ValueTask ShowRangeTabAsync(AvaPlot avaPlot)
 	{
-		var targets = RawCastList
+		var targets = CastList
 			//.Where(c => c.IsShowTempo)
-			.Where(c => c.Category == Category.SingerSong && c.VocalRange is not null)
-			.OrderBy(c => VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.High))
-			.ThenBy(c => VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.Low))
-			.ThenBy(c => c.Names[1].Display)
+			.Where(c => c is { Category: Category.SingerSong, VocalRange: not null })
+			.OrderBy(c => VocalRangeUtil.GetNoteNumberFromName(c.VocalRange?.High ?? "C4"))
+			.ThenBy(c => VocalRangeUtil.GetNoteNumberFromName(c.VocalRange?.Low ?? "C4"))
+			.ThenBy(c => c.Names![1])
 			;
 
 		Tick[] castTicks = targets
-			.Select((c, i) => new Tick(i, c.Names[1].Display))
+			.Select((c, i) => new Tick(i, c.Names![1]))
 			.ToArray()
 			;
 
@@ -322,10 +333,10 @@ public class MainViewModel : ViewModelBase
 		bars = targets
 			.Select((c,i) => new Bar()
 				{
-					Label = $"{c.VocalRange.Low} - {c.VocalRange.High}",
+					Label = $"{c.VocalRange?.Low} - {c.VocalRange?.High}",
 					Position = i,
-					ValueBase = VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.Low),
-					Value = VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.High),
+					ValueBase = VocalRangeUtil.GetNoteNumberFromName(c.VocalRange?.Low ?? "C4"),
+					Value = VocalRangeUtil.GetNoteNumberFromName(c.VocalRange?.High ?? "C4"),
 					FillColor = GetColor(c.Product),
 					BorderLineWidth = 0,
 					//BorderColor = Colors.Gray,
@@ -346,15 +357,10 @@ public class MainViewModel : ViewModelBase
 
 	private ValueTask ShowTempoRangeTabAsync(AvaPlot avaPlot)
 	{
-		var targets = RawCastList
+		var targets = CastList
 			//.Where(c => c.IsShowTempo)
-			.Where(c => c.Category == Category.SingerSong
-				&& c.VocalRange is not null
-				&& c.VocalTempo is not null)
-			.OrderBy(c => c.Names[0].Display)
-			//.OrderBy(c => VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.High))
-			//.ThenBy(c => VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.Low))
-			//.ThenBy(c => c.Names[1].Display)
+			.Where(c => c is { Category: Category.SingerSong, VocalRange: not null, VocalTempo: not null })
+			.OrderBy(c => c.Names![0])
 			;
 
 		Tick[] rangeTicks = VocalRangeUtil
@@ -364,10 +370,10 @@ public class MainViewModel : ViewModelBase
 
 		CoordinateRect[] rects = targets
 			.Select((c, _) => new CoordinateRect(
-				VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.Low),
-				VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.High),
-				c.VocalTempo.Low,
-				c.VocalTempo.High
+				VocalRangeUtil.GetNoteNumberFromName(c.VocalRange?.Low ?? "C4"),
+				VocalRangeUtil.GetNoteNumberFromName(c.VocalRange?.High ?? "C4"),
+				c.VocalTempo?.Low ?? 50,
+				c.VocalTempo?.High ?? 300
 			))
 			.Distinct()
 			.ToArray();
@@ -383,16 +389,16 @@ public class MainViewModel : ViewModelBase
 
 		var texts = targets
 			.Select(c => (
-				cast: c.Names[1].Display,
+				cast: c.Names![1],
 				rect: (
-					left: VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.Low),
+					left: VocalRangeUtil.GetNoteNumberFromName(c.VocalRange?.Low ?? "C4"),
 					//VocalRangeUtil.GetNoteNumberFromName(c.VocalRange.High),
 					//c.VocalTempo.Low,
-					top: c.VocalTempo.High
+					top: c.VocalTempo?.High ?? 300
 					)))
 			.GroupBy(v => v.rect)
 			.Select(v => (
-				casts: string.Join(", ", v.Select(v => v.cast).Distinct()),
+				casts: string.Join(", ", v.Select(t => t.cast).Distinct()),
 				rect: v.Key
 			))
 			;
@@ -407,23 +413,23 @@ public class MainViewModel : ViewModelBase
 
 	private async ValueTask ShowEmotionsTabAsync(AvaPlot avaPlot)
 	{
-		var targets = RawCastList
-			.Where(c => c.Emotions is not null && c.Emotions.Length != 0)
-			.OrderByDescending(c => c.Emotions.Length)
-			.ThenBy(c => c.Names[0].Display)
+		var targets = CastList
+			.Where(c => c.Emotions is not null && c.Emotions.Count != 0)
+			.OrderByDescending(c => c.Emotions.Count)
+			.ThenBy(c => c.Names![0])
 			;
 		Tick[] castTicks = targets
 			.Select((c, i) => new Tick(
 				i,
-				$"{c.Names[1].Display} - {TextUtil.GetAppCatText(c.Product, c.Category)}"))
+				$"{c.Names![1]} - {TextUtil.GetAppCatText(c.Product, c.Category)}"))
 			.ToArray()
 			;
 		Bar[] bars = targets
 			.Select((c,i) => new Bar()
 				{
-					Label = $"{c.Emotions.Length}",
+					Label = $"{c.Emotions?.Count ?? 0}",
 					Position = i,
-					Value = c.Emotions.Length,
+					Value = c.Emotions?.Count ?? 0,
 					FillColor = GetColor(c.Product),
 					BorderLineWidth = 0,
 					//BorderColor = Colors.Gray,
@@ -449,7 +455,7 @@ public class MainViewModel : ViewModelBase
 		using SkiaSharp.SKPaint paint = new();
 		foreach (Tick tick in castTicks)
 		{
-			ScottPlot.PixelSize size = avaPlot.Plot.Axes.Bottom.TickLabelStyle.Measure(tick.Label, paint).Size;
+			var size = avaPlot.Plot.Axes.Bottom.TickLabelStyle.Measure(tick.Label, paint).Size;
 			largestLabelWidth = Math.Max(largestLabelWidth, size.Width);
 		}
 
@@ -471,6 +477,9 @@ public class MainViewModel : ViewModelBase
 		bool isShowLegend = true
 	)
 	{
+		avaPlot.Reset();
+		avaPlot.Plot.Clear();
+		
 		//title
 		avaPlot.Plot.Axes.Title.Label.Text = title;
 
@@ -519,19 +528,20 @@ public class MainViewModel : ViewModelBase
 		}
 
 		// build the legend manually
-		if (!isShowLegend)
+		if (isShowLegend)
 		{
-			return;
+			var legend = avaPlot.Plot.Legend;
+			legend.IsVisible = true;
+			legend.Alignment = Alignment.LowerRight;
+			legend.ManualItems = [
+				new(){LabelText = nameof(Product.CeVIO_AI), FillColor = Colors.LightSalmon},
+				new(){LabelText = nameof(Product.VoiSona), FillColor = Colors.LightBlue},
+				new(){LabelText = nameof(Product.CeVIO_CS), FillColor = Colors.Gray},
+			];
 		}
-
-		var legend = avaPlot.Plot.Legend;
-		legend.IsVisible = true;
-		legend.Alignment = Alignment.LowerRight;
-		legend.ManualItems = [
-			new(){LabelText = nameof(Product.CeVIO_AI), FillColor = Colors.LightSalmon},
-			new(){LabelText = nameof(Product.VoiSona), FillColor = Colors.LightBlue},
-			new(){LabelText = nameof(Product.CeVIO_CS), FillColor = Colors.Gray},
-		];
+		
+		avaPlot.Refresh();
+		
 	}
 
 	static Color GetColor(Product product)
@@ -590,12 +600,39 @@ public class MainViewModel : ViewModelBase
 		return default;
 	}
 
+	private async ValueTask RedrawAsync()
+	{
+		if (SelectedModeTab is null)
+		{
+			SelectedModeTabIndex = 0;
+		}
+		switch (SelectedModeTab?.Name ?? "Plot")
+		{
+			case "Plot":
+			{
+				if (SelectedPlotTab is null) break;
+				await SelectedPlotTabChangedAsync(SelectedPlotTab);
+				break;
+			}
+			case "Table":
+			{
+				if (SelectedTableTab is null) break;
+				await SelectedTableTabChangedAsync(SelectedTableTab);
+				break;
+			}
+			default:
+				break;
+		}
+	}
+
 	[PropertyChanged(nameof(SelectedPlotTab))]
 	[SuppressMessage("","IDE0051")]
 	private async ValueTask SelectedPlotTabChangedAsync(TabItem value)
 	{
-		if(value is null) return;
-		if(value.Content is not AvaPlot plot) return;
+		if(value.Content is not Visual tabVisual) return;
+
+		var plot = tabVisual.FindDescendantOfType<AvaPlot>();
+		if(plot is null) return;
 
 		switch(value.Name){
 			case "TempoPlotTab":
@@ -629,8 +666,10 @@ public class MainViewModel : ViewModelBase
 	[SuppressMessage("","IDE0051")]
 	private async ValueTask SelectedTableTabChangedAsync(TabItem value)
 	{
-		if(value is null) return;
-		if(value.Content is not DataGrid grid) return;
+		if(value.Content is not Visual tabVisual) return;
+
+		var grid = tabVisual.FindDescendantOfType<DataGrid>();
+		if(grid is null) return;
 
 		switch(value.Name)
 		{

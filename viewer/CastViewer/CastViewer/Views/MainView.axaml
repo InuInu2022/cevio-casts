@@ -16,12 +16,63 @@
     <vm:MainViewModel />
   </Design.DataContext>
 
+  <UserControl.Resources>
+    <ControlTemplate x:Key="CategoryFilterPanelTemplate">
+      <WrapPanel
+        Margin="2">
+        <ToggleButton
+          IsChecked="{Binding IsShowTalkVoice}"
+          Command="{Binding CastFilterEvent}"
+          CommandParameter="Talk"
+          Content="Talk" />
+        <ToggleButton
+          IsChecked="{Binding IsShowSongVoice}"
+          Command="{Binding CastFilterEvent}"
+          CommandParameter="Talk"
+          Content="Song" />
+      </WrapPanel>
+    </ControlTemplate>
+    <ControlTemplate x:Key="CastFilterPanelTemplate">
+      <WrapPanel Margin="2">
+        <ToggleButton
+          IsChecked="{Binding IsShowCS}"
+          ToolTip.Tip="CeVIO CS"
+          Command="{Binding CastFilterEvent}"
+          Content="CS" />
+        <ToggleButton
+          IsChecked="{Binding IsShowAI}"
+          ToolTip.Tip="CeVIO AI"
+          Command="{Binding CastFilterEvent}"
+          Content="AI" />
+        <ToggleButton
+          IsChecked="{Binding IsShowVS}"
+          ToolTip.Tip="VoiSona"
+          Command="{Binding CastFilterEvent}"
+          Content="VS" />
+      </WrapPanel>
+    </ControlTemplate>
+  </UserControl.Resources>
+  
+  <UserControl.Styles>
+    <Style Selector="StackPanel.tabInfo">
+      <Setter Property="Margin" Value="2 5"/>
+    </Style>
+    <Style Selector="TextBlock.h2">
+      <Setter Property="FontSize" Value="16"/>
+      <Setter Property="FontWeight" Value="Bold"/>
+    </Style>
+  </UserControl.Styles>
+
+
   <TabControl
     TabStripPlacement="Bottom"
+    SelectedItem="{Binding SelectedModeTab}"
+    SelectedIndex="{Binding SelectedModeTabIndex}"
     >
     <TabItem
       FontSize="14"
       IsEnabled="True"
+      Name="Plot"
       Header="Plot">
       <TabControl
         TabStripPlacement="Left"
@@ -33,53 +84,117 @@
           Name="DefaultTab"
           FontSize="16"
           >
-          <TextBlock Text="Please select a left plot tab" />
+          <StackPanel Spacing="5">
+            <SelectableTextBlock Text="← Please select a left plot tab" />
+            <StackPanel Classes="tabInfo">
+              <TextBlock Classes="h2" Text="Vocal Tempo"/>
+              <SelectableTextBlock Text="ボイスライブラリの推奨テンポのグラフ" />
+            </StackPanel>
+            <StackPanel Classes="tabInfo">
+              <TextBlock Classes="h2" Text="Vocal Range"/>
+              <SelectableTextBlock Text="ボイスライブラリの推奨音域のグラフ" />
+            </StackPanel>
+            <StackPanel Classes="tabInfo">
+              <TextBlock Classes="h2" Text="Tempo Range"/>
+              <SelectableTextBlock Text="ボイスライブラリの推奨音域・テンポの範囲グラフ" />
+            </StackPanel>
+            <StackPanel Classes="tabInfo">
+              <TextBlock Classes="h2" Text="Emotions"/>
+              <SelectableTextBlock Text="ボイスライブラリの感情（スタイル）の数の棒グラフ" />
+            </StackPanel>
+          </StackPanel>
         </TabItem>
         <TabItem
           Header="Vocal Tempo"
           Name="TempoPlotTab"
           FontSize="16"
           >
-          <ScottPlot:AvaPlot
-            Name="TempoPlot"
-            epoxy:Anchor.Pile="{Binding TempoPlotPile}"
-            />
+          <DockPanel>
+            <StackPanel
+               DockPanel.Dock="Top"
+               Orientation="Horizontal"
+              >
+              <ContentControl Template="{StaticResource CastFilterPanelTemplate}" />
+              <ComboBox
+                IsEnabled="False"
+                Name="SortCombo"
+                SelectedIndex="{Binding SelectedTempoSortIndex}"
+                Margin="5 2">
+                <ComboBoxItem>Max tempo</ComboBoxItem>
+                <ComboBoxItem>Min tempo</ComboBoxItem>
+                <ComboBoxItem>Range tempo</ComboBoxItem>
+              </ComboBox>
+              <ToggleSwitch
+                IsEnabled="False"
+                Name="SortOrderButton"
+                OnContent="↓"
+                OffContent="↑"
+                IsChecked="True"
+              />
+            </StackPanel>
+            <ScottPlot:AvaPlot
+              Name="TempoPlot"
+              epoxy:Anchor.Pile="{Binding TempoPlotPile}"
+              />
+          </DockPanel>
+
         </TabItem>
         <TabItem
           Header="Vocal Range"
           Name="RangePlotTab"
           FontSize="16"
           >
-          <ScottPlot:AvaPlot
-            Name="RangePlot"
-            epoxy:Anchor.Pile="{Binding RangePlotPile}"
-            />
+          <DockPanel>
+            <StackPanel
+              DockPanel.Dock="Top"
+              Orientation="Horizontal">
+              <ContentControl Template="{StaticResource CastFilterPanelTemplate}" />
+            </StackPanel>
+            <ScottPlot:AvaPlot
+              Name="RangePlot"
+              epoxy:Anchor.Pile="{Binding RangePlotPile}" />
+          </DockPanel>
         </TabItem>
         <TabItem
           Header="Tempo Range"
           Name="TempoRangePlotTab"
           FontSize="16"
           >
-          <ScottPlot:AvaPlot
-            Name="TempoRangePlot"
-            epoxy:Anchor.Pile="{Binding TempoRangePlotPile}"
-            />
+          <DockPanel>
+            <StackPanel
+              DockPanel.Dock="Top"
+              Orientation="Horizontal">
+              <ContentControl Template="{StaticResource CastFilterPanelTemplate}" />
+            </StackPanel>
+            <ScottPlot:AvaPlot
+              Name="TempoRangePlot"
+              epoxy:Anchor.Pile="{Binding TempoRangePlotPile}" />
+          </DockPanel>
         </TabItem>
         <TabItem
           Header="Emotions"
           Name="EmotionsPlotTab"
           FontSize="16"
           >
-          <ScottPlot:AvaPlot
-            Name="EmotionsPlot"
-            epoxy:Anchor.Pile="{Binding EmotionsPlotPile}"
-            />
+          <DockPanel>
+            <StackPanel
+              DockPanel.Dock="Top"
+              Orientation="Horizontal">
+              <!--  voice category  -->
+              <ContentControl Template="{StaticResource CategoryFilterPanelTemplate}" />
+              <ContentControl Template="{StaticResource CastFilterPanelTemplate}" />
+            </StackPanel>
+            <ScottPlot:AvaPlot
+              Name="EmotionsPlot"
+              epoxy:Anchor.Pile="{Binding EmotionsPlotPile}" />
+          </DockPanel>
         </TabItem>
       </TabControl>
     </TabItem>
     <TabItem
       FontSize="14"
       IsEnabled="True"
+      Name="Table"
       Header="Table">
       <TabControl
         TabStripPlacement="Left"
@@ -91,70 +206,99 @@
           Name="DefaultTableTab"
           FontSize="16"
           >
-          <TextBlock Text="Please select a left plot tab" />
+          <StackPanel Spacing="5">
+            <SelectableTextBlock Text="← Please select a left table tab" />
+            <StackPanel Classes="tabInfo">
+              <TextBlock Classes="h2" Text="Emotions"/>
+              <SelectableTextBlock Text="ボイスライブラリの感情（スタイル）の表" />
+            </StackPanel>
+            <StackPanel Classes="tabInfo">
+              <TextBlock Classes="h2" Text="Special symbols"/>
+              <SelectableTextBlock Text="ボイスライブラリの歌詞特殊記号の表" />
+            </StackPanel>
+          </StackPanel>
         </TabItem>
         <TabItem
           Header="Emotions"
           Name="EmotionsTab"
           FontSize="16"
           >
-          <DataGrid
-            x:DataType="cvm:EmotionTableColumn"
-            Margin="20"
-            AutoGenerateColumns="False"
-            IsReadOnly="True"
-            CanUserReorderColumns="True"
-            CanUserResizeColumns="True"
-            GridLinesVisibility="All"
-            FrozenColumnCount="3"
-            BorderThickness="1" BorderBrush="Gray">
-            <DataGrid.Columns>
-              <DataGridTextColumn Header="Type" Binding="{Binding Category}"/>
-              <DataGridTextColumn Header="Name" Binding="{Binding CastName}"/>
-              <DataGridTextColumn Header="Product" Binding="{Binding Product}" />
-              <DataGridTextColumn Header="#" Binding="{Binding EmotionCount}" />
-              <DataGridTextColumn Header="感情1" Binding="{Binding Emo1}" />
-              <DataGridTextColumn Header="感情2" Binding="{Binding Emo2}" />
-              <DataGridTextColumn Header="感情3" Binding="{Binding Emo3}" />
-              <DataGridTextColumn Header="感情4" Binding="{Binding Emo4}" />
-              <DataGridTextColumn Header="感情5" Binding="{Binding Emo5}" />
-              <DataGridTextColumn Header="感情6" Binding="{Binding Emo6}" />
-            </DataGrid.Columns>
-          </DataGrid>
+          <DockPanel>
+            <StackPanel
+              DockPanel.Dock="Top"
+              Orientation="Horizontal">
+              <!--  voice category  -->
+              <ContentControl Template="{StaticResource CategoryFilterPanelTemplate}" />
+              <ContentControl Template="{StaticResource CastFilterPanelTemplate}" />
+            </StackPanel>
+            <DataGrid
+              x:DataType="cvm:EmotionTableColumn"
+              Margin="0 5"
+              AutoGenerateColumns="False"
+              IsReadOnly="True"
+              CanUserReorderColumns="True"
+              CanUserResizeColumns="True"
+              GridLinesVisibility="All"
+              FrozenColumnCount="3"
+              BorderThickness="1" BorderBrush="Gray">
+              <DataGrid.Columns>
+                <DataGridTextColumn Header="Type" Binding="{Binding Category}" />
+                <DataGridTextColumn Header="Name" Binding="{Binding CastName}" />
+                <DataGridTextColumn Header="Product" Binding="{Binding Product}" />
+                <DataGridTextColumn Header="#" Binding="{Binding EmotionCount}" />
+                <DataGridTextColumn Header="感情1" Binding="{Binding Emo1}" />
+                <DataGridTextColumn Header="感情2" Binding="{Binding Emo2}" />
+                <DataGridTextColumn Header="感情3" Binding="{Binding Emo3}" />
+                <DataGridTextColumn Header="感情4" Binding="{Binding Emo4}" />
+                <DataGridTextColumn Header="感情5" Binding="{Binding Emo5}" />
+                <DataGridTextColumn Header="感情6" Binding="{Binding Emo6}" />
+              </DataGrid.Columns>
+            </DataGrid>
+          </DockPanel>
         </TabItem>
         <TabItem
           Header="Special symbols"
           Name="SpSymbolTab"
           FontSize="16"
           >
-          <DataGrid
-            x:DataType="cvm:SpSymbolTableColumn"
-            Margin="20"
-            AutoGenerateColumns="False"
-            IsReadOnly="True"
-            CanUserReorderColumns="True"
-            CanUserResizeColumns="True"
-            GridLinesVisibility="All"
-            FrozenColumnCount="3"
-            BorderThickness="1" BorderBrush="Gray">
-            <DataGrid.Columns>
-              <DataGridTextColumn Header="Type" Binding="{Binding Category}"/>
-              <DataGridTextColumn Header="Name" Binding="{Binding CastName}"/>
-              <DataGridTextColumn Header="Product" Binding="{Binding Product}" />
-              <DataGridTextColumn Header="※ $ ＄" Binding="{Binding LabelFalsetto}" />
-              <DataGridTextColumn Header="@ ＠" Binding="{Binding LabelAtmark}" />
-              <DataGridTextColumn Header="^ ＾" Binding="{Binding LabelCaret}" />
-              <DataGridTextColumn Header="% ％" Binding="{Binding LabelPercent}" />
-              <DataGridTextColumn Header="= ＝" Binding="{Binding LabelEqual}" />
-              <DataGridTextColumn Header="_ ＿" Binding="{Binding LabelUnderscore}" />
-            </DataGrid.Columns>
-          </DataGrid>
+          <DockPanel>
+            <StackPanel
+              DockPanel.Dock="Top"
+              Orientation="Horizontal">
+              <!--  voice category  -->
+              <ContentControl Template="{StaticResource CategoryFilterPanelTemplate}" />
+              <ContentControl Template="{StaticResource CastFilterPanelTemplate}" />
+            </StackPanel>
+            <DataGrid
+              x:DataType="cvm:SpSymbolTableColumn"
+              Margin="2"
+              AutoGenerateColumns="False"
+              IsReadOnly="True"
+              CanUserReorderColumns="True"
+              CanUserResizeColumns="True"
+              GridLinesVisibility="All"
+              FrozenColumnCount="3"
+              BorderThickness="1" BorderBrush="Gray">
+              <DataGrid.Columns>
+                <DataGridTextColumn Header="Type" Binding="{Binding Category}" />
+                <DataGridTextColumn Header="Name" Binding="{Binding CastName}" />
+                <DataGridTextColumn Header="Product" Binding="{Binding Product}" />
+                <DataGridTextColumn Header="※ $ ＄" Binding="{Binding LabelFalsetto}" />
+                <DataGridTextColumn Header="@ ＠" Binding="{Binding LabelAtmark}" />
+                <DataGridTextColumn Header="^ ＾" Binding="{Binding LabelCaret}" />
+                <DataGridTextColumn Header="% ％" Binding="{Binding LabelPercent}" />
+                <DataGridTextColumn Header="= ＝" Binding="{Binding LabelEqual}" />
+                <DataGridTextColumn Header="_ ＿" Binding="{Binding LabelUnderscore}" />
+              </DataGrid.Columns>
+            </DataGrid>
+          </DockPanel>
         </TabItem>
       </TabControl>
     </TabItem>
 
     <TabItem
       FontSize="14"
+      Name="Data"
       Header="Data">
       <Grid
         ColumnDefinitions="*, 3, 2*"
@@ -171,38 +315,9 @@
               MinWidth="100"
               IsVisible="False" />
             <!--  voice category  -->
-            <WrapPanel
-              Margin="5">
-              <ToggleButton
-                IsChecked="{Binding IsShowTalkVoice}"
-                Command="{Binding CastFilterEvent}"
-                CommandParameter="Talk"
-                Content="Talk" />
-              <ToggleButton
-                IsChecked="{Binding IsShowSongVoice}"
-                Command="{Binding CastFilterEvent}"
-                CommandParameter="Talk"
-                Content="Song" />
-            </WrapPanel>
+            <ContentControl Template="{StaticResource CategoryFilterPanelTemplate}" />
             <!--  app  -->
-            <WrapPanel
-              Margin="5">
-              <ToggleButton
-                IsChecked="{Binding IsShowCS}"
-                ToolTip.Tip="CeVIO CS"
-                Command="{Binding CastFilterEvent}"
-                Content="CS" />
-              <ToggleButton
-                IsChecked="{Binding IsShowAI}"
-                ToolTip.Tip="CeVIO AI"
-                Command="{Binding CastFilterEvent}"
-                Content="AI" />
-              <ToggleButton
-                IsChecked="{Binding IsShowVS}"
-                ToolTip.Tip="VoiSona"
-                Command="{Binding CastFilterEvent}"
-                Content="VS" />
-            </WrapPanel>
+            <ContentControl Template="{StaticResource CastFilterPanelTemplate}" />
             <TextBlock
               Text="{Binding DataVersion}"
               FontSize="11"
