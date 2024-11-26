@@ -181,7 +181,7 @@ public class UnitTest1 : IDisposable
 			//すべてのIDがユニーク
 			var ids = cast?.Emotions
 				.Select(v => v.Id);
-			Assert.Equal(ids.Count(), ids.Distinct().Count());
+			Assert.Equal(ids?.Count(), ids?.Distinct().Count());
 		}
 	}
 
