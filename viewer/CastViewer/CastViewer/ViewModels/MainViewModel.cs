@@ -24,7 +24,7 @@ using Avalonia.VisualTree;
 namespace CastViewer.ViewModels;
 
 [ViewModel]
-public class MainViewModel : ViewModelBase
+public class MainViewModel
 {
 	public string WindowTitle { get; set; } = "C v0.0.0";
 	public IEnumerable<Cast> RawCastList { get; private set; }
@@ -302,7 +302,7 @@ public class MainViewModel : ViewModelBase
 						ValueBase = c.VocalTempo?.Low ?? 0,
 						Value = c.VocalTempo?.High ?? 0,
 						FillColor = GetColor(c.Product),
-						BorderLineWidth = 0,
+						//BorderLineWidth = 0,
 						//BorderColor = Colors.Gray,
 					})
 				.ToArray()
@@ -356,7 +356,7 @@ public class MainViewModel : ViewModelBase
 					ValueBase = VocalRangeUtil.GetNoteNumberFromName(c.VocalRange?.Low ?? "C4"),
 					Value = VocalRangeUtil.GetNoteNumberFromName(c.VocalRange?.High ?? "C4"),
 					FillColor = GetColor(c.Product),
-					BorderLineWidth = 0,
+					//BorderLineWidth = 0,
 					//BorderColor = Colors.Gray,
 				})
 			.ToArray()
@@ -449,7 +449,7 @@ public class MainViewModel : ViewModelBase
 					Position = i,
 					Value = c.Emotions?.Count ?? 0,
 					FillColor = GetColor(c.Product),
-					BorderLineWidth = 0,
+					//BorderLineWidth = 0,
 					//BorderColor = Colors.Gray,
 				})
 			.ToArray()
@@ -512,7 +512,7 @@ public class MainViewModel : ViewModelBase
 		{
 			if (plots is IEnumerable<Bar> _bars)
 			{
-				var barPlot = avaPlot.Plot.Add.Bars(_bars);
+				var barPlot = avaPlot.Plot.Add.Bars(_bars.ToList());
 				barPlot.Horizontal = isHorizontal;
 				barPlot.ValueLabelStyle.ForeColor = Color.FromHex("#a0acb5");
 			}

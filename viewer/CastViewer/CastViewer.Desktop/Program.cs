@@ -1,6 +1,6 @@
 ﻿using System;
 using Avalonia;
-using Avalonia.ReactiveUI;
+//using Avalonia.ReactiveUI;
 
 namespace CastViewer.Desktop;
 
@@ -19,5 +19,6 @@ sealed class Program
             .UsePlatformDetect()
             .WithInterFont()
             .LogToTrace()
-            .UseReactiveUI();
+            //.UseReactiveUI()
+            ;
 }
