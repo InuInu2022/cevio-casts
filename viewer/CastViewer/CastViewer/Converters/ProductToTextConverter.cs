@@ -4,22 +4,18 @@ using CevioCasts;
 
 namespace CastViewer.Converters;
 
-public class ProductToTextConverter : IValueConverter
+public sealed class ProductToTextConverter : Epoxy.ValueConverter<Product, string>
 {
-    public object Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
+    public override bool TryConvert(Product from, out string result)
     {
-        if (value is not Product p) return value ?? "";
-        return p switch
+        result = from switch
         {
             Product.VoiSona => "VS",
             Product.CeVIO_AI => "AI",
             Product.CeVIO_CS => "CS",
             _ => "Other" // その他
         };
+        return true;
     }
 
-    public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
-    {
-        throw new NotImplementedException();
-    }
 }
