@@ -2488,6 +2488,141 @@
 			]
 		},
 		{
+			"id": "CSNV-JPM-SGF1",
+			"cname": "CSNV-JPM-SGF1",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "梵そよぎ"
+				},
+				{
+					"lang": "English",
+					"display": "Soyogi Soyogi"
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO AI",
+			"gender": "Male",
+			"lang": "Japanese",
+			"versions": [
+				"2.0.0"
+			],
+			"hasEmotions": false,
+			"vocalRange": {
+				"high": "G#4",
+				"low": "C#3"
+			},
+			"vocalTempo": {
+				"high": 170,
+				"low": 80
+			},
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols": [
+						"$",
+						"※",
+						"＄"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
+					"id": "bounceuppitch",
+					"symbols": [
+						"@",
+						"＠"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "はね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Bounce up pitch"
+						}
+					]
+				},
+				{
+					"id": "fallattack",
+					"symbols": [
+						"%",
+						"％"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "下降アタック"
+						},
+						{
+							"lang": "English",
+							"display": "Fall Attack"
+						}
+					]
+				},
+				{
+					"id": "spitout",
+					"symbols": [
+						"^",
+						"＾"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "吐き捨て"
+						},
+						{
+							"lang": "English",
+							"display": "Spit Out"
+						}
+					]
+				},
+				{
+					"id": "irritation",
+					"symbols": [
+						"_",
+						"＿"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "いきり"
+						},
+						{
+							"lang": "English",
+							"display": "Irritation"
+						}
+					]
+				},
+				{
+					"id": "inflection",
+					"symbols": [
+						"=",
+						"＝"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "語尾変化"
+						},
+						{
+							"lang": "English",
+							"display": "Inflection"
+						}
+					]
+				}
+			]
+		},
+		{
 			"id": "CTNV-JPF-A",
 			"cname": "CTNV-JPF-A",
 			"names": [
@@ -3689,6 +3824,134 @@
 						{
 							"lang": "English",
 							"display": "Child"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "CTNV-JPM-SGF1",
+			"cname": "CTNV-JPM-SGF1",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "梵そよぎ"
+				},
+				{
+					"lang": "English",
+					"display": "Soyogi Soyogi"
+				}
+			],
+			"category": "TextVocal",
+			"product": "CeVIO AI",
+			"gender": "Male",
+			"lang": "Japanese",
+			"versions": [
+				"2.0.1"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "CTNV-JPM-SGF1_NORMAL",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "普通"
+						},
+						{
+							"lang": "English",
+							"display": "Normal"
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPM-SGF1_FINE",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "嬉しい"
+						},
+						{
+							"lang": "English",
+							"display": "Fine"
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPM-SGF1_ANGRY",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "怒り"
+						},
+						{
+							"lang": "English",
+							"display": "Angry"
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPM-SGF1_RAGE",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "激怒"
+						},
+						{
+							"lang": "English",
+							"display": "Rage"
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPM-SGF1_SAD",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "哀しみ"
+						},
+						{
+							"lang": "English",
+							"display": "Sad"
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPM-SGF1_WHISPER",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "ささやき"
+						},
+						{
+							"lang": "English",
+							"display": "Whisper"
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPM-SGF1_HAPPY",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "喜び"
+						},
+						{
+							"lang": "English",
+							"display": "Happy"
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPM-SGF1_LOUD",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "大声"
+						},
+						{
+							"lang": "English",
+							"display": "Loud"
 						}
 					]
 				}
@@ -5795,6 +6058,141 @@
 			]
 		},
 		{
+			"id": "techno-sp_ja_JP_m804_svss",
+			"cname": "techno-sp_ja_JP_m804_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "梵そよぎ"
+				},
+				{
+					"lang": "English",
+					"display": "Soyogi Soyogi"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Male",
+			"lang": "Japanese",
+			"versions": [
+				"2.1.0"
+			],
+			"hasEmotions": false,
+			"vocalRange": {
+				"high": "G#4",
+				"low": "C#3"
+			},
+			"vocalTempo": {
+				"high": 170,
+				"low": 80
+			},
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols": [
+						"$",
+						"※",
+						"＄"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
+					"id": "pitchflipup",
+					"symbols": [
+						"@",
+						"＠"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "跳ね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Pitch flip up"
+						}
+					]
+				},
+				{
+					"id": "headfall",
+					"symbols": [
+						"%",
+						"％"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "先頭フォール"
+						},
+						{
+							"lang": "English",
+							"display": "Head Fall"
+						}
+					]
+				},
+				{
+					"id": "exhale",
+					"symbols": [
+						"^",
+						"＾"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "吐き捨て"
+						},
+						{
+							"lang": "English",
+							"display": "Exhale"
+						}
+					]
+				},
+				{
+					"id": "strained",
+					"symbols": [
+						"_",
+						"＿"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "いきり"
+						},
+						{
+							"lang": "English",
+							"display": "Strained"
+						}
+					]
+				},
+				{
+					"id": "inflection",
+					"symbols": [
+						"=",
+						"＝"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "語尾変化"
+						},
+						{
+							"lang": "English",
+							"display": "Inflection"
+						}
+					]
+				}
+			]
+		},
+		{
 			"id": "techno-sp_en_US_f845_svss",
 			"cname": "techno-sp_en_US_f845_svss.tsnvoice",
 			"names": [
@@ -6938,6 +7336,134 @@
 						{
 							"lang": "English",
 							"display": "Calm"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "techno-sp_ja_JP_m804_tts",
+			"cname": "techno-sp_ja_JP_m804_tts.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "梵そよぎ"
+				},
+				{
+					"lang": "English",
+					"display": "Soyogi Soyogi"
+				}
+			],
+			"category": "TextVocal",
+			"product": "VoiSona",
+			"gender": "Male",
+			"lang": "Japanese",
+			"versions": [
+				"2.1.0"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "0",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Normal"
+						},
+						{
+							"lang": "English",
+							"display": "Normal"
+						}
+					]
+				},
+				{
+					"id": "1",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Fine"
+						},
+						{
+							"lang": "English",
+							"display": "Fine"
+						}
+					]
+				},
+				{
+					"id": "2",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Angry"
+						},
+						{
+							"lang": "English",
+							"display": "Angry"
+						}
+					]
+				},
+				{
+					"id": "3",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Rage"
+						},
+						{
+							"lang": "English",
+							"display": "Rage"
+						}
+					]
+				},
+				{
+					"id": "4",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Sad"
+						},
+						{
+							"lang": "English",
+							"display": "Sad"
+						}
+					]
+				},
+				{
+					"id": "5",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Whisper"
+						},
+						{
+							"lang": "English",
+							"display": "Whisper"
+						}
+					]
+				},
+				{
+					"id": "6",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Happy"
+						},
+						{
+							"lang": "English",
+							"display": "Happy"
+						}
+					]
+				},
+				{
+					"id": "7",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Loud"
+						},
+						{
+							"lang": "English",
+							"display": "Loud"
 						}
 					]
 				}
