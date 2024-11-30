@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "CastViewer.Browser.dll",
   "resources": {
-    "hash": "sha256-sqVUH2Q8nsj/4UD5yXWTi339ukvaBTpTEnYkejmnON0=",
+    "hash": "sha256-wS8uHKfinqjhoxBPJrPCKps34KPiZaiEOK0FH2vxlz0=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-hW4oUN7BjHVwNGlRjp5gGY3RWZnFrXQmJBWw18uQpYc="
     },
@@ -9,7 +9,7 @@
       "dotnet.runtime.js": "sha256-nam8JTYKjhMKOTg6+FlihYP6JpWPGe3jjM9fiUFWzhY="
     },
     "wasmNative": {
-      "dotnet.native.wasm": "sha256-rkDCNkSkmsrIPg60C10guDEZGpxI3nBEqXvEKQ2mMXA="
+      "dotnet.native.wasm": "sha256-FQHfYJewSCT7lM1QLnL/bILXN/fPAaIRH1g8lfTELI8="
     },
     "icu": {
       "icudt_CJK.dat": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
@@ -30,10 +30,10 @@
       "Avalonia.PropertyGrid.wasm": "sha256-WYup5yDXcRMd5baoOKbuPcFNCg21UElmzhhuIDh8hIE=",
       "Avalonia.Skia.wasm": "sha256-MyQaOQY2jzKjDCFCtAKB8POdsVoHAc0rwSbh5pwXekU=",
       "Avalonia.Themes.Fluent.wasm": "sha256-83wzc198a7/lrWmPtEIswWL9oGAPCJEJYduWphqzVgA=",
-      "CastViewer.Browser.wasm": "sha256-uG9XPVPJkE+nvsAQDkTaza7QRFdqHSyxNZ41tREBaoM=",
-      "CastViewer.Core.wasm": "sha256-iucwqbpzH+J2z7ulG9q/U1kAGty+osMTxvooefZ3VoQ=",
-      "CastViewer.wasm": "sha256-xivT3vyWqBY7TA5u/OhIUNDoX0F+EhilCb45D+7QLUg=",
-      "CevioCasts.wasm": "sha256-l/CYJtZWLiQ+XJSvPz3zglm5DCMdpaaq4OL6W4B95fg=",
+      "CastViewer.Browser.wasm": "sha256-0vYlPdGfPttBD9EfR5bW4kwM12aQPiMELpHf0ybpAi8=",
+      "CastViewer.Core.wasm": "sha256-+ssKHCNkir+AXyw4yu8pgveOrJ4J8y4RqzkRjLNr+mQ=",
+      "CastViewer.wasm": "sha256-l7rwN9phOqsVGQ773kNSMQKiyD/Jl8KdjVWeiETeWgU=",
+      "CevioCasts.wasm": "sha256-W4ne9QMsQxMKIq+VVlNn8NhZjIqkfsEiGe+OQkk3SdA=",
       "Epoxy.Core.wasm": "sha256-JjrI0IxAsZ4wqU9yP7RiE38GVJIwCD57XS+LDr+/f38=",
       "Epoxy.wasm": "sha256-i2dtSjM/kHOqLk2qEIpMqKE4L3LisxwTCneRJQe1hW0=",
       "HarfBuzzSharp.wasm": "sha256-PUBj/qoAO40YA0ZQE/rjYhUHyz9XVn04XA7FDOOiIts=",

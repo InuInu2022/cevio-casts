@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.32.0",
+	"version": "1.33.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -6359,6 +6359,152 @@
 						{
 							"lang": "English",
 							"display": "Rolled Rs"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "techno-sp_ja_JP_f846_svss",
+			"cname": "techno-sp_ja_JP_f846_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "月音"
+				},
+				{
+					"lang": "English",
+					"display": "Lunon"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"2.2.0"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "0",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Sweet"
+						},
+						{
+							"lang": "English",
+							"display": "Sweet"
+						}
+					]
+				},
+				{
+					"id": "1",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Cool"
+						},
+						{
+							"lang": "English",
+							"display": "Cool"
+						}
+					]
+				}
+			],
+			"vocalRange": {
+				"high": "F#5",
+				"low": "G3"
+			},
+			"vocalTempo": {
+				"high": 200,
+				"low": 80
+			},
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols": [
+						"$",
+						"※",
+						"＄"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
+					"id": "pitchflipup",
+					"symbols": [
+						"@",
+						"＠"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "跳ね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Pitch flip up"
+						}
+					]
+				},
+				{
+					"id": "headfall",
+					"symbols": [
+						"%",
+						"％"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "先頭フォール"
+						},
+						{
+							"lang": "English",
+							"display": "Head Fall"
+						}
+					]
+				},
+				{
+					"id": "exhale",
+					"symbols": [
+						"^",
+						"＾"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "吐き捨て"
+						},
+						{
+							"lang": "English",
+							"display": "Exhale"
+						}
+					]
+				},
+				{
+					"id": "whisper",
+					"symbols": [
+						"=",
+						"＝"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "ささやき"
+						},
+						{
+							"lang": "English",
+							"display": "Whisper"
 						}
 					]
 				}
