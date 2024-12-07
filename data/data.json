@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.33.0",
+	"version": "1.34.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -2617,6 +2617,175 @@
 						{
 							"lang": "English",
 							"display": "Inflection"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "CSNV-JPF-MCL1",
+			"cname": "CSNV-JPF-MCL1",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "箱庭ハノ"
+				},
+				{
+					"lang": "English",
+					"display": "Hakoniwa Hano"
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO AI",
+			"gender": "Male",
+			"lang": "Japanese",
+			"versions": [
+				"1.0.1"
+			],
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols": [
+						"$",
+						"※",
+						"＄"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
+					"id": "bounceuppitch",
+					"symbols": [
+						"@",
+						"＠"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "はね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Bounce up pitch"
+						}
+					]
+				},
+				{
+					"id": "spitout",
+					"symbols": [
+						"^",
+						"＾"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "吐き捨て"
+						},
+						{
+							"lang": "English",
+							"display": "Spit Out"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "CSNV-JPF-MCL2",
+			"cname": "CSNV-JPF-MCL2",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "箱庭コト"
+				},
+				{
+					"lang": "English",
+					"display": "Hakoniwa Koto"
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO AI",
+			"gender": "Male",
+			"lang": "Japanese",
+			"versions": [
+				"1.0.1"
+			],
+			"hasEmotions": false,
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols": [
+						"$",
+						"※",
+						"＄"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
+					"id": "bounceuppitch",
+					"symbols": [
+						"@",
+						"＠"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "はね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Bounce up pitch"
+						}
+					]
+				},
+				{
+					"id": "edgevoice",
+					"symbols": [
+						"%",
+						"％"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "エッジボイス"
+						},
+						{
+							"lang": "English",
+							"display": "Edge Voice"
+						}
+					]
+				},
+				{
+					"id": "spitout",
+					"symbols": [
+						"^",
+						"＾"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "吐き捨て"
+						},
+						{
+							"lang": "English",
+							"display": "Spit Out"
 						}
 					]
 				}
