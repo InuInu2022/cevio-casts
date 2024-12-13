@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.34.0",
+	"version": "1.35.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -6674,6 +6674,73 @@
 						{
 							"lang": "English",
 							"display": "Whisper"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "techno-sp_ja_JP_m805_svss",
+			"cname": "techno-sp_ja_JP_m805_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "ジャスパー"
+				},
+				{
+					"lang": "English",
+					"display": "Jasper"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Male",
+			"lang": "Japanese",
+			"versions": [
+				"2.1.0"
+			],
+			"hasEmotions": false,
+			"vocalRange": {
+				"high": "G4",
+				"low": "C3"
+			},
+			"vocalTempo": {
+				"high": 125,
+				"low": 70
+			},
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols": [
+						"$",
+						"※",
+						"＄"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
+					"id": "exhale",
+					"symbols": [
+						"^",
+						"＾"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "吐き捨て"
+						},
+						{
+							"lang": "English",
+							"display": "Exhale"
 						}
 					]
 				}
