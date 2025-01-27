@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.35.0",
+	"version": "1.36.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -7846,6 +7846,158 @@
 						{
 							"lang": "English",
 							"display": "Loud"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "techno-sp_ja_JP_f804_tts",
+			"cname": "techno-sp_ja_JP_f804_tts.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "IA"
+				},
+				{
+					"lang": "English",
+					"display": "IA"
+				}
+			],
+			"category": "TextVocal",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.1.0 ported from CeVIO AI"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "0",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Bright"
+						},
+						{
+							"lang": "English",
+							"display": "Bright"
+						}
+					]
+				},
+				{
+					"id": "1",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Normal"
+						},
+						{
+							"lang": "English",
+							"display": "Normal"
+						}
+					]
+				},
+				{
+					"id": "2",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Strong"
+						},
+						{
+							"lang": "English",
+							"display": "Strong"
+						}
+					]
+				},
+				{
+					"id": "3",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Dark"
+						},
+						{
+							"lang": "English",
+							"display": "Dark"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "techno-sp_ja_JP_f803_tts",
+			"cname": "techno-sp_ja_JP_f803_tts.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "OИE"
+				},
+				{
+					"lang": "English",
+					"display": "OИE"
+				}
+			],
+			"category": "TextVocal",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"1.1.0 ported from CeVIO AI"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "0",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Bright"
+						},
+						{
+							"lang": "English",
+							"display": "Bright"
+						}
+					]
+				},
+				{
+					"id": "1",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Normal"
+						},
+						{
+							"lang": "English",
+							"display": "Normal"
+						}
+					]
+				},
+				{
+					"id": "2",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Strong"
+						},
+						{
+							"lang": "English",
+							"display": "Strong"
+						}
+					]
+				},
+				{
+					"id": "3",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Dark"
+						},
+						{
+							"lang": "English",
+							"display": "Dark"
 						}
 					]
 				}
