@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.36.0",
+	"version": "1.37.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -6741,6 +6741,76 @@
 						{
 							"lang": "English",
 							"display": "Exhale"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "techno-sp_ja_JP_f849_svss",
+			"cname": "techno-sp_ja_JP_f849_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "ルウル"
+				},
+				{
+					"lang": "English",
+					"display": "LeuR"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"2.1.0",
+				"2.0.0"
+			],
+			"hasEmotions": false,
+			"emotions": [
+			],
+			"vocalRange": {
+				"high": "D5",
+				"low": "A3"
+			},
+			"vocalTempo": {
+				"high": 190,
+				"low": 85
+			},
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols": [
+						"$",
+						"※",
+						"＄"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
+					"id": "pitchflipup",
+					"symbols": [
+						"@",
+						"＠"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "跳ね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Pitch flip up"
 						}
 					]
 				}
