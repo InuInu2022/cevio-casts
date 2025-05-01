@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.37.0",
+	"version": "1.38.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -6811,6 +6811,57 @@
 						{
 							"lang": "English",
 							"display": "Pitch flip up"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "techno-sp_zh_TW_f702_svss",
+			"cname": "techno-sp_zh_TW_f702_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "瑛璨"
+				},
+				{
+					"lang": "English",
+					"display": "Ying Can"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Chinese",
+			"versions": [
+				"2.1.1"
+			],
+			"hasEmotions": false,
+			"emotions": [],
+			"vocalRange": {
+				"high": "C#5",
+				"low": "G3"
+			},
+			"vocalTempo": {
+				"high": 140,
+				"low": 60
+			},
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols": [
+						"$",
+						"※",
+						"＄"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
 						}
 					]
 				}
