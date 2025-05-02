@@ -144,7 +144,14 @@ namespace CevioCasts
 
     public enum Category { SingerSong, TextVocal };
 
-    public enum Lang { English, Japanese, Chinese };
+    public enum Lang
+    {
+        English,
+        Japanese,
+        Chinese,
+        Unknown = 999
+    };
+
 
     public enum Gender { Female, Male };
 
@@ -226,8 +233,9 @@ namespace CevioCasts
                     return Lang.Japanese;
                 case "Chinese":
                     return Lang.Chinese;
+                default:
+                    return Lang.Unknown;
             }
-            throw new Exception("Cannot unmarshal type Lang");
         }
 
         public override void Write(Utf8JsonWriter writer, Lang value, JsonSerializerOptions options)
@@ -243,8 +251,10 @@ namespace CevioCasts
                 case Lang.Chinese:
                     JsonSerializer.Serialize(writer, "Chinese", options);
                     return;
+                default:
+                    JsonSerializer.Serialize(writer, "Unknown", options);
+                    return;
             }
-            throw new Exception("Cannot marshal type Lang");
         }
 
         public static readonly LangConverter Singleton = new LangConverter();
