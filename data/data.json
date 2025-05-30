@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.38.0",
+	"version": "1.39.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -6768,8 +6768,6 @@
 				"2.0.0"
 			],
 			"hasEmotions": false,
-			"emotions": [
-			],
 			"vocalRange": {
 				"high": "D5",
 				"low": "A3"
@@ -6837,7 +6835,6 @@
 				"2.1.1"
 			],
 			"hasEmotions": false,
-			"emotions": [],
 			"vocalRange": {
 				"high": "C#5",
 				"low": "G3"
@@ -6862,6 +6859,143 @@
 						{
 							"lang": "English",
 							"display": "Falsetto"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "techno-sp_ja_JP_f850_svss",
+			"cname": "techno-sp_ja_JP_f850_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "雨衣"
+				},
+				{
+					"lang": "English",
+					"display": "Ui"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"2.1.0"
+			],
+			"hasEmotions": false,
+			"vocalRange": {
+				"high": "D#5",
+				"low": "A3"
+			},
+			"vocalTempo": {
+				"high": 185,
+				"low": 105
+			},
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols": [
+						"$",
+						"※",
+						"＄"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
+					"id": "pitchflipup",
+					"symbols": [
+						"@",
+						"＠"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "跳ね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Pitch flip up"
+						}
+					]
+				},
+				{
+					"id": "headfall",
+					"symbols": [
+						"%",
+						"％"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "先頭フォール"
+						},
+						{
+							"lang": "English",
+							"display": "Head fall"
+						}
+					]
+				},
+				{
+					"id": "exhall",
+					"symbols": [
+						"^",
+						"＾"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "吐き捨て"
+						},
+						{
+							"lang": "English",
+							"display": "Exhall"
+						}
+					]
+				},
+				{
+					"id": "whisper",
+					"symbols": [
+						"=",
+						"＝"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "ささやき"
+						},
+						{
+							"lang": "English",
+							"display": "Whisper"
+						}
+					]
+				},
+				{
+					"id": "edgevoice",
+					"symbols": [
+						"+",
+						"＋",
+						"＿",
+						"_"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "エッジボイス"
+						},
+						{
+							"lang": "English",
+							"display": "Edge voice"
 						}
 					]
 				}
