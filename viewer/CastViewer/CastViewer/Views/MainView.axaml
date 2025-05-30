@@ -372,6 +372,7 @@
                 <DataGridTextColumn Header="% ％" Binding="{Binding LabelPercent}" />
                 <DataGridTextColumn Header="= ＝" Binding="{Binding LabelEqual}" />
                 <DataGridTextColumn Header="_ ＿" Binding="{Binding LabelUnderscore}" />
+                <DataGridTextColumn Header="+ ＋" Binding="{Binding LabelPlus}" />
               </DataGrid.Columns>
             </DataGrid>
           </DockPanel>
