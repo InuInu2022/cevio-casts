@@ -147,7 +147,7 @@ public class UnitTest1 : IDisposable
 			if(cast?.SpSymbols is null){continue;}
 			if(cast!.SpSymbols.Length == 0){continue;}
 
-			Assert.True(cast.SpSymbols.Any(v => v.Id != ""));
+			Assert.Contains(cast.SpSymbols, v => v.Id != "");
 			var result =
 				cast
 					.SpSymbols
@@ -174,9 +174,9 @@ public class UnitTest1 : IDisposable
 			//HasEmotions
 			Assert.Equal(cast.HasEmotions, cast.Emotions?.Count() > 0);
 
-			if(cast?.Emotions is null){ continue; }
+			if(cast?.Emotions is null or []){ continue; }
 
-			Assert.True(cast?.Emotions.Any(v => v.Id != ""));
+			Assert.True(cast?.Emotions.Any(v => v.Id != ""), $"{cast?.Cname}");
 
 			//すべてのIDがユニーク
 			var ids = cast?.Emotions
