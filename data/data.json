@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.39.0",
+	"version": "1.40.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -8253,6 +8253,108 @@
 						{
 							"lang": "English",
 							"display": "Dark"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "techno-sp_ja_JP_f849_tts",
+			"cname": "techno-sp_ja_JP_f849_tts.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "ルウル"
+				},
+				{
+					"lang": "English",
+					"display": "LeuR"
+				}
+			],
+			"category": "TextVocal",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"2.0.4"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "0",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Normal"
+						},
+						{
+							"lang": "English",
+							"display": "Normal"
+						}
+					]
+				},
+				{
+					"id": "1",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Happy"
+						},
+						{
+							"lang": "English",
+							"display": "Happy"
+						}
+					]
+				},
+				{
+					"id": "2",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Bashful"
+						},
+						{
+							"lang": "English",
+							"display": "Bashful"
+						}
+					]
+				},
+				{
+					"id": "3",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Angry"
+						},
+						{
+							"lang": "English",
+							"display": "Angry"
+						}
+					]
+				},
+				{
+					"id": "4",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Calm"
+						},
+						{
+							"lang": "English",
+							"display": "Calm"
+						}
+					]
+				},
+				{
+					"id": "5",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Sad"
+						},
+						{
+							"lang": "English",
+							"display": "Sad"
 						}
 					]
 				}
