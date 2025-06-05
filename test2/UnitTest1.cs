@@ -120,7 +120,7 @@ public class UnitTest1 : IDisposable
 	}
 
 	[Fact]
-	public void ChechCName()
+	public void CheckCName()
 	{
 		var defs = Definitions.FromJson(jsonString);
 		foreach(var cast in defs.Casts)
@@ -130,10 +130,26 @@ public class UnitTest1 : IDisposable
 				Assert.Equal(cast.Id, cast.Cname);
 			}
 
-			if(cast.Product == CevioCasts.Product.VoiSona)
+			if (cast.Product == CevioCasts.Product.VoiSona)
 			{
 				var check = cast.Cname.Split(".")[0];
 				Assert.Equal(cast.Id, check);
+
+				//file extension
+				Assert.EndsWith("tsnvoice", cast.Cname);
+
+				switch (cast.Category)
+				{
+					case Category.SingerSong:
+						Assert.EndsWith("svss", check);
+						break;
+					case Category.TextVocal:
+						Assert.EndsWith("tts", check);
+						break;
+					default:
+						Assert.Fail();
+						break;
+				}
 			}
 		}
 	}
