@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.40.0",
+	"version": "1.45.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -6882,7 +6882,8 @@
 			"gender": "Female",
 			"lang": "Japanese",
 			"versions": [
-				"2.1.0"
+				"2.1.0",
+				"2.2.0"
 			],
 			"hasEmotions": false,
 			"vocalRange": {
@@ -6996,6 +6997,124 @@
 						{
 							"lang": "English",
 							"display": "Edge voice"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "techno-sp_ja_JP_f854_svss",
+			"cname": "techno-sp_ja_JP_f854_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "那由歌"
+				},
+				{
+					"lang": "English",
+					"display": "NAYUTA"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"2.0.0"
+			],
+			"hasEmotions": false,
+			"vocalRange": {
+				"high": "E5",
+				"low": "G#3"
+			},
+			"vocalTempo": {
+				"high": 180,
+				"low": 70
+			},
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols": [
+						"$",
+						"※",
+						"＄"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
+					"id": "pitchflipup",
+					"symbols": [
+						"@",
+						"＠"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "跳ね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Pitch flip up"
+						}
+					]
+				},
+				{
+					"id": "soft",
+					"symbols": [
+						"%",
+						"％"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "抜き"
+						},
+						{
+							"lang": "English",
+							"display": "Soft"
+						}
+					]
+				},
+				{
+					"id": "exhall",
+					"symbols": [
+						"^",
+						"＾"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "吐き捨て"
+						},
+						{
+							"lang": "English",
+							"display": "Exhall"
+						}
+					]
+				},
+				{
+					"id": "breathy",
+					"symbols": [
+						"=",
+						"＝"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "かすれ"
+						},
+						{
+							"lang": "English",
+							"display": "Breathy"
 						}
 					]
 				}

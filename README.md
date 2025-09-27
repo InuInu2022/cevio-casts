@@ -8,7 +8,7 @@ Definition data for CeVIO casts (voice library) defined in JSON format.
 
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 ![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/inuinu2022/cevio-casts?include_prereleases&label=%F0%9F%9A%80release) ![GitHub all releases](https://img.shields.io/github/downloads/InuInu2022/cevio-casts/total?color=green&label=%E2%AC%87%20downloads) ![GitHub Repo stars](https://img.shields.io/github/stars/InuInu2022/cevio-casts?label=%E2%98%85&logo=github&style=flat)
-[![CeVIO CS](https://img.shields.io/badge/CeVIO_Creative_Studio-7.0-d08cbb.svg?logo=&style=flat)](https://cevio.jp/) [![CeVIO AI](https://img.shields.io/badge/CeVIO_AI-9.1-lightgray.svg?logo=&style=flat)](https://cevio.jp/) [![VoiSona](https://img.shields.io/badge/VoiSona-1.14-53abdb.svg?logo=&style=flat)](https://voisona.com/) [![VoiSona Talk](https://img.shields.io/badge/VoiSona_Talk-1.2-53abdb.svg?logo=&style=flat)](https://voisona.com/talk/)
+[![CeVIO CS](https://img.shields.io/badge/CeVIO_Creative_Studio-7.0-d08cbb.svg?logo=&style=flat)](https://cevio.jp/) [![CeVIO AI](https://img.shields.io/badge/CeVIO_AI-9.1-lightgray.svg?logo=&style=flat)](https://cevio.jp/) [![VoiSona](https://img.shields.io/badge/VoiSona-1.16-53abdb.svg?logo=&style=flat)](https://voisona.com/) [![VoiSona Talk](https://img.shields.io/badge/VoiSona_Talk-1.3-53abdb.svg?logo=&style=flat)](https://voisona.com/talk/)
 
 # Features
 
@@ -21,13 +21,14 @@ Definition data for CeVIO casts (voice library) defined in JSON format.
 - CeVIOトークの外部連携インターフェイスを経由せずにキャスト（ボイスライブラリ）の名前やIDを取得できます
 - CeVIOトークボイスの感情パラメータの名前やIDも同様に静的に取得できます
 - CeVIOソングボイス/VoiSonaソングボイスライブラリの内部IDも静的に取得できます
+- 多言語対応ボイスライブラリはベースの言語が記録されています
 
 |Product|Talk|Song|Total|
 |---|---:|---:|---:|
 |CeVIO CS|5|11|16|
 |CeVIO AI|15|26|41|
-|VoiSona|15|35|50|
-|Sum|35|72|107|
+|VoiSona|15|36|51|
+|Sum|35|73|108|
 
 ## Definitions
 
