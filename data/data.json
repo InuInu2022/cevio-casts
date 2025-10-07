@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.45.0",
+	"version": "1.46.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -7115,6 +7115,154 @@
 						{
 							"lang": "English",
 							"display": "Breathy"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "techno-sp_zh_CN_f853_svss",
+			"cname": "techno-sp_zh_CN_f853_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "柚凛"
+				},
+				{
+					"lang": "English",
+					"display": "Yurin"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Chinese",
+			"versions": [
+				"2.0.0"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "0",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Cool"
+						},
+						{
+							"lang": "English",
+							"display": "Cool"
+						}
+					]
+				},
+				{
+					"id": "1",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Soft"
+						},
+						{
+							"lang": "English",
+							"display": "Soft"
+						}
+					]
+				}
+			],
+			"vocalRange": {
+				"high": "D5",
+				"low": "D#3"
+			},
+			"vocalTempo": {
+				"high": 135,
+				"low": 60
+			},
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols": [
+						"$",
+						"※",
+						"＄"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
+					"id": "edgevoice",
+					"symbols": [
+						"=",
+						"＝"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "エッジボイス"
+						},
+						{
+							"lang": "English",
+							"display": "Edge voice"
+						}
+					]
+				},
+				{
+					"id": "soft",
+					"symbols": [
+						"^",
+						"＾"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "抜き"
+						},
+						{
+							"lang": "English",
+							"display": "Soft"
+						}
+					]
+				},
+				{
+					"id": "edgeend",
+					"symbols": [
+						"+",
+						"＋",
+						"＿",
+						"_"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "エッジエンド"
+						},
+						{
+							"lang": "English",
+							"display": "Edge end"
+						}
+					]
+				},
+				{
+					"id": "tailfall",
+					"symbols": [
+						"@",
+						"＠"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "末尾フォール"
+						},
+						{
+							"lang": "English",
+							"display": "Tail fall"
 						}
 					]
 				}
