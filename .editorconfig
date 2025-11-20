@@ -1,0 +1,4 @@
+[*.cs]
+
+# SMA0040: Missing Using Statement
+dotnet_diagnostic.SMA0040.severity = none
