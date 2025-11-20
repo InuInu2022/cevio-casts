@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.46.0",
+	"version": "1.47.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -4121,6 +4121,69 @@
 						{
 							"lang": "English",
 							"display": "Loud"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "CTNV-ENM-SGF1",
+			"cname": "CTNV-ENM-SGF1",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "梵そよぎ(英)"
+				},
+				{
+					"lang": "English",
+					"display": "Soyogi Soyogi (EN)"
+				}
+			],
+			"category": "TextVocal",
+			"product": "CeVIO AI",
+			"gender": "Male",
+			"lang": "English",
+			"versions": [
+				"2.0.0"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "CTNV-ENM-SGF1_NORMAL",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "普通"
+						},
+						{
+							"lang": "English",
+							"display": "Normal"
+						}
+					]
+				},
+				{
+					"id": "CTNV-ENM-SGF1_FINE",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "嬉しい"
+						},
+						{
+							"lang": "English",
+							"display": "Fine"
+						}
+					]
+				},
+				{
+					"id": "CTNV-JPM-SGF1_SAD",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "哀しみ"
+						},
+						{
+							"lang": "English",
+							"display": "Sad"
 						}
 					]
 				}
@@ -8622,6 +8685,132 @@
 						{
 							"lang": "English",
 							"display": "Sad"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "nitech-jp_ja_JP_f008_tts",
+			"cname": "nitech-jp_ja_JP_f008_tts.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "知声"
+				},
+				{
+					"lang": "English",
+					"display": "Chis-A"
+				}
+			],
+			"category": "TextVocal",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"2.1.0"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "0",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Normal"
+						},
+						{
+							"lang": "English",
+							"display": "Normal"
+						}
+					]
+				},
+				{
+					"id": "1",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Happy"
+						},
+						{
+							"lang": "English",
+							"display": "Happy"
+						}
+					]
+				},
+				{
+					"id": "2",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Angry"
+						},
+						{
+							"lang": "English",
+							"display": "Angry"
+						}
+					]
+				},
+				{
+					"id": "3",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Bashful"
+						},
+						{
+							"lang": "English",
+							"display": "Bashful"
+						}
+					]
+				},
+				{
+					"id": "4",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Sad"
+						},
+						{
+							"lang": "English",
+							"display": "Sad"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "techno-sp_ja_JP_f712_tts",
+			"cname": "techno-sp_ja_JP_f712_tts.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "トモ"
+				},
+				{
+					"lang": "English",
+					"display": "Tomo"
+				}
+			],
+			"category": "TextVocal",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"2.1.0"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "0",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Normal"
+						},
+						{
+							"lang": "English",
+							"display": "Normal"
 						}
 					]
 				}

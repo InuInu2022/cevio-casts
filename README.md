@@ -23,12 +23,12 @@ Definition data for CeVIO casts (voice library) defined in JSON format.
 - CeVIOソングボイス/VoiSonaソングボイスライブラリの内部IDも静的に取得できます
 - 多言語対応ボイスライブラリはベースの言語が記録されています
 
-|Product|Talk|Song|Total|
-|---|---:|---:|---:|
-|CeVIO CS|5|11|16|
-|CeVIO AI|15|26|41|
-|VoiSona|15|36|51|
-|Sum|35|73|108|
+| Product  | Talk | Song | Total |
+|----------|-----:|-----:|------:|
+| CeVIO CS |    5 |   11 |    16 |
+| CeVIO AI |   16 |   26 |    42 |
+| VoiSona  |   17 |   37 |    54 |
+| Sum      |   38 |   74 |   112 |
 
 ## Definitions
 
