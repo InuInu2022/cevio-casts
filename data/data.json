@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.47.0",
+	"version": "1.48.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -4275,7 +4275,8 @@
 			"versions": [
 				"1.0.0",
 				"1.1.0",
-				"2.0.0"
+				"2.0.0",
+				"2.2.0 Cross-Lingual"
 			],
 			"hasEmotions": false,
 			"vocalRange": {
@@ -6442,7 +6443,8 @@
 			"gender": "Female",
 			"lang": "English",
 			"versions": [
-				"2.2.1"
+				"2.2.1",
+				"2.3.0 Cross-Lingual"
 			],
 			"hasEmotions": true,
 			"emotions": [
@@ -6592,6 +6594,28 @@
 							"lang": "English",
 							"display": "Rolled Rs"
 						}
+					]
+				},
+				{
+					"id": "edgeend",
+					"symbols": [
+						"+",
+						"＋",
+						"＿",
+						"_"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "エッジエンド"
+						},
+						{
+							"lang": "English",
+							"display": "Edge End"
+						}
+					],
+					"versions": [
+						"2.3.0 Cross-Lingual"
 					]
 				}
 			]
