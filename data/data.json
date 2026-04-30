@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.49.0",
+	"version": "1.50.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -7089,7 +7089,8 @@
 			"gender": "Female",
 			"lang": "Chinese",
 			"versions": [
-				"2.1.1"
+				"2.1.1",
+				"2.2.0 Cross-Lingual"
 			],
 			"hasEmotions": false,
 			"vocalRange": {
@@ -9147,6 +9148,69 @@
 						{
 							"lang": "English",
 							"display": "Loud"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "techno-sp_en_US_m804_tts",
+			"cname": "techno-sp_en_US_m804_tts.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "梵そよぎ English"
+				},
+				{
+					"lang": "English",
+					"display": "Soyogi Soyogi"
+				}
+			],
+			"category": "TextVocal",
+			"product": "VoiSona",
+			"gender": "Male",
+			"lang": "English",
+			"versions": [
+				"2.0.0"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "0",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Normal"
+						},
+						{
+							"lang": "English",
+							"display": "Normal"
+						}
+					]
+				},
+				{
+					"id": "1",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Fine"
+						},
+						{
+							"lang": "English",
+							"display": "Fine"
+						}
+					]
+				},
+				{
+					"id": "2",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Sad"
+						},
+						{
+							"lang": "English",
+							"display": "Sad"
 						}
 					]
 				}
