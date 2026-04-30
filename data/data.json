@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/InuInu2022/cevio-casts/main/model/schema.json",
-	"version": "1.48.0",
+	"version": "1.49.0",
 	"casts": [
 		{
 			"id": "CTV-JPF-A",
@@ -2792,6 +2792,135 @@
 			]
 		},
 		{
+			"id": "CSNV-JPF-GLA2",
+			"cname": "CSNV-JPF-GLA2",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "ふたばこみなと"
+				},
+				{
+					"lang": "English",
+					"display": "Futaba Kominato"
+				}
+			],
+			"category": "SingerSong",
+			"product": "CeVIO AI",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"2.0.0"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "0",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "わんぱく"
+						},
+						{
+							"lang": "English",
+							"display": "Wanpaku"
+						}
+					]
+				},
+				{
+					"id": "1",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "わんぱく"
+						},
+						{
+							"lang": "English",
+							"display": "Wanpaku"
+						}
+					]
+				}
+			],
+			"vocalRange": {
+				"high": "D5",
+				"low": "G3"
+			},
+			"vocalTempo": {
+				"high": 155,
+				"low": 80
+			},
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols": [
+						"$",
+						"※",
+						"＄"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
+					"id": "bounceuppitch",
+					"symbols": [
+						"@",
+						"＠"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "はね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Bounce up pitch"
+						}
+					]
+				},
+				{
+					"id": "irritation",
+					"symbols": [
+						"%",
+						"％"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "いきり"
+						},
+						{
+							"lang": "English",
+							"display": "Irritation"
+						}
+					]
+				},
+				{
+					"id": "tailfall",
+					"symbols": [
+						"^",
+						"＾"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "末尾フォール"
+						},
+						{
+							"lang": "English",
+							"display": "Tail Fall"
+						}
+					]
+				}
+			]
+		},
+		{
 			"id": "CTNV-JPF-A",
 			"cname": "CTNV-JPF-A",
 			"names": [
@@ -4955,7 +5084,8 @@
 			"gender": "Female",
 			"lang": "Japanese",
 			"versions": [
-				"2.0.0"
+				"2.0.0",
+				"2.1.0 Cross-Lingual"
 			],
 			"hasEmotions": false,
 			"vocalRange": {
@@ -4965,7 +5095,47 @@
 			"vocalTempo": {
 				"high": 120,
 				"low": 80
-			}
+			},
+			"spSymbols": [
+				{
+					"id": "edgevoice",
+					"symbols": [
+						"(E)"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "エッジボイス"
+						},
+						{
+							"lang": "English",
+							"display": "Edge voice"
+						}
+					],
+					"versions": [
+						"2.1.0 Cross-Lingual"
+					]
+				},
+				{
+					"id": "edgeend",
+					"symbols": [
+						"(D)"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "エッジエンド"
+						},
+						{
+							"lang": "English",
+							"display": "Edge end"
+						}
+					],
+					"versions": [
+						"2.1.0 Cross-Lingual"
+					]
+				}
+			]
 		}
 		,{
 			"id": "techno-sp_ja_JP_f808_svss",
@@ -7208,6 +7378,118 @@
 			]
 		},
 		{
+			"id": "techno-sp_ja_JP_f847_svss",
+			"cname": "techno-sp_ja_JP_f847_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "乙辺ヒスイ"
+				},
+				{
+					"lang": "English",
+					"display": "Otobe Hisui"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"2.0.0"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "0",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Cool"
+						},
+						{
+							"lang": "English",
+							"display": "Cool"
+						}
+					]
+				},
+				{
+					"id": "1",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Sweet"
+						},
+						{
+							"lang": "English",
+							"display": "Sweet"
+						}
+					]
+				}
+			],
+			"vocalRange": {
+				"high": "D5",
+				"low": "A3"
+			},
+			"vocalTempo": {
+				"high": 170,
+				"low": 85
+			},
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols": [
+						"$",
+						"※",
+						"＄"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
+					"id": "exhale",
+					"symbols": [
+						"^",
+						"＾"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "吐き捨て"
+						},
+						{
+							"lang": "English",
+							"display": "Exhale"
+						}
+					]
+				},
+				{
+					"id": "pitchflipup",
+					"symbols": [
+						"@",
+						"＠"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "跳ね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Pitch Flip Up"
+						}
+					]
+				}
+			]
+		},
+		{
 			"id": "techno-sp_zh_CN_f853_svss",
 			"cname": "techno-sp_zh_CN_f853_svss.tsnvoice",
 			"names": [
@@ -7350,6 +7632,416 @@
 						{
 							"lang": "English",
 							"display": "Tail fall"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "techno-sp_ja_JP_f857_svss",
+			"cname": "techno-sp_ja_JP_f857_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "一花"
+				},
+				{
+					"lang": "English",
+					"display": "Ichika"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"2.1.0"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "0",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Cool"
+						},
+						{
+							"lang": "English",
+							"display": "Cool"
+						}
+					]
+				},
+				{
+					"id": "1",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Cute"
+						},
+						{
+							"lang": "English",
+							"display": "Cute"
+						}
+					]
+				}
+			],
+			"vocalRange": {
+				"high": "F5",
+				"low": "F#3"
+			},
+			"vocalTempo": {
+				"high": 180,
+				"low": 80
+			},
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols": [
+						"$",
+						"※",
+						"＄"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
+					"id": "edgevoice",
+					"symbols": [
+						"=",
+						"＝"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "エッジボイス"
+						},
+						{
+							"lang": "English",
+							"display": "Edge voice"
+						}
+					]
+				},
+				{
+					"id": "exhale",
+					"symbols": [
+						"^",
+						"＾"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "吐き捨て"
+						},
+						{
+							"lang": "English",
+							"display": "Exhale"
+						}
+					]
+				},
+				{
+					"id": "edgeend",
+					"symbols": [
+						"+",
+						"＋",
+						"＿"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "エッジエンド"
+						},
+						{
+							"lang": "English",
+							"display": "Edge end"
+						}
+					]
+				},
+				{
+					"id": "pitchflipup",
+					"symbols": [
+						"@",
+						"＠"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "跳ね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Pitch flip up"
+						}
+					]
+				},
+				{
+					"id": "tailfall",
+					"symbols": [
+						"%",
+						"％"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "末尾フォール"
+						},
+						{
+							"lang": "English",
+							"display": "Tail fall"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "techno-sp_ja_JP_f859_svss",
+			"cname": "techno-sp_ja_JP_f859_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "ふたばこみなと"
+				},
+				{
+					"lang": "English",
+					"display": "Futaba Kominato"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"2.0.0"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "0",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Cute"
+						},
+						{
+							"lang": "English",
+							"display": "Cute"
+						}
+					]
+				},
+				{
+					"id": "1",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Mischievous"
+						},
+						{
+							"lang": "English",
+							"display": "Mischievous"
+						}
+					]
+				}
+			],
+			"vocalRange": {
+				"high": "D5",
+				"low": "G3"
+			},
+			"vocalTempo": {
+				"high": 155,
+				"low": 80
+			},
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols": [
+						"$",
+						"※",
+						"＄"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
+					"id": "pitchflipup",
+					"symbols": [
+						"@",
+						"＠",
+						"(P)"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "はね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Pitch flip up"
+						}
+					]
+				},
+				{
+					"id": "strained",
+					"symbols": [
+						"%",
+						"％",
+						"(I)"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "いきり"
+						},
+						{
+							"lang": "English",
+							"display": "Strained"
+						}
+					]
+				},
+				{
+					"id": "tailfall",
+					"symbols": [
+						"^",
+						"＾",
+						"(M)"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "末尾フォール"
+						},
+						{
+							"lang": "English",
+							"display": "Tail Fall"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "techno-sp_ja_JP_t014_svss",
+			"cname": "techno-sp_ja_JP_t014_svss.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "ray"
+				},
+				{
+					"lang": "English",
+					"display": "ray"
+				}
+			],
+			"category": "SingerSong",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"2.1.0 Cross-Lingual"
+			],
+			"hasEmotions": false,
+			"vocalRange": {
+				"high": "D#5",
+				"low": "C#3"
+			},
+			"vocalTempo": {
+				"high": 170,
+				"low": 75
+			},
+			"spSymbols": [
+				{
+					"id": "falsetto",
+					"symbols": [
+						"$",
+						"※",
+						"＄"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "ファルセット"
+						},
+						{
+							"lang": "English",
+							"display": "Falsetto"
+						}
+					]
+				},
+				{
+					"id": "edgevoice",
+					"symbols": [
+						"(E)"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "エッジボイス"
+						},
+						{
+							"lang": "English",
+							"display": "Edge voice"
+						}
+					]
+				},
+				{
+					"id": "pitchflipup",
+					"symbols": [
+						"(P)"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "跳ね上げ"
+						},
+						{
+							"lang": "English",
+							"display": "Pitch flip up"
+						}
+					]
+				},
+				{
+					"id": "exhale",
+					"symbols": [
+						"(H)"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "吐き捨て"
+						},
+						{
+							"lang": "English",
+							"display": "Exhale"
+						}
+					]
+				},
+				{
+					"id": "headfall",
+					"symbols": [
+						"(S)"
+					],
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "先頭フォール"
+						},
+						{
+							"lang": "English",
+							"display": "Head fall"
 						}
 					]
 				}
@@ -8835,6 +9527,145 @@
 						{
 							"lang": "English",
 							"display": "Normal"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "techno-sp_ja_JP_f830-custom1_tts",
+			"cname": "techno-sp_ja_JP_f830-custom1_tts.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "ふたばこみなと Lite"
+				},
+				{
+					"lang": "English",
+					"display": "Futaba Kominato Lite"
+				}
+			],
+			"category": "TextVocal",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"2.0.0"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "0",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Normal"
+						},
+						{
+							"lang": "English",
+							"display": "Normal"
+						}
+					]
+				},
+				{
+					"id": "1",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Fine"
+						},
+						{
+							"lang": "English",
+							"display": "Fine"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "techno-sp_ja_JP_f855_tts",
+			"cname": "techno-sp_ja_JP_f855_tts.tsnvoice",
+			"names": [
+				{
+					"lang": "Japanese",
+					"display": "ナースロボ＿TypeT"
+				},
+				{
+					"lang": "English",
+					"display": "NurseRobot_TypeT"
+				}
+			],
+			"category": "TextVocal",
+			"product": "VoiSona",
+			"gender": "Female",
+			"lang": "Japanese",
+			"versions": [
+				"2.0.0"
+			],
+			"hasEmotions": true,
+			"emotions": [
+				{
+					"id": "0",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Normal"
+						},
+						{
+							"lang": "English",
+							"display": "Normal"
+						}
+					]
+				},
+				{
+					"id": "1",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Happy"
+						},
+						{
+							"lang": "English",
+							"display": "Happy"
+						}
+					]
+				},
+				{
+					"id": "2",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Angry"
+						},
+						{
+							"lang": "English",
+							"display": "Angry"
+						}
+					]
+				},
+				{
+					"id": "3",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Sad"
+						},
+						{
+							"lang": "English",
+							"display": "Sad"
+						}
+					]
+				},
+				{
+					"id": "4",
+					"names": [
+						{
+							"lang": "Japanese",
+							"display": "Smol"
+						},
+						{
+							"lang": "English",
+							"display": "Smol"
 						}
 					]
 				}
