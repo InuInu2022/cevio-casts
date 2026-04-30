@@ -26,9 +26,9 @@ Definition data for CeVIO casts (voice library) defined in JSON format.
 | Product  | Talk | Song | Total |
 |----------|-----:|-----:|------:|
 | CeVIO CS |    5 |   11 |    16 |
-| CeVIO AI |   16 |   26 |    42 |
-| VoiSona  |   17 |   37 |    54 |
-| Sum      |   38 |   74 |   112 |
+| CeVIO AI |   16 |   27 |    43 |
+| VoiSona  |   19 |   41 |    60 |
+| Sum      |   40 |   79 |   119 |
 
 ## Definitions
 
@@ -159,5 +159,5 @@ CeVIO Creative Studio の ONE (Song/Talk), IA (English Song/Talk)のデータが
 ```
 MIT License
 
-Copyright (c) 2024 いぬいぬ
+Copyright (c) 2024-2026 いぬいぬ
 ```
