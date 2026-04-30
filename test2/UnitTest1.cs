@@ -176,6 +176,11 @@ public class UnitTest1 : IDisposable
 			var ids = cast.SpSymbols
 				.Select(v => v.Id);
 			Assert.Equal(ids.Count(), ids.Distinct().Count());
+
+			foreach(var sp in cast.SpSymbols)
+			{
+				output.WriteLine($"cast:{cast.Names[0].Display}, sp:{sp.Names[0].Display}, symbols: {string.Join(", ", sp.Symbols)}");
+			}
 		}
 	}
 
