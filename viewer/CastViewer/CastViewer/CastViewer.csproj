@@ -22,8 +22,11 @@
     -->
     <SatelliteResourceLanguages>en-US;ja-JP</SatelliteResourceLanguages>
   </PropertyGroup>
-  <Target Name="CopyDataFile" BeforeTargets="Build">
-    <Copy SourceFiles="../../../data/data.json" DestinationFolder="./Assets" OverwriteReadOnlyFiles="true" />
+  <Target Name="CopyDataFile" BeforeTargets="Build"
+    Inputs="../../../data/data.json"
+    Outputs="./Assets/data.json">
+    <Copy SourceFiles="../../../data/data.json" DestinationFolder="./Assets"
+      OverwriteReadOnlyFiles="true" />
     <Message Text="Actions Before Build" Importance="high" />
   </Target>
   <ItemGroup>
