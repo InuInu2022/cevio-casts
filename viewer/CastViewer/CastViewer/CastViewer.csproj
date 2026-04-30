@@ -25,6 +25,7 @@
   <Target Name="CopyDataFile" BeforeTargets="Build"
     Inputs="../../../data/data.json"
     Outputs="./Assets/data.json">
+    <Remove Files="./Assets/data.json" />
     <Copy SourceFiles="../../../data/data.json" DestinationFolder="./Assets"
       OverwriteReadOnlyFiles="true" />
     <Message Text="Actions Before Build" Importance="high" />

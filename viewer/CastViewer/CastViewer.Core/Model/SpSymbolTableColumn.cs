@@ -23,6 +23,13 @@ public record SpSymbolTableColumn(
 	public string? LabelEqual => GetName(SpSymbols, ["=", "＝"]);
 	public string? LabelUnderscore => GetName(SpSymbols, ["_", "＿"]);
 	public string? LabelPlus => GetName(SpSymbols, ["+", "＋"]);
+	public string? LabelEdgeVoice => GetName(SpSymbols, ["(E)"]);
+	public string? LabelEdgeEnd => GetName(SpSymbols, ["(D)"]);
+	public string? LabelPitchFlipUp => GetName(SpSymbols, ["(P)"]);
+	public string? LabelStrained => GetName(SpSymbols, ["(I)"]);
+	public string? LabelTailFall => GetName(SpSymbols, ["(M)"]);
+	public string? LabelExhale => GetName(SpSymbols, ["(H)"]);
+	public string? LabelHeadFall => GetName(SpSymbols, ["(S)"]);
 
 	private static string GetName(
 		IEnumerable<DisplaySpSymbol> spSymbols,

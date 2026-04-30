@@ -474,6 +474,13 @@
                 <DataGridTextColumn Header="= ＝" Binding="{Binding LabelEqual}" />
                 <DataGridTextColumn Header="_ ＿" Binding="{Binding LabelUnderscore}" />
                 <DataGridTextColumn Header="+ ＋" Binding="{Binding LabelPlus}" />
+                <DataGridTextColumn Header="(E)" Binding="{Binding LabelEdgeVoice}" />
+                <DataGridTextColumn Header="(D)" Binding="{Binding LabelEdgeEnd}" />
+                <DataGridTextColumn Header="(I)" Binding="{Binding LabelStrained}" />
+                <DataGridTextColumn Header="(P)" Binding="{Binding LabelPitchFlipUp}" />
+                <DataGridTextColumn Header="(M)" Binding="{Binding LabelTailFall}" />
+                <DataGridTextColumn Header="(S)" Binding="{Binding LabelHeadFall}" />
+                <DataGridTextColumn Header="(H)" Binding="{Binding LabelExhale}" />
               </DataGrid.Columns>
             </DataGrid>
           </DockPanel>
