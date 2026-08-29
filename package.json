@@ -12,6 +12,6 @@
   "license": "MIT",
   "devDependencies": {
     "ajv": "^8.16.0",
-    "quicktype": "^23.0.170"
+    "quicktype": "^23.3.25"
   }
 }
